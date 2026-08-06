@@ -168,75 +168,11 @@
    ========================================================================== */
 
 /* Primary & Secondary Button Hover Effects */
-.primary-button,
 .more-button,
 .secondary-button {
   position: relative !important;
   overflow: hidden !important;
   transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1) !important;
-}
-
-.primary-button-text-wrap {
-  position: relative !important;
-  overflow: hidden !important;
-}
-
-.primary-button-text,
-.primary-button-text-hover {
-  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
-}
-
-.primary-button:hover .primary-button-text,
-.more-button:hover .primary-button-text {
-  transform: translateY(-100%) !important;
-}
-
-.primary-button:hover .primary-button-text-hover,
-.more-button:hover .primary-button-text-hover {
-  transform: translateY(-100%) !important;
-}
-
-.primary-button-arrow-wrap,
-.more-button-arrow-wrap {
-  position: relative !important;
-  overflow: hidden !important;
-}
-
-.primary-button-arrow,
-.primary-button-arrow-hover,
-.more-button-arrow,
-.more-button-arrow-hover {
-  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.3s ease !important;
-}
-
-.primary-button:hover .primary-button-arrow,
-.more-button:hover .more-button-arrow {
-  transform: translate(100%, -100%) !important;
-  opacity: 0 !important;
-}
-
-.primary-button:hover .primary-button-arrow-hover,
-.more-button:hover .more-button-arrow-hover {
-  transform: translate(0, 0) !important;
-  opacity: 1 !important;
-}
-
-.primary-button-hover-bg {
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  opacity: 0 !important;
-  transform: scale(0.85) !important;
-  transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.25, 1, 0.5, 1) !important;
-  pointer-events: none !important;
-  z-index: 1 !important;
-}
-
-.primary-button:hover .primary-button-hover-bg {
-  opacity: 1 !important;
-  transform: scale(1) !important;
 }
 
 /* Services Page Card Hover Effects */

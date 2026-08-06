@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { RollingButton } from '@/components/ui/RollingButton';
 
 interface TechItem {
   name: string;
