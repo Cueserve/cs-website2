@@ -148,18 +148,19 @@ export default function ServicesSection() {
                     return (
                       <div
                         key={service.id}
-                        className={`service-tab-link w-inline-block w-tab-link ${isActive ? 'w--current active' : ''}`}
+                        className={`service-tab-link w-inline-block w-tab-link cursor-pointer ${isActive ? 'w--current active' : ''}`}
                         onClick={() => setActiveTabId(service.id)}
-                        onMouseEnter={() => setActiveTabId(service.id)}
                       >
                         <div className="service-tab-link-content">
                           <div className="service-tab-link-content-flex">
                             <div className="service-tab-link-flex-left">
                               <div className="service-name-wrap">
-                                <div className="service-name-dot-wrap">
-                                  <div className="service-name-dot"></div>
-                                </div>
-                                <h3 className="service-name">{service.name}</h3>
+                                {isActive && (
+                                  <div className="service-name-dot-wrap">
+                                    <div className="service-name-dot !bg-[#2d8cff]"></div>
+                                  </div>
+                                )}
+                                <h3 className={`service-name ${isActive ? 'text-[#2d8cff]' : ''}`}>{service.name}</h3>
                               </div>
 
                               {isActive && (

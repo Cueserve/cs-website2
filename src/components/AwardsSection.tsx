@@ -2,7 +2,7 @@ export default function AwardsSection() {
   return (
     <section className="section awards">
       <div className="container">
-        <div data-w-id="08afc44f-b84e-cedb-ff88-b4be87a31e4b" className="awards-vh-wrap">
+        <div className="awards-vh-wrap">
           <div className="awards-grid-wrap">
             <div className="award-item-wrap _01">
               <div className="single-award-wrap">
