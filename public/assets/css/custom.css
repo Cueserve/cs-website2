@@ -569,6 +569,68 @@
   }
 }
 
+/* Services Page Banner: Bottom to Top Fade Up (No Blur) */
+@keyframes bannerFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* About Us Page Banner: Horizontal Entrance (No Blur) */
+@keyframes bannerFadeLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-35px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bannerFadeRight {
+  0% {
+    opacity: 0;
+    transform: translateX(35px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.inner-banner-content-wrap {
+  animation: bannerFadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+}
+
+.feature-banner-content-left {
+  animation: bannerFadeLeft 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+}
+
+.feature-banner-content-right {
+  animation: bannerFadeRight 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+}
+
+/* Enforce zero blur and sharp visibility */
+.inner-banner,
+.inner-banner *,
+.feature-banner-content-wrap,
+.feature-banner-content-wrap * {
+  filter: none !important;
+  -webkit-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+
+
+
+
+
 
 
 
