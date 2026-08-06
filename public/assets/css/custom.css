@@ -299,38 +299,79 @@
 .single-project-wrap {
   position: relative !important;
   overflow: hidden !important;
-  border-radius: 16px !important;
-  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease !important;
+  border-radius: 1.5rem !important;
+  transition: border-color 0.35s ease, box-shadow 0.35s ease !important;
 }
 
 .single-project-wrap:hover {
-  transform: translateY(-6px) !important;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25) !important;
+  transform: none !important;
+  box-shadow: 0 16px 40px rgba(0, 82, 204, 0.15) !important;
 }
 
 .single-project-image-wrap {
   overflow: hidden !important;
   display: block !important;
   position: relative !important;
-  border-radius: 16px !important;
+  border-radius: 1.5rem !important;
 }
 
 .project-image.single-project {
-  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1) !important;
-  will-change: transform;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
 }
 
 .single-project-wrap:hover .project-image.single-project {
-  transform: scale(1.05) !important;
+  transform: none !important;
 }
 
+/* Top-Right Arrow Circle: turns white background with royal blue arrow */
 .project-arrow-button.single-project {
-  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s ease !important;
+  transition: background-color 0.35s ease, transform 0.35s ease !important;
 }
 
 .single-project-wrap:hover .project-arrow-button.single-project {
-  transform: rotate(45deg) scale(1.1) !important;
-  background-color: #2d8cff !important;
+  transform: none !important;
+  background-color: #ffffff !important;
+}
+
+.single-project-wrap:hover .project-button-arrow.single-project,
+.single-project-wrap:hover .project-button-arrow {
+  filter: brightness(0) saturate(100%) invert(32%) sepia(96%) saturate(2280%) hue-rotate(208deg) brightness(100%) contrast(108%) !important;
+  -webkit-filter: brightness(0) saturate(100%) invert(32%) sepia(96%) saturate(2280%) hue-rotate(208deg) brightness(100%) contrast(108%) !important;
+}
+
+/* Bottom Bar Background Height Expansion */
+.single-project-hover-bg {
+  transition: height 0.4s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.4s ease !important;
+}
+
+.single-project-wrap:hover .single-project-hover-bg {
+  height: 100% !important;
+  opacity: 1 !important;
+}
+
+/* Bottom Bar Typography & Dot turn White on Hover */
+.single-project-name {
+  transition: color 0.3s ease !important;
+}
+
+.single-project-wrap:hover .single-project-name {
+  color: #ffffff !important;
+}
+
+.single-project-category {
+  transition: color 0.3s ease !important;
+}
+
+.single-project-wrap:hover .single-project-category {
+  color: #ffffff !important;
+}
+
+.single-project-cat-dot {
+  transition: background-color 0.3s ease !important;
+}
+
+.single-project-wrap:hover .single-project-cat-dot {
+  background-color: #ffffff !important;
 }
 
 .single-project-name {
