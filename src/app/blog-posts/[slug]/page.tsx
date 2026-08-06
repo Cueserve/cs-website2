@@ -1,112 +1,41 @@
 import React from 'react';
-import Link from 'next/link';
-import { notFound } from 'next/navigation';
-import { RollingButton } from '@/components/ui/RollingButton';
-
-const blogPostsData: Record<
-  string,
-  { title: string; category: string; date: string; image: string; content: string }
-> = {
-  'designing-for-emotion-the-secret-to-memorable-brands-3': {
-    title: 'Designing for Emotion: The Secret to Memorable Brands.',
-    category: 'Advice',
-    date: 'Nov 14, 2025',
-    image:
-      'https://cdn.prod.website-files.com/6916390ccd119327e597f20f/69163a5192d7749a090ca88b_Blog-Image-1.jpg',
-    content:
-      'Emotional branding creates a strong connection between consumers and brands by appealing directly to the customer’s emotional state, needs, and desires. In modern web design, micro-interactions, cohesive typography, and harmonious color palettes evoke trust and delight.',
-  },
-  'the-power-of-minimalism-in-modern-web-design': {
-    title: 'The Power of Minimalism in Modern Web Design.',
-    category: 'Advice',
-    date: 'Nov 14, 2025',
-    image:
-      'https://cdn.prod.website-files.com/6916390ccd119327e597f20f/69163a37dc79e51d34432ff1_Blog-Image-2.jpg',
-    content:
-      'Minimalism isn’t just about having less content—it’s about amplifying what truly matters. By stripping away non-essential elements, minimalistic design elevates readability, accelerates load speed, and focuses user attention on key calls-to-action.',
-  },
-  'building-digital-trust-through-strong-brand-identity': {
-    title: 'Building Digital Trust Through Strong Brand Identity.',
-    category: 'Advice',
-    date: 'Nov 14, 2025',
-    image:
-      'https://cdn.prod.website-files.com/6916390ccd119327e597f20f/69163a128551ce062ec12c66_Blog-Image-3.jpg',
-    content:
-      'Trust is the currency of the digital web. Consistent visual branding, accessible interfaces, and transparent communication reassure visitors that your brand is reliable, high-quality, and market-tested.',
-  },
-};
 
 export function generateStaticParams() {
-  return Object.keys(blogPostsData).map((slug) => ({ slug }));
+  return [
+    { slug: 'designing-for-emotion-the-secret-to-memorable-brands-3' },
+    { slug: 'the-power-of-minimalism-in-modern-web-design' },
+    { slug: 'building-digital-trust-through-strong-brand-identity' },
+  ];
 }
 
-export default function BlogPostPage({
-  params,
-}: {
-  params: { slug: string };
-}) {
-  const post = blogPostsData[params.slug];
-
-  if (!post) {
-    notFound();
-  }
-
+export default function BlogPostPage() {
   return (
-    <div className="section" style={{ paddingTop: '80px', paddingBottom: '100px' }}>
-      <div className="container">
-        <div style={{ maxWidth: '800px', margin: '0 auto', color: '#fff' }}>
-          <div
-            data-wf--subtitle--variant="borders"
-            className="subtitle-wrap w-variant-89dd2e21-7faa-27ca-a536-110057684450"
-            style={{ marginBottom: '20px' }}
-          >
-            <div className="subtitle-flex-wrap">
-              <div className="subtitle-text">
-                {post.category} • {post.date}
+    <section className="section" style={{ minHeight: '70vh', display: 'flex', alignItems: 'center', justifyContent: 'center', paddingTop: '100px', paddingBottom: '100px', position: 'relative', overflow: 'hidden' }}>
+      <div className="container" style={{ position: 'relative', zIndex: 2, textAlign: 'center' }}>
+        <div style={{ maxWidth: '600px', margin: '0 auto', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          
+          <div className="section-subtile-wrap" style={{ marginBottom: '24px' }}>
+            <div data-wf--subtitle--variant="borders" className="subtitle-wrap w-variant-89dd2e21-7faa-27ca-a536-110057684450">
+              <div className="subtitle-flex-wrap">
+                <img
+                  src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/690f9e158664fc7bd2753513_Subtitle-Icon.svg"
+                  loading="lazy"
+                  alt="Subtitle Icon"
+                  className="subtitle-icon"
+                />
+                <div className="subtitle-text">Article</div>
               </div>
             </div>
           </div>
 
-          <h1
-            style={{
-              fontSize: '3rem',
-              fontWeight: 700,
-              lineHeight: 1.2,
-              marginBottom: '32px',
-            }}
-          >
-            {post.title}
+          <h1 style={{ fontSize: 'clamp(2.2rem, 4vw, 3.2rem)', fontWeight: 700, color: '#0a2540', marginBottom: '20px' }}>
+            Article <span className="section-title-mark">Coming Soon</span>
           </h1>
-
-          <div
-            style={{
-              borderRadius: '20px',
-              overflow: 'hidden',
-              marginBottom: '40px',
-              border: '1px solid rgba(255, 255, 255, 0.1)',
-            }}
-          >
-            <img
-              src={post.image}
-              alt={post.title}
-              style={{ width: '100%', height: 'auto', display: 'block' }}
-            />
-          </div>
-
-          <p
-            style={{
-              fontSize: '1.2rem',
-              lineHeight: 1.8,
-              color: 'rgba(255, 255, 255, 0.8)',
-              marginBottom: '40px',
-            }}
-          >
-            {post.content}
+          <p style={{ fontSize: '1.15rem', color: '#3f4756', lineHeight: 1.6, marginBottom: '0px' }}>
+            This article is currently under editorial review and will be published shortly.
           </p>
-
-          <RollingButton variant="alice-blue" href="/blogs" text="← Back to Articles" showArrow={false} />
         </div>
       </div>
-    </div>
+    </section>
   );
 }

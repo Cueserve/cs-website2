@@ -1057,16 +1057,17 @@
 /* Mobile hero layout */
 .mobile-hero-section {
   position: relative;
-  min-height: 100svh;
+  min-height: auto;
   overflow: hidden;
+  background-color: #edf3ff !important;
 }
 
 .mobile-hero-inner {
   position: relative;
-  min-height: 100svh;
+  min-height: auto;
   display: flex;
   align-items: center;
-  padding: 6rem 0 4rem;
+  padding: 7rem 0 3.5rem;
   z-index: 2;
 }
 
@@ -1082,17 +1083,17 @@
   font-size: clamp(2rem, 6vw, 3.5rem);
   font-weight: 700;
   line-height: 1.15;
-  color: #ffffff;
+  color: #0a2540 !important;
   margin: 0;
 }
 
 .mobile-hero-mark {
-  color: #2d8cff;
+  color: #2d8cff !important;
 }
 
 .mobile-hero-desc {
   font-size: clamp(0.95rem, 2.5vw, 1.125rem);
-  color: rgba(255, 255, 255, 0.7);
+  color: #3f4756 !important;
   line-height: 1.65;
   max-width: 480px;
   margin: 0;
@@ -1105,29 +1106,58 @@
   flex-wrap: wrap;
 }
 
-/* Background image */
+/* Background image & Squared Grid */
 .mobile-hero-bg {
   position: absolute;
   inset: 0;
   z-index: 0;
+  pointer-events: none;
 }
 
-.mobile-hero-bg-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
+.mobile-hero-squared-grid {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(12, 56, 90, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(12, 56, 90, 0.12) 1px, transparent 1px),
+    linear-gradient(rgba(12, 56, 90, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(12, 56, 90, 0.04) 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-position: center center;
+  opacity: 0.6;
+}
+
+.mobile-borders-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  height: 100% !important;
+  padding: 0 !important;
+}
+
+.mobile-borders-wrapper .banner-borders-flex {
+  height: 100% !important;
+  max-height: none !important;
 }
 
 .mobile-hero-bg-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(2, 5, 16, 0.88) 0%,
-    rgba(2, 5, 16, 0.65) 60%,
-    rgba(2, 5, 16, 0.45) 100%
-  );
+  display: none;
+}
+
+/* Tablet (768px–1023px): centre-align content */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .mobile-hero-content {
+    align-items: center !important;
+    text-align: center !important;
+  }
+  .mobile-hero-desc {
+    max-width: 560px !important;
+    margin: 0 auto !important;
+  }
+  .mobile-hero-buttons {
+    justify-content: center !important;
+  }
 }
 
 

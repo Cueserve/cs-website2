@@ -31,6 +31,7 @@ export default function RootLayout({
       data-wf-page="68dbb9a72b91c794d0cdd10e"
       data-wf-site="68dbb9a72b91c794d0cdd10c"
       data-wf-status="1"
+      suppressHydrationWarning
     >
       <head>
         <link
@@ -45,7 +46,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <WebflowInit />
         <div className="page-wrapper">
           <Navbar />

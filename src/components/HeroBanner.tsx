@@ -187,7 +187,7 @@ export default function HeroBanner() {
       {/* Mobile / Tablet static hero — shown only below 1024px */}
       <section className="banner-section mobile-hero-section">
         <div className="mobile-hero-inner">
-          <div className="container">
+          <div className="container" style={{ position: 'relative', zIndex: 3 }}>
             <div className="mobile-hero-content">
               <h1 className="mobile-hero-title">
                 Crafting Modern <span className="mobile-hero-mark">Vision</span> For the Ambitious Brands
@@ -202,12 +202,14 @@ export default function HeroBanner() {
             </div>
           </div>
           <div className="mobile-hero-bg">
-            <img
-              src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/69393d89707a466887665505_Banner-Image-p-800.jpg"
-              alt="Banner"
-              className="mobile-hero-bg-img"
-            />
-            <div className="mobile-hero-bg-overlay" />
+            <div className="mobile-hero-squared-grid" />
+          </div>
+          <div className="banner-borders-wrapper mobile-borders-wrapper">
+            <div className="banner-borders-flex">
+              <div className="banner-border-line"></div>
+              <div className="banner-border-line"></div>
+              <div className="banner-border-line"></div>
+            </div>
           </div>
         </div>
       </section>
