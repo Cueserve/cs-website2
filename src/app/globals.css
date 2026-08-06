@@ -167,22 +167,23 @@
 /* Services Page Card Hover Effects */
 .single-service-wrap {
   position: relative !important;
-  transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.35s ease, box-shadow 0.35s ease !important;
+  transition: border-color 0.35s ease, box-shadow 0.35s ease !important;
   overflow: hidden !important;
 }
 
 .single-service-wrap:hover {
-  transform: translateY(-6px) !important;
-  box-shadow: 0 12px 36px rgba(45, 140, 255, 0.15) !important;
+  transform: none !important;
+  box-shadow: 0 16px 40px rgba(0, 82, 204, 0.2) !important;
 }
 
+/* Original background height movement */
 .single-service-hover-bg {
-  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+  transition: height 0.4s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.4s ease !important;
 }
 
 .single-service-wrap:hover .single-service-hover-bg {
+  height: 100% !important;
   opacity: 1 !important;
-  transform: scale(1) !important;
 }
 
 .single-service-icon {
@@ -190,7 +191,7 @@
 }
 
 .single-service-wrap:hover .single-service-icon {
-  transform: scale(1.12) rotate(3deg) !important;
+  transform: none !important;
 }
 
 .single-service-name {
@@ -198,7 +199,89 @@
 }
 
 .single-service-wrap:hover .single-service-name {
-  color: #2d8cff !important;
+  color: #ffffff !important;
+}
+
+.single-service-wrap:hover .single-service-details {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Completely lock button and all children static in place */
+.service-more-buttons-wrap,
+.service-more-buttons-wrap *,
+.service-more-button,
+.service-more-button *,
+.more-button,
+.more-button *,
+.more-button-flex,
+.more-button-flex *,
+.more-button-text,
+.more-button-arrow-wrap {
+  transform: none !important;
+  animation: none !important;
+  position: static !important;
+}
+
+.service-more-buttons-wrap {
+  position: relative !important;
+  margin-top: 1.375rem !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.service-more-button {
+  position: relative !important;
+  display: flex !important;
+}
+
+.more-button {
+  position: relative !important;
+  display: inline-block !important;
+}
+
+.more-button-flex {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
+}
+
+.more-button-arrow-wrap {
+  position: relative !important;
+  background-color: var(--primary) !important;
+  border-radius: 50% !important;
+  width: 2.25rem !important;
+  height: 2.25rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: background-color 0.3s ease !important;
+}
+
+.more-button-text {
+  color: var(--eerie-black) !important;
+  transition: color 0.3s ease !important;
+}
+
+.more-button-arrow-hover,
+.more-button-hover-bg,
+.service-more-button.absolute {
+  display: none !important;
+}
+
+.single-service-wrap:hover .more-button-text {
+  color: #ffffff !important;
+}
+
+.single-service-wrap:hover .more-button-arrow-wrap {
+  background-color: #ffffff !important;
+}
+
+.single-service-wrap:hover .more-button-arrow {
+  filter: brightness(0) saturate(100%) invert(32%) sepia(96%) saturate(2280%) hue-rotate(208deg) brightness(100%) contrast(108%) !important;
+  -webkit-filter: brightness(0) saturate(100%) invert(32%) sepia(96%) saturate(2280%) hue-rotate(208deg) brightness(100%) contrast(108%) !important;
+  opacity: 1 !important;
 }
 
 /* Projects / Works Page Card Hover Effects */
