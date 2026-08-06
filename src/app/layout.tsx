@@ -68,6 +68,19 @@ export default function RootLayout({
           if(typeof WebFont!=='undefined'){WebFont.load({google:{families:["Instrument Sans:regular,500,600,700","Poppins:300,regular,500,600,700"]}})}
           !function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);
         `}</Script>
+        {/* GSAP + plugins (loaded before Webflow IX2 chunks) */}
+        <Script
+          src="https://cdn.prod.website-files.com/gsap/3.15.0/gsap.min.js"
+          strategy="beforeInteractive"
+        />
+        <Script
+          src="https://cdn.prod.website-files.com/gsap/3.15.0/SplitText.min.js"
+          strategy="beforeInteractive"
+        />
+        <Script
+          src="https://cdn.prod.website-files.com/gsap/3.15.0/ScrollTrigger.min.js"
+          strategy="beforeInteractive"
+        />
         {/* Webflow runtime chunks */}
         <Script
           src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/js/webflow.schunk.36b8fb49256177c8.js"
@@ -85,27 +98,15 @@ export default function RootLayout({
           src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/js/webflow.9afb6367.094aedc2bbd9f610.js"
           strategy="afterInteractive"
         />
-        {/* GSAP + plugins */}
-        <Script
-          src="https://cdn.prod.website-files.com/gsap/3.15.0/gsap.min.js"
-          strategy="afterInteractive"
-        />
-        <Script
-          src="https://cdn.prod.website-files.com/gsap/3.15.0/SplitText.min.js"
-          strategy="afterInteractive"
-        />
-        <Script
-          src="https://cdn.prod.website-files.com/gsap/3.15.0/ScrollTrigger.min.js"
-          strategy="afterInteractive"
-        />
         {/* Re-init IX2 after hydration */}
         <Script id="ix2-init" strategy="lazyOnload">{`
           setTimeout(function(){
             if(window.Webflow&&window.Webflow.require){
               try{window.Webflow.require('ix2').init()}catch(e){}
             }
-          },500);
+          },300);
         `}</Script>
+
       </body>
     </html>
   );

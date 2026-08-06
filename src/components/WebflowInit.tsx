@@ -12,12 +12,8 @@ export default function WebflowInit() {
       if (typeof window !== 'undefined' && window.Webflow) {
         try {
           // @ts-ignore
-          window.Webflow.destroy();
-          // @ts-ignore
-          window.Webflow.ready();
-          // @ts-ignore
           const ix2 = window.Webflow.require('ix2');
-          if (ix2) {
+          if (ix2 && typeof ix2.init === 'function') {
             ix2.init();
           }
         } catch (e) {
