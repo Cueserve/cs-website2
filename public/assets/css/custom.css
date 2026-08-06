@@ -160,7 +160,7 @@
 }
 
 .service-banner-ticker-flex:hover {
-  animation-play-state: paused !important;
+  animation-play-state: running !important;
 }
 
 /* ==========================================================================
