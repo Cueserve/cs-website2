@@ -56,24 +56,25 @@
   display: block !important;
   overflow: hidden !important;
   width: 100% !important;
-  padding: 22px 0 !important;
-  background: rgba(10, 25, 64, 0.94) !important;
-  backdrop-filter: blur(16px) !important;
-  -webkit-backdrop-filter: blur(16px) !important;
-  border-top: 1px solid rgba(255, 255, 255, 0.14) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.14) !important;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35) !important;
-  position: relative !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  padding: 24px 0 18px 0 !important;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.45) 40%, rgba(255, 255, 255, 0.88) 75%, #ffffff 100%) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none !important;
+  box-shadow: none !important;
   z-index: 30 !important;
-  margin-top: 40px !important;
-  margin-bottom: 20px !important;
+  margin: 0 !important;
 }
 
 .after-banner-ticker-flex {
   display: flex !important;
   align-items: center !important;
   width: max-content !important;
-  animation: marquee-infinite 30s linear infinite !important;
+  animation: marquee-infinite 35s linear infinite !important;
   will-change: transform;
 }
 
@@ -85,39 +86,38 @@
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  margin: 0 35px !important;
-  height: 48px !important;
+  margin: 0 48px !important;
+  height: 72px !important;
   flex-shrink: 0 !important;
 }
 
 .tech-logo-img {
-  height: 42px !important;
+  height: 68px !important;
   width: auto !important;
-  max-width: 80px !important;
+  max-width: 280px !important;
   object-fit: contain !important;
-  opacity: 0.95 !important;
-  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5)) !important;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  opacity: 1 !important;
+  filter: none !important;
+  transition: transform 0.3s ease !important;
 }
 
 .tech-logo-item:hover .tech-logo-img {
   opacity: 1 !important;
-  transform: scale(1.2) !important;
-  filter: drop-shadow(0 4px 16px rgba(45, 140, 255, 0.75)) !important;
+  transform: scale(1.08) !important;
+  filter: none !important;
 }
 
 @media screen and (max-width: 767px) {
   .tech-logo-item {
-    margin: 0 20px !important;
-    height: 38px !important;
+    margin: 0 24px !important;
+    height: 42px !important;
   }
   .tech-logo-img {
-    height: 32px !important;
-    max-width: 55px !important;
+    height: 38px !important;
+    max-width: 140px !important;
   }
   .after-banner-ticker-wrap {
-    padding: 14px 0 !important;
-    margin-top: 24px !important;
+    padding: 16px 0 12px 0 !important;
   }
 }
 
@@ -420,6 +420,79 @@
   color: #2d8cff !important;
   font-weight: 600 !important;
 }
+
+/* ==========================================================================
+   4. Page Load Entrance Animations for Hero Banner
+   ========================================================================== */
+
+@keyframes letterUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Staggered letter entrance animation on page load (V-I-S-I-O-N) */
+.single-banner-letter._01 {
+  animation: letterUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+.single-banner-letter._02 {
+  animation: letterUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.18s both;
+}
+
+.single-banner-letter._03 {
+  animation: letterUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.26s both;
+}
+
+.single-banner-letter._04 {
+  animation: letterUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.34s both;
+}
+
+.after-banner-wrapper {
+  width: 22.5%;
+  animation: letterUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.42s both;
+}
+
+.single-banner-letter._05 {
+  animation: letterUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
+}
+
+/* Bottom container horizontal entrance animation on page load */
+.banner-details-wrap {
+  animation: slideFromLeft 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both;
+}
+
+.banner-button-wrap {
+  animation: slideFromRight 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.52s both;
+}
+
 
 /* ==========================================================================
    4. Smaller Screen Hero Banner Clearance Fix

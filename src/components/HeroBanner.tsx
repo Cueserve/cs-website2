@@ -8,21 +8,14 @@ interface TechItem {
 }
 
 const techItems: TechItem[] = [
-  { name: 'Microsoft .NET', icon: '/assets/images/logos/dotnet.svg' },
-  { name: 'Angular', icon: '/assets/images/logos/angular.svg' },
-  { name: 'React', icon: '/assets/images/logos/react.svg' },
-  { name: 'Next.js', icon: '/assets/images/logos/nextjs.svg' },
-  { name: 'HTML5', icon: '/assets/images/logos/html5.svg' },
-  { name: 'CSS3', icon: '/assets/images/logos/css3.svg' },
-  { name: 'JavaScript', icon: '/assets/images/logos/javascript.svg' },
-  { name: 'Node.js', icon: '/assets/images/logos/nodejs.svg' },
-  { name: 'Android Studio', icon: '/assets/images/logos/androidstudio.svg' },
-  { name: 'Laravel', icon: '/assets/images/logos/laravel.svg' },
-  { name: 'WordPress', icon: '/assets/images/logos/wordpress.svg' },
-  { name: 'Swift', icon: '/assets/images/logos/swift.svg' },
-  { name: 'TypeScript', icon: '/assets/images/logos/typescript.svg' },
-  { name: 'Python', icon: '/assets/images/logos/python.svg' },
-  { name: 'Flutter', icon: '/assets/images/logos/flutter.svg' },
+  { name: 'Microsoft .NET', icon: '/Sliding_logos/dotnet.png' },
+  { name: 'Angular', icon: '/Sliding_logos/angular.png' },
+  { name: 'React', icon: '/Sliding_logos/react.png' },
+  { name: 'Next.js', icon: '/Sliding_logos/nextjs.png' },
+  { name: 'HTML5', icon: '/Sliding_logos/html.png' },
+  { name: 'CSS3', icon: '/Sliding_logos/css.png' },
+  { name: 'JavaScript', icon: '/Sliding_logos/javascript.png' },
+  { name: 'Android Studio', icon: '/Sliding_logos/android-studio.png' },
 ];
 
 export default function HeroBanner() {
