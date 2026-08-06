@@ -118,7 +118,7 @@ export default function AboutTestimonialsSection() {
                     height: '100%',
                     display: 'flex',
                     flexDirection: 'column',
-                    justify: 'space-between',
+                    justifyContent: 'space-between',
                     boxSizing: 'border-box',
                   }}
                 >

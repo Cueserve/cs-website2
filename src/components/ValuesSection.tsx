@@ -162,7 +162,7 @@ export default function ValuesSection() {
                       <div className="mission-border"></div>
                     </div>
                     <div className="mission-card-wrap" style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-                      <div className="mission-card-content-wrap" style={{ flex: 1, display: 'flex', flexDirection: 'column', justify: 'space-between' }}>
+                      <div className="mission-card-content-wrap" style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                         <div className="mission-icon-wrap">
                           <img
                             src={card.icon}

@@ -18,14 +18,14 @@ export default function Navbar() {
         <div className="navbar-wrap">
           <div className="navbar-flex-wrap">
             <div className="nav-flex-left">
-              <Link href="/" className={`main-logo-wrap w-nav-brand ${isActive('/') ? 'w--current' : ''}`}>
+              <a href="/" className={`main-logo-wrap w-nav-brand ${isActive('/') ? 'w--current' : ''}`}>
                 <img src="/cueserve-logo.png" loading="lazy" alt="Cueserve Logo" className="main-logo" style={{ maxHeight: '40px', width: 'auto' }} />
-              </Link>
+              </a>
               <div className="nav-links-wrapper">
                 <div className="nav-links-flex">
-                  <Link href="/" className={`single-nav-link w-inline-block ${isActive('/') ? 'w--current' : ''}`}>
+                  <a href="/" className={`single-nav-link w-inline-block ${isActive('/') ? 'w--current' : ''}`}>
                     <div>Home</div>
-                  </Link>
+                  </a>
                   <Link href="/about-us" className={`single-nav-link w-inline-block ${isActive('/about-us') ? 'w--current' : ''}`}>
                     <div>About Us</div>
                   </Link>
@@ -69,7 +69,7 @@ export default function Navbar() {
                             <div className="navigation-content-wrapper">
                               <div className="navigation-contents">
                                 <div className="navigation-links-flex">
-                                  <Link href="/" className={`single-navigation-links w-inline-block ${isActive('/') ? 'w--current' : ''}`}>
+                                  <a href="/" className={`single-navigation-links w-inline-block ${isActive('/') ? 'w--current' : ''}`}>
                                     <div className="navigation-inline-wrap">
                                       <div className="navigation-text-flex">
                                         <div className="navigation-link-text">Home</div>
@@ -79,7 +79,7 @@ export default function Navbar() {
                                     <div className="navigation-link-border">
                                       <div className="navigation-link-border-inner"></div>
                                     </div>
-                                  </Link>
+                                  </a>
                                   <Link href="/about-us" className={`single-navigation-links w-inline-block ${isActive('/about-us') ? 'w--current' : ''}`}>
                                     <div className="navigation-inline-wrap">
                                       <div className="navigation-text-flex">
