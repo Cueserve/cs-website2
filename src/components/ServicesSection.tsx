@@ -155,12 +155,8 @@ export default function ServicesSection() {
                           <div className="service-tab-link-content-flex">
                             <div className="service-tab-link-flex-left">
                               <div className="service-name-wrap">
-                                {isActive && (
-                                  <div className="service-name-dot-wrap">
-                                    <div className="service-name-dot !bg-[#2d8cff]"></div>
-                                  </div>
-                                )}
-                                <h3 className={`service-name ${isActive ? 'text-[#2d8cff]' : ''}`}>{service.name}</h3>
+                                {isActive && <div className="service-name-dot"></div>}
+                                <h3 className={`service-name ${isActive ? 'text-[#0052cc]' : ''}`}>{service.name}</h3>
                               </div>
 
                               {isActive && (
