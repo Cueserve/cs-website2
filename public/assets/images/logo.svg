@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 36" fill="none">
+  <!-- CS monogram icon -->
+  <path d="M18 2C8.6 2 1 9.6 1 19s7.6 17 17 17 17-7.6 17-17S27.4 2 18 2zm0 30c-7.2 0-13-5.8-13-13S10.8 6 18 6s13 5.8 13 13-5.8 13-13 13z" fill="#0A2540"/>
+  <path d="M18 6c-7.2 0-13 5.8-13 13 0 2.2.5 4.3 1.5 6.1L18 18V6z" fill="#0A2540"/>
+  <circle cx="18" cy="19" r="11" fill="#2D8CFF"/>
+  <path d="M13.5 19c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5-2 4.5-4.5 4.5" stroke="#0A2540" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <path d="M22.5 14.5c2.5 0 4.5 2 4.5 4.5" stroke="#0A2540" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <!-- Wordmark -->
+  <text x="44" y="26" font-family="'Instrument Sans', Arial, sans-serif" font-size="20" font-weight="700" fill="#2D8CFF" letter-spacing="1.5">CUESERVE</text>
+</svg>

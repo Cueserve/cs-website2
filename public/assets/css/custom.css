@@ -1,0 +1,463 @@
+/* ==========================================================================
+   Cueserve Brand Overrides & Custom Enhancements
+   ========================================================================== */
+
+/* Cueserve brand tokens */
+:root {
+  --cueserve-blue: #2d8cff;
+  --cueserve-navy: #0a2540;
+}
+
+/* Logo sizing */
+.main-logo,
+.footer-logo {
+  height: 28px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+}
+
+.footer-logo {
+  height: 32px;
+}
+
+@media screen and (max-width: 767px) {
+  .main-logo,
+  .footer-logo {
+    height: 24px;
+    max-width: 150px;
+  }
+}
+
+/* Ensure banner content & buttons are always visible across all initial states */
+.banner-details-wrap,
+.banner-button-wrap,
+.after-banner-content-wrap,
+.after-banner-title,
+.after-banner-details,
+.banner-details {
+  opacity: 1 !important;
+  visibility: visible !important;
+  filter: none !important;
+}
+
+/* ==========================================================================
+   1. Home Page Tech Stack Marquee Ticker
+   ========================================================================== */
+
+@keyframes marquee-infinite {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-33.3333%, 0, 0);
+  }
+}
+
+.after-banner-wrapper,
+.after-banner-inner,
+.after-banner-wrap {
+  visibility: visible !important;
+  opacity: 1 !important;
+  overflow: visible !important;
+}
+
+.after-banner-ticker-wrap {
+  visibility: visible !important;
+  opacity: 1 !important;
+  display: block !important;
+  overflow: hidden !important;
+  width: 100% !important;
+  padding: 22px 0 !important;
+  background: rgba(10, 25, 64, 0.94) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.14) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35) !important;
+  position: relative !important;
+  z-index: 30 !important;
+  margin-top: 40px !important;
+  margin-bottom: 20px !important;
+}
+
+.after-banner-ticker-flex {
+  display: flex !important;
+  align-items: center !important;
+  width: max-content !important;
+  animation: marquee-infinite 30s linear infinite !important;
+  will-change: transform;
+}
+
+.after-banner-ticker-flex:hover {
+  animation-play-state: paused !important;
+}
+
+.tech-logo-item {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 35px !important;
+  height: 48px !important;
+  flex-shrink: 0 !important;
+}
+
+.tech-logo-img {
+  height: 42px !important;
+  width: auto !important;
+  max-width: 80px !important;
+  object-fit: contain !important;
+  opacity: 0.95 !important;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5)) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.tech-logo-item:hover .tech-logo-img {
+  opacity: 1 !important;
+  transform: scale(1.2) !important;
+  filter: drop-shadow(0 4px 16px rgba(45, 140, 255, 0.75)) !important;
+}
+
+@media screen and (max-width: 767px) {
+  .tech-logo-item {
+    margin: 0 20px !important;
+    height: 38px !important;
+  }
+  .tech-logo-img {
+    height: 32px !important;
+    max-width: 55px !important;
+  }
+  .after-banner-ticker-wrap {
+    padding: 14px 0 !important;
+    margin-top: 24px !important;
+  }
+}
+
+/* ==========================================================================
+   2. Services & About Inner Banner Marquee Ticker
+   ========================================================================== */
+
+@keyframes service-ticker-infinite {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-33.3333%, 0, 0);
+  }
+}
+
+.service-banner-ticker-wrap {
+  overflow: hidden !important;
+  width: 100% !important;
+  position: relative !important;
+}
+
+.service-banner-ticker-flex {
+  display: flex !important;
+  width: max-content !important;
+  animation: service-ticker-infinite 35s linear infinite !important;
+  will-change: transform;
+}
+
+.service-banner-ticker-flex:hover {
+  animation-play-state: paused !important;
+}
+
+/* ==========================================================================
+   3. Universal Interactive Hover Effects Across All Pages
+   ========================================================================== */
+
+/* Primary & Secondary Button Hover Effects */
+.primary-button,
+.more-button,
+.secondary-button {
+  position: relative !important;
+  overflow: hidden !important;
+  transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+.primary-button-text-wrap {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.primary-button-text,
+.primary-button-text-hover {
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+.primary-button:hover .primary-button-text,
+.more-button:hover .primary-button-text {
+  transform: translateY(-100%) !important;
+}
+
+.primary-button:hover .primary-button-text-hover,
+.more-button:hover .primary-button-text-hover {
+  transform: translateY(-100%) !important;
+}
+
+.primary-button-arrow-wrap,
+.more-button-arrow-wrap {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.primary-button-arrow,
+.primary-button-arrow-hover,
+.more-button-arrow,
+.more-button-arrow-hover {
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.3s ease !important;
+}
+
+.primary-button:hover .primary-button-arrow,
+.more-button:hover .more-button-arrow {
+  transform: translate(100%, -100%) !important;
+  opacity: 0 !important;
+}
+
+.primary-button:hover .primary-button-arrow-hover,
+.more-button:hover .more-button-arrow-hover {
+  transform: translate(0, 0) !important;
+  opacity: 1 !important;
+}
+
+.primary-button-hover-bg {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  opacity: 0 !important;
+  transform: scale(0.85) !important;
+  transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.25, 1, 0.5, 1) !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+}
+
+.primary-button:hover .primary-button-hover-bg {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+
+/* Services Page Card Hover Effects */
+.single-service-wrap {
+  position: relative !important;
+  transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.35s ease, box-shadow 0.35s ease !important;
+  overflow: hidden !important;
+}
+
+.single-service-wrap:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 12px 36px rgba(45, 140, 255, 0.15) !important;
+}
+
+.single-service-hover-bg {
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+.single-service-wrap:hover .single-service-hover-bg {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+
+.single-service-icon {
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+.single-service-wrap:hover .single-service-icon {
+  transform: scale(1.12) rotate(3deg) !important;
+}
+
+.single-service-name {
+  transition: color 0.3s ease !important;
+}
+
+.single-service-wrap:hover .single-service-name {
+  color: #2d8cff !important;
+}
+
+/* Projects / Works Page Card Hover Effects */
+.single-project-wrap {
+  position: relative !important;
+  overflow: hidden !important;
+  border-radius: 16px !important;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease !important;
+}
+
+.single-project-wrap:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25) !important;
+}
+
+.single-project-image-wrap {
+  overflow: hidden !important;
+  display: block !important;
+  position: relative !important;
+  border-radius: 16px !important;
+}
+
+.project-image.single-project {
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1) !important;
+  will-change: transform;
+}
+
+.single-project-wrap:hover .project-image.single-project {
+  transform: scale(1.05) !important;
+}
+
+.project-arrow-button.single-project {
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s ease !important;
+}
+
+.single-project-wrap:hover .project-arrow-button.single-project {
+  transform: rotate(45deg) scale(1.1) !important;
+  background-color: #2d8cff !important;
+}
+
+.single-project-name {
+  transition: color 0.3s ease !important;
+}
+
+.single-project-wrap:hover .single-project-name {
+  color: #2d8cff !important;
+}
+
+.single-project-hover-bg {
+  transition: opacity 0.4s ease !important;
+}
+
+.single-project-wrap:hover .single-project-hover-bg {
+  opacity: 1 !important;
+}
+
+/* About Us - Team Member Card Hover Effects */
+.single-member-wrap {
+  position: relative !important;
+  overflow: hidden !important;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+.single-member-wrap:hover {
+  transform: translateY(-5px) !important;
+}
+
+.member-image {
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+.single-member-wrap:hover .member-image {
+  transform: scale(1.05) !important;
+}
+
+.member-name {
+  transition: color 0.3s ease !important;
+}
+
+.single-member-wrap:hover .member-name {
+  color: #2d8cff !important;
+}
+
+/* About Us - Mission / Values Card Hover Effects */
+.single-mission-wrapper {
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+.single-mission-wrapper:hover {
+  transform: translateY(-4px) !important;
+}
+
+.mission-image {
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+.single-mission-wrapper:hover .mission-image {
+  transform: scale(1.04) !important;
+}
+
+.mission-name-hover-bg {
+  transition: opacity 0.4s ease, transform 0.4s ease !important;
+}
+
+.single-mission-wrapper:hover .mission-name-hover-bg {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+
+/* Blog Card Hover Effects */
+.single-blog-wrap {
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+.single-blog-wrap:hover {
+  transform: translateY(-5px) !important;
+}
+
+.blog-image {
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+.single-blog-wrap:hover .blog-image {
+  transform: scale(1.05) !important;
+}
+
+.single-blog-title {
+  transition: color 0.3s ease !important;
+}
+
+.single-blog-wrap:hover .single-blog-title {
+  color: #2d8cff !important;
+}
+
+/* Contact Us Page Image & Form Checkbox */
+.contact-image {
+  visibility: visible !important;
+  opacity: 1 !important;
+  filter: none !important;
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 20px !important;
+  object-fit: cover !important;
+}
+
+.contact-checkbox.w--redirected-checked {
+  background-color: #2d8cff !important;
+  border-color: #2d8cff !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") !important;
+  background-size: 14px 14px !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+.single-checkbox-wrap.active-checkbox .checkbox-label {
+  color: #2d8cff !important;
+  font-weight: 600 !important;
+}
+
+/* ==========================================================================
+   4. Smaller Screen Hero Banner Clearance Fix
+   ========================================================================== */
+@media screen and (max-width: 1400px) and (min-width: 992px), screen and (max-height: 820px) and (min-width: 992px) {
+  .banner-content-wrapper {
+    padding-top: 5rem !important;
+    padding-bottom: 3.5rem !important;
+  }
+
+  .banner-borders-wrapper {
+    padding-top: 7rem !important;
+    padding-bottom: 5rem !important;
+  }
+
+  .banner-borders-flex {
+    height: 35.75rem !important;
+    max-height: 54vh !important;
+  }
+
+  .banner-content-bottom {
+    grid-column-gap: 1.5rem !important;
+    grid-row-gap: 1.5rem !important;
+  }
+}
+
+
+
+

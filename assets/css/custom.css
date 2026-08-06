@@ -1,0 +1,25 @@
+/* Cueserve brand overrides */
+:root {
+  --cueserve-blue: #2d8cff;
+  --cueserve-navy: #0a2540;
+}
+
+.main-logo,
+.footer-logo {
+  height: 28px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+}
+
+.footer-logo {
+  height: 32px;
+}
+
+@media screen and (max-width: 767px) {
+  .main-logo,
+  .footer-logo {
+    height: 24px;
+    max-width: 150px;
+  }
+}
