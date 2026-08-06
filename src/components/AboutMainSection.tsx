@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import RollingButton from '@/components/ui/RollingButton';
 
 export default function AboutMainSection() {
   return (
@@ -8,7 +8,7 @@ export default function AboutMainSection() {
         <div className="about-us-title-wrapper mb-0">
           <div className="about-us-title-flex">
             <div className="about-flex-left">
-              <div className="about-us-stat-wrappper">
+              <div data-w-id="497c147f-e0be-3b6c-03c7-3bee10cc43c6" className="about-us-stat-wrappper">
                 <div className="about-us-subtitle-wrap">
                   <div
                     data-wf--subtitle--variant="borders"
@@ -25,13 +25,13 @@ export default function AboutMainSection() {
                     </div>
                   </div>
                 </div>
-                <div className="about-award-count-wrap">
+                <div data-w-id="497c147f-e0be-3b6c-03c7-3bee10cc43ca" className="about-award-count-wrap">
                   <div className="about-award-count-number">40+</div>
                   <div className="award-count-arrow-wrap one">
                     <div className="award-count-arrow-text">Worldwide</div>
                     <img
-                      loading="lazy"
                       src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/691f33702cc97b2f28589225_Award-Arrow-One.png"
+                      loading="lazy"
                       alt="Award Arrow"
                       className="award-count-arrow-icon one"
                     />
@@ -39,8 +39,8 @@ export default function AboutMainSection() {
                   <div className="award-count-arrow-wrap two">
                     <div className="award-count-arrow-text two">Awards Won</div>
                     <img
-                      loading="lazy"
                       src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/691f33700369e38aee50c1d5_Award-Arrow-Two.png"
+                      loading="lazy"
                       alt="Award Arrow"
                       className="award-count-arrow-icon two"
                     />
@@ -75,35 +75,7 @@ export default function AboutMainSection() {
                   <p className="about-section-details">
                     We combine strategy, creativity, and technology to help brands grow in the modern digital landscape. Every project we take on is fueled by curiosity, guided by precision.
                   </p>
-                  <Link
-                    data-wf--primary-button--variant="alice-blue"
-                    href="/about-us"
-                    className="primary-button w-variant-3b35c6e6-bf39-22a4-81e5-2d58550c88a7 w-inline-block"
-                  >
-                    <div className="primary-button-flex">
-                      <div className="primary-button-text-wrap">
-                        <div className="primary-button-text">More About Us</div>
-                        <div className="primary-button-text-hover">More About Us</div>
-                      </div>
-                      <div className="primary-button-arrow-wrapper">
-                        <div className="primary-button-arrow-wrap">
-                          <img
-                            src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/69108960e3284bb1a2e481a4_Button-Arrow.svg"
-                            loading="lazy"
-                            alt="Arrow"
-                            className="primary-button-arrow"
-                          />
-                          <img
-                            src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/69108960e3284bb1a2e481a4_Button-Arrow.svg"
-                            loading="lazy"
-                            alt="Arrow"
-                            className="primary-button-arrow-hover"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="primary-button-hover-bg"></div>
-                  </Link>
+                  <RollingButton text="More About Us" href="/about-us" />
                 </div>
                 <div className="about-us-image-wrap">
                   <img

@@ -50,9 +50,9 @@ export const RollingButton = forwardRef<HTMLAnchorElement, RollingButtonProps>(
         </span>
 
         {/* Larger Arrow Circle Icon sitting close to right ending with matching curves */}
-        <span className={`w-7 md:w-10 h-7 md:h-10 rounded-full flex items-center justify-center shrink-0 transition-all duration-[180ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105 ${arrowClass}`}>
+        <span className={`!w-7 md:!w-10 !h-7 md:!h-10 rounded-full flex items-center justify-center shrink-0 transition-all duration-[180ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105 ${arrowClass}`}>
           <svg
-            className="w-3.5 md:w-4 h-3.5 md:h-4 transition-transform duration-[180ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+            className="!w-3.5 md:!w-4 !h-3.5 md:!h-4 !max-w-none transition-transform duration-[180ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
