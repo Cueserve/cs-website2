@@ -538,6 +538,24 @@
   background-color: #2d8cff !important;
 }
 
+@keyframes serviceCardOpen {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.service-tab-link.active .service-tags-wrapper,
+.service-tab-link.active .service-tab-link-image-wrap,
+.service-tab-link.w--current .service-tags-wrapper,
+.service-tab-link.w--current .service-tab-link-image-wrap {
+  animation: serviceCardOpen 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+}
+
 @media screen and (max-width: 991px) {
   .awards-grid-wrap {
     grid-template-columns: repeat(2, 1fr) !important;
