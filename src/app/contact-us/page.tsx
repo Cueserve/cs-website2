@@ -6,7 +6,7 @@ import Link from 'next/link';
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
   const [selectedServices, setSelectedServices] = useState<{ [key: string]: boolean }>({
-    Development: true,
+    Development: false,
     'UI/UX Design': false,
     Branding: false,
     Marketing: false,
@@ -68,15 +68,6 @@ export default function ContactPage() {
               {/* Left Column */}
               <div className="contact-flex-left-wrap">
                 <div className="contact-contents-wrap">
-                  <Link href="/" className="contact-logo-wrap w-inline-block">
-                    <img
-                      loading="lazy"
-                      src="/cueserve-logo.png"
-                      alt="Cueserve Logo"
-                      className="contact-logo"
-                      style={{ maxHeight: '36px', width: 'auto' }}
-                    />
-                  </Link>
                   <h2 className="conatct-title">Fill This Form.</h2>
                 </div>
                 <div className="contact-image-wrap">
@@ -100,24 +91,25 @@ export default function ContactPage() {
                           {servicesList.map((service) => {
                             const isChecked = !!selectedServices[service];
                             return (
-                              <label
+                              <button
                                 key={service}
-                                className={`w-checkbox single-checkbox-wrap ${isChecked ? 'active-checkbox' : ''}`}
+                                type="button"
+                                className={`single-checkbox-wrap ${isChecked ? 'active-checkbox' : ''}`}
+                                style={{
+                                  backgroundColor: isChecked ? '#000000' : 'rgba(255, 255, 255, 0.2)',
+                                  border: 'none',
+                                  outline: 'none',
+                                  cursor: 'pointer',
+                                }}
                                 onClick={() => toggleService(service)}
                               >
-                                <div
-                                  className={`w-checkbox-input w-checkbox-input--inputType-custom contact-checkbox ${
-                                    isChecked ? 'w--redirected-checked' : ''
-                                  }`}
-                                ></div>
-                                <input
-                                  type="checkbox"
-                                  checked={isChecked}
-                                  onChange={() => {}}
-                                  style={{ opacity: 0, position: 'absolute', zIndex: -1 }}
-                                />
-                                <span className="checkbox-label w-form-label">{service}</span>
-                              </label>
+                                <span
+                                  className="checkbox-label"
+                                  style={{ color: '#ffffff', fontWeight: isChecked ? 600 : 400 }}
+                                >
+                                  {service}
+                                </span>
+                              </button>
                             );
                           })}
                         </div>

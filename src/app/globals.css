@@ -363,6 +363,216 @@
   background-color: #ffffff !important;
 }
 
+/* Single Project Details Tabs Side-by-Side Grid & Vertical Timeline Line */
+.project-single-details-wrapper {
+  margin-bottom: 4rem !important;
+  width: 100% !important;
+}
+
+.project-details-tab {
+  display: grid !important;
+  grid-template-columns: 1fr auto !important;
+  grid-column-gap: 3.75rem !important;
+  grid-row-gap: 2.5rem !important;
+  align-items: center !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.project-details-tab-content {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+  width: 100% !important;
+}
+
+.project-details-tabs-menu {
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  grid-row-gap: 2.75rem !important;
+  white-space: nowrap !important;
+}
+
+.project-details-tabs-link {
+  background-color: transparent !important;
+  padding: 0 0 0 1.75rem !important;
+  position: relative !important;
+  border: none !important;
+  cursor: pointer !important;
+  text-align: left !important;
+}
+
+.project-tabs-link-dot {
+  z-index: 2 !important;
+  background-color: #dbe7ff !important;
+  border-radius: 50% !important;
+  width: 0.75rem !important;
+  height: 0.75rem !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  transition: background-color 0.3s ease !important;
+}
+
+.project-details-tabs-link.w--current .project-tabs-link-dot {
+  background-color: #0052cc !important;
+}
+
+.project-tabs-link-border {
+  z-index: 1 !important;
+  background-color: #dbe7ff !important;
+  width: 1px !important;
+  height: 10rem !important;
+  position: absolute !important;
+  left: 0.3125rem !important;
+  top: -1.75rem !important;
+}
+
+.project-overview-details-wrap {
+  border-radius: 2rem !important;
+  background-color: #edf3ff !important;
+  padding: 2.5rem 3.25rem !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.project-overview-details {
+  color: #3f4756 !important;
+  font-size: 1.125rem !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+}
+
+/* Contact Form Left Image Height Alignment */
+.contact-flex-wrap {
+  display: flex !important;
+  align-items: stretch !important;
+}
+
+.contact-flex-left-wrap {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  height: auto !important;
+}
+
+.contact-contents-wrap {
+  margin-bottom: 1.25rem !important;
+  padding: 0 !important;
+}
+
+.conatct-title {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.2 !important;
+  display: flex !important;
+  align-items: center !important;
+  height: 2.25rem !important;
+}
+
+.contact-checkbox-title {
+  color: #ffffff !important;
+  font-size: 1.25rem !important;
+  font-weight: 500 !important;
+  margin: 0 0 1.25rem 0 !important;
+  padding: 0 !important;
+  line-height: 1.2 !important;
+  display: flex !important;
+  align-items: center !important;
+  height: 2.25rem !important;
+}
+
+.contact-checkbox-wrapper {
+  margin-bottom: 2.5rem !important;
+}
+
+/* Contact Pills Styling (Single Line & White Text on Solid Black Selected Pill) */
+.contact-checkbox-flex {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  width: 100% !important;
+}
+
+.single-checkbox-wrap {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 100px !important;
+  cursor: pointer !important;
+  transition: background-color 0.25s ease, color 0.25s ease !important;
+  margin: 0 !important;
+  user-select: none !important;
+  flex-shrink: 0 !important;
+  white-space: nowrap !important;
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  border: none !important;
+  outline: none !important;
+}
+
+.single-checkbox-wrap:not(.active-checkbox) {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  border: none !important;
+  color: #ffffff !important;
+}
+
+.single-checkbox-wrap:not(.active-checkbox) *,
+.single-checkbox-wrap:not(.active-checkbox) .checkbox-label,
+.single-checkbox-wrap:not(.active-checkbox) .w-form-label {
+  color: #ffffff !important;
+}
+
+.single-checkbox-wrap.active-checkbox {
+  background-color: #000000 !important;
+  background-image: none !important;
+  border-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+.single-checkbox-wrap.active-checkbox *,
+.single-checkbox-wrap.active-checkbox .checkbox-label,
+.single-checkbox-wrap.active-checkbox .w-form-label {
+  color: #ffffff !important;
+  font-weight: 500 !important;
+}
+
+.contact-checkbox {
+  display: none !important;
+}
+
+.checkbox-label,
+.w-form-label {
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #ffffff !important;
+  font-size: 0.875rem !important;
+  line-height: 1 !important;
+}
+
+.contact-image-wrap {
+  flex: 1 !important;
+  display: flex !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 22rem !important;
+  border-radius: 1.5rem !important;
+  overflow: hidden !important;
+}
+
+.contact-image {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 1.5rem !important;
+}
+
 .single-project-name {
   transition: color 0.3s ease !important;
 }
@@ -479,7 +689,7 @@
 }
 
 .single-checkbox-wrap.active-checkbox .checkbox-label {
-  color: #2d8cff !important;
+  color: #ffffff !important;
   font-weight: 600 !important;
 }
 

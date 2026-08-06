@@ -44,11 +44,11 @@ export default function Navbar() {
             <div className="nav-flex-right">
               <div className="nav-right-flex">
                 <div className="nav-button-wrap">
-                  <Link data-wf--primary-button--variant="blue" href="/services" className="primary-button w-variant-4c2497dc-c520-3049-f2ee-2eb4bb579d66 w-inline-block">
+                  <Link data-wf--primary-button--variant="blue" href="/contact-us" className="primary-button w-variant-4c2497dc-c520-3049-f2ee-2eb4bb579d66 w-inline-block">
                     <div className="primary-button-flex">
                       <div className="primary-button-text-wrap">
-                        <div className="primary-button-text w-variant-4c2497dc-c520-3049-f2ee-2eb4bb579d66">View All Services</div>
-                        <div className="primary-button-text-hover w-variant-4c2497dc-c520-3049-f2ee-2eb4bb579d66">View All Services</div>
+                        <div className="primary-button-text w-variant-4c2497dc-c520-3049-f2ee-2eb4bb579d66">Contact Us</div>
+                        <div className="primary-button-text-hover w-variant-4c2497dc-c520-3049-f2ee-2eb4bb579d66">Contact Us</div>
                       </div>
                       <div className="primary-button-arrow-wrapper w-variant-4c2497dc-c520-3049-f2ee-2eb4bb579d66">
                         <div className="primary-button-arrow-wrap">

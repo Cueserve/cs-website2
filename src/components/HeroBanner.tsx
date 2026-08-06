@@ -63,21 +63,43 @@ export default function HeroBanner() {
                           <div className="after-banner-content-wrap">
                             <h2 className="after-banner-title">Crafting Modern <span className="after-banner-title-line">&nbsp;</span><span className="after-banner-title-mark">Vision For the</span> Ambitious Brands</h2>
                             <p className="after-banner-details">We blend creativity with strategy to build digital experiences that move brands forward. From crafting standout websites.</p>
-                            <Link data-wf--primary-button--variant="white" href="/contact-us" className="primary-button w-inline-block">
-                              <div className="primary-button-flex">
-                                <div className="primary-button-text-wrap">
-                                  <div className="primary-button-text">Get Started Now</div>
-                                  <div className="primary-button-text-hover">Get Started Now</div>
-                                </div>
-                                <div className="primary-button-arrow-wrapper">
-                                  <div className="primary-button-arrow-wrap">
-                                    <img src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/69108960e3284bb1a2e481a4_Button-Arrow.svg" loading="lazy" alt="Arrow" className="primary-button-arrow" />
-                                    <img src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/69108960e3284bb1a2e481a4_Button-Arrow.svg" loading="lazy" alt="Arrow" className="primary-button-arrow-hover" />
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
+                              <Link
+                                data-wf--primary-button--variant="blue"
+                                href="/contact-us"
+                                className="primary-button w-variant-4c2497dc-c520-3049-f2ee-2eb4bb579d66 w-inline-block"
+                              >
+                                <div className="primary-button-flex">
+                                  <div className="primary-button-text-wrap">
+                                    <div className="primary-button-text w-variant-4c2497dc-c520-3049-f2ee-2eb4bb579d66">Book a Free Call</div>
+                                    <div className="primary-button-text-hover w-variant-4c2497dc-c520-3049-f2ee-2eb4bb579d66">Book a Free Call</div>
+                                  </div>
+                                  <div className="primary-button-arrow-wrapper w-variant-4c2497dc-c520-3049-f2ee-2eb4bb579d66">
+                                    <div className="primary-button-arrow-wrap">
+                                      <img src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/6910991e7df760b9063f4b51_Button-Arrow-Blue.svg" loading="lazy" alt="Arrow" className="primary-button-arrow" />
+                                      <img src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/6910991e7df760b9063f4b51_Button-Arrow-Blue.svg" loading="lazy" alt="Arrow" className="primary-button-arrow-hover" />
+                                    </div>
                                   </div>
                                 </div>
-                              </div>
-                              <div className="primary-button-hover-bg"></div>
-                            </Link>
+                                <div className="primary-button-hover-bg"></div>
+                              </Link>
+
+                              <Link data-wf--primary-button--variant="white" href="/contact-us" className="primary-button w-inline-block">
+                                <div className="primary-button-flex">
+                                  <div className="primary-button-text-wrap">
+                                    <div className="primary-button-text">Get Started Now</div>
+                                    <div className="primary-button-text-hover">Get Started Now</div>
+                                  </div>
+                                  <div className="primary-button-arrow-wrapper">
+                                    <div className="primary-button-arrow-wrap">
+                                      <img src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/69108960e3284bb1a2e481a4_Button-Arrow.svg" loading="lazy" alt="Arrow" className="primary-button-arrow" />
+                                      <img src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/69108960e3284bb1a2e481a4_Button-Arrow.svg" loading="lazy" alt="Arrow" className="primary-button-arrow-hover" />
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="primary-button-hover-bg"></div>
+                              </Link>
+                            </div>
                           </div>
 
                           <div className="after-banner-ticker-wrap">
@@ -111,7 +133,29 @@ export default function HeroBanner() {
                   <div className="banner-details-wrap">
                     <p className="banner-details">At Cueserve, we blend creativity with strategy to build digital experiences that move brands forward. From crafting standout websites.</p>
                   </div>
-                  <div className="banner-button-wrap">
+                  <div className="banner-button-wrap" style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                    {/* Book a Free Call Button (Left) */}
+                    <Link
+                      data-wf--primary-button--variant="blue"
+                      href="/contact-us"
+                      className="primary-button w-variant-4c2497dc-c520-3049-f2ee-2eb4bb579d66 w-inline-block"
+                    >
+                      <div className="primary-button-flex">
+                        <div className="primary-button-text-wrap">
+                          <div className="primary-button-text w-variant-4c2497dc-c520-3049-f2ee-2eb4bb579d66">Book a Free Call</div>
+                          <div className="primary-button-text-hover w-variant-4c2497dc-c520-3049-f2ee-2eb4bb579d66">Book a Free Call</div>
+                        </div>
+                        <div className="primary-button-arrow-wrapper w-variant-4c2497dc-c520-3049-f2ee-2eb4bb579d66">
+                          <div className="primary-button-arrow-wrap">
+                            <img src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/6910991e7df760b9063f4b51_Button-Arrow-Blue.svg" loading="lazy" alt="Arrow" className="primary-button-arrow" />
+                            <img src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/6910991e7df760b9063f4b51_Button-Arrow-Blue.svg" loading="lazy" alt="Arrow" className="primary-button-arrow-hover" />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="primary-button-hover-bg"></div>
+                    </Link>
+
+                    {/* Get Started Now Button (Right) */}
                     <Link data-wf--primary-button--variant="alice-blue" href="/contact-us" className="primary-button w-variant-3b35c6e6-bf39-22a4-81e5-2d58550c88a7 w-inline-block">
                       <div className="primary-button-flex">
                         <div className="primary-button-text-wrap">
