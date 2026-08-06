@@ -519,6 +519,24 @@
   }
 }
 
+/* ==========================================================================
+   5. Large Screen Spacing Adjustments Between Heading Lines, Paragraph, and Button
+   ========================================================================== */
+@media screen and (min-width: 1401px) {
+  .after-banner-title {
+    line-height: 1.25 !important;
+  }
+
+  .after-banner-details {
+    margin-top: 2.25rem !important;
+    margin-bottom: 2.75rem !important;
+    font-size: 1.08rem !important;
+    line-height: 1.7 !important;
+  }
+}
+
+
+
 
 
 
