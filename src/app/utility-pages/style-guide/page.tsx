@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { RollingButton } from '@/components/ui/RollingButton';
 
 export const metadata = {
   title: 'Style Guide - Cueserve',
@@ -10,8 +11,8 @@ export default function StyleGuidePage() {
     <div className="section" style={{ paddingTop: '80px', paddingBottom: '100px' }}>
       <div className="container">
         <div style={{ maxWidth: '800px', margin: '0 auto', color: '#fff' }}>
-          <h1 style={{ fontSize: '3rem', marginBottom: '24px' }}>Style Guide</h1>
-          <p style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '1.1rem', marginBottom: '32px' }}>
+          <h1 style={{ fontSize: '3rem', marginBottom: '24px' }}>Design System &amp; Style Guide</h1>
+          <p style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '1.1rem', lineHeight: 1.6, marginBottom: '32px' }}>
             Typography scale, brand colors, button variants, and spacing guidelines for Cueserve design system.
           </p>
 
@@ -24,9 +25,7 @@ export default function StyleGuidePage() {
             </div>
           </div>
 
-          <Link href="/" className="primary-button w-inline-block">
-            <div className="primary-button-text">Return Home</div>
-          </Link>
+          <RollingButton variant="blue" href="/" text="Return Home" />
         </div>
       </div>
     </div>

@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { RollingButton } from '@/components/ui/RollingButton';
 
 export interface ProjectData {
   slug: string;
@@ -169,18 +170,7 @@ export default function ProjectDetailClient({ project }: { project: ProjectData 
 
           {/* Navigation Back Button */}
           <div style={{ marginTop: '4rem', textAlign: 'center' }}>
-            <Link
-              href="/projects"
-              className="primary-button w-variant-3b35c6e6-bf39-22a4-81e5-2d58550c88a7 w-inline-block"
-            >
-              <div className="primary-button-flex">
-                <div className="primary-button-text-wrap">
-                  <div className="primary-button-text">← View All Projects</div>
-                  <div className="primary-button-text-hover">← View All Projects</div>
-                </div>
-              </div>
-              <div className="primary-button-hover-bg"></div>
-            </Link>
+            <RollingButton variant="alice-blue" href="/projects" text="← View All Projects" showArrow={false} />
           </div>
         </div>
 

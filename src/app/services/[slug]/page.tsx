@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { RollingButton } from '@/components/ui/RollingButton';
 
 const servicesData: Record<
   string,
@@ -146,17 +147,7 @@ export default function ServiceDetailPage({
             </ul>
           </div>
 
-          <Link
-            href="/contact-us"
-            className="primary-button w-variant-4c2497dc-c520-3049-f2ee-2eb4bb579d66 w-inline-block"
-          >
-            <div className="primary-button-flex">
-              <div className="primary-button-text-wrap">
-                <div className="primary-button-text">Start A Project</div>
-                <div className="primary-button-text-hover">Start A Project</div>
-              </div>
-            </div>
-          </Link>
+          <RollingButton variant="blue" href="/contact-us" text="Start A Project" />
         </div>
       </div>
     </div>

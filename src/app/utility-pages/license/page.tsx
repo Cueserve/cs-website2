@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { RollingButton } from '@/components/ui/RollingButton';
 
 export const metadata = {
   title: 'Licenses - Cueserve',
@@ -14,9 +15,7 @@ export default function LicensePage() {
           <p style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '1.1rem', lineHeight: 1.6, marginBottom: '32px' }}>
             All photography, typography, icons, and assets utilized in the Cueserve website digital experience are licensed for royalty-free commercial and creative applications.
           </p>
-          <Link href="/" className="primary-button w-inline-block">
-            <div className="primary-button-text">Return Home</div>
-          </Link>
+          <RollingButton variant="blue" href="/" text="Return Home" />
         </div>
       </div>
     </div>

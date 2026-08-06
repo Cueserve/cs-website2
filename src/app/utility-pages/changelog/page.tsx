@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { RollingButton } from '@/components/ui/RollingButton';
 
 export const metadata = {
   title: 'Changelog - Cueserve',
@@ -27,9 +28,7 @@ export default function ChangelogPage() {
               Full release of Cueserve Next.js web platform, featuring dynamic React components, interactive tabs, testimonial slider, and FAQ accordion.
             </p>
           </div>
-          <Link href="/" className="primary-button w-inline-block">
-            <div className="primary-button-text">Return Home</div>
-          </Link>
+          <RollingButton variant="blue" href="/" text="Return Home" />
         </div>
       </div>
     </div>

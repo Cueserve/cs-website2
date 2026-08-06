@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { RollingButton } from '@/components/ui/RollingButton';
 
 export default function ProjectsSection() {
   return (
@@ -18,21 +19,7 @@ export default function ProjectsSection() {
               <h2 className="section-title">Our Latest <span className="section-title-mark">Projects.</span></h2>
             </div>
             <div className="section-title-right-wrap project-button-wrap">
-              <Link data-wf--primary-button--variant="alice-blue" href="/projects" className="primary-button w-variant-3b35c6e6-bf39-22a4-81e5-2d58550c88a7 w-inline-block">
-                <div className="primary-button-flex">
-                  <div className="primary-button-text-wrap">
-                    <div className="primary-button-text">View All Projects</div>
-                    <div className="primary-button-text-hover">View All Projects</div>
-                  </div>
-                  <div className="primary-button-arrow-wrapper">
-                    <div className="primary-button-arrow-wrap">
-                      <img src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/69108960e3284bb1a2e481a4_Button-Arrow.svg" loading="lazy" alt="Arrow" className="primary-button-arrow" />
-                      <img src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/69108960e3284bb1a2e481a4_Button-Arrow.svg" loading="lazy" alt="Arrow" className="primary-button-arrow-hover" />
-                    </div>
-                  </div>
-                </div>
-                <div className="primary-button-hover-bg"></div>
-              </Link>
+              <RollingButton variant="alice-blue" href="/projects" text="View All Projects" />
             </div>
           </div>
           <div className="projects-wrapper">

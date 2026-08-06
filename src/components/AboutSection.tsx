@@ -33,21 +33,7 @@ export default function AboutSection() {
               <div className="about-us-title-wrap">
                 <h3 className="about-us-title">Our team of designers, developers, and thinkers driven by <span className="about-us-title-mark">one purpose — to craft digital experiences.</span></h3>
                 <p className="about-section-details">We combine strategy, creativity, and technology to help brands grow in the modern digital landscape. Every project we take on is fueled by curiosity, guided by precision.</p>
-                <Link data-wf--primary-button--variant="alice-blue" href="/about-us" className="primary-button w-variant-3b35c6e6-bf39-22a4-81e5-2d58550c88a7 w-inline-block mt-4 mb-6">
-                  <div className="primary-button-flex">
-                    <div className="primary-button-text-wrap">
-                      <div className="primary-button-text">More About Us</div>
-                      <div className="primary-button-text-hover">More About Us</div>
-                    </div>
-                    <div className="primary-button-arrow-wrapper">
-                      <div className="primary-button-arrow-wrap">
-                        <img src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/69108960e3284bb1a2e481a4_Button-Arrow.svg" loading="lazy" alt="Arrow" className="primary-button-arrow" />
-                        <img src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/69108960e3284bb1a2e481a4_Button-Arrow.svg" loading="lazy" alt="Arrow" className="primary-button-arrow-hover" />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="primary-button-hover-bg"></div>
-                </Link>
+                <RollingButton variant="alice-blue" href="/about-us" text="More About Us" className="mt-4 mb-6" />
               </div>
             </div>
           </div>

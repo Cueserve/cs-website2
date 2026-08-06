@@ -3,64 +3,66 @@
 import React, { forwardRef } from "react";
 import Link from "next/link";
 
-export interface RollingButtonProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
-  text: string;
+export type ButtonVariant = "default" | "white" | "blue" | "alice-blue";
+
+export interface RollingButtonProps extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, 'text'> {
+  text?: React.ReactNode;
+  children?: React.ReactNode;
   href?: string;
   className?: string;
-  variant?: "primary" | "secondary";
+  variant?: ButtonVariant;
+  showArrow?: boolean;
 }
 
 export const RollingButton = forwardRef<HTMLAnchorElement, RollingButtonProps>(
-  ({ text, href = "#contact", className = "", variant = "secondary", ...rest }, ref) => {
-    const isPrimary = variant === "primary";
+  ({ text, children, href = "/contact-us", className = "", variant = "alice-blue", showArrow = true, style, ...rest }, ref) => {
+    const buttonText = text || children || "";
 
-    const pillClass = isPrimary
-      ? "bg-[#2d8cff] hover:bg-[#1a75e8] text-white border border-[#2d8cff]"
-      : "bg-white hover:bg-slate-50 text-slate-900 border border-slate-200";
+    let variantAttribute = "white";
+    let variantClass = "";
+    let textVariantClass = "";
+    let arrowVariantClass = "";
+    let arrowSrc = "https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/69108960e3284bb1a2e481a4_Button-Arrow.svg";
 
-    const arrowClass = isPrimary
-      ? "bg-white text-[#2d8cff] group-hover:bg-slate-50"
-      : "bg-[#2d8cff] text-white group-hover:bg-[#1a75e8]";
+    if (variant === "blue") {
+      variantAttribute = "blue";
+      variantClass = "w-variant-4c2497dc-c520-3049-f2ee-2eb4bb579d66";
+      textVariantClass = "w-variant-4c2497dc-c520-3049-f2ee-2eb4bb579d66";
+      arrowVariantClass = "w-variant-4c2497dc-c520-3049-f2ee-2eb4bb579d66";
+      arrowSrc = "https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/6910991e7df760b9063f4b51_Button-Arrow-Blue.svg";
+    } else if (variant === "alice-blue") {
+      variantAttribute = "alice-blue";
+      variantClass = "w-variant-3b35c6e6-bf39-22a4-81e5-2d58550c88a7";
+      arrowSrc = "https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/69108960e3284bb1a2e481a4_Button-Arrow.svg";
+    } else if (variant === "white") {
+      variantAttribute = "white";
+      arrowSrc = "https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/69108960e3284bb1a2e481a4_Button-Arrow.svg";
+    }
 
     return (
       <Link
         ref={ref}
+        data-wf--primary-button--variant={variantAttribute}
         href={href}
-        className={`group relative inline-flex items-center gap-2 md:gap-3 pl-4 md:pl-6 pr-1 md:pr-1.5 py-1 md:py-1.5 rounded-full text-[13px] md:text-[16px] transition-all duration-[180ms] ease-[cubic-bezier(0.16,1,0.3,1)] shadow-md hover:shadow-lg shrink-0 ${pillClass} ${className}`}
+        className={`primary-button ${variantClass} w-inline-block ${className}`}
+        style={style}
         {...rest}
       >
-        {/* Staggered Letter-by-Letter Rolling Text Animation */}
-        <span className="inline-flex items-center overflow-hidden h-5 md:h-7 leading-5 md:leading-7 font-sans">
-          {text.split("").map((char, index) => (
-            <span key={index} className="relative inline-block overflow-hidden h-5 md:h-7 leading-5 md:leading-7">
-              <span
-                className="inline-block transition-transform duration-[180ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-full"
-                style={{ transitionDelay: `${index * 8}ms` }}
-              >
-                {char === " " ? "\u00A0" : char}
-              </span>
-              <span
-                className="absolute inset-0 inline-block translate-y-full transition-transform duration-[180ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-y-0"
-                style={{ transitionDelay: `${index * 8}ms` }}
-              >
-                {char === " " ? "\u00A0" : char}
-              </span>
-            </span>
-          ))}
-        </span>
-
-        {/* Larger Arrow Circle Icon sitting close to right ending with matching curves */}
-        <span className={`!w-7 md:!w-10 !h-7 md:!h-10 rounded-full flex items-center justify-center shrink-0 transition-all duration-[180ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105 ${arrowClass}`}>
-          <svg
-            className="!w-3.5 md:!w-4 !h-3.5 md:!h-4 !max-w-none transition-transform duration-[180ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            strokeWidth={2.5}
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
-          </svg>
-        </span>
+        <div className="primary-button-flex">
+          <div className="primary-button-text-wrap">
+            <div className={`primary-button-text ${textVariantClass}`}>{buttonText}</div>
+            <div className={`primary-button-text-hover ${textVariantClass}`}>{buttonText}</div>
+          </div>
+          {showArrow && (
+            <div className={`primary-button-arrow-wrapper ${arrowVariantClass}`}>
+              <div className="primary-button-arrow-wrap">
+                <img src={arrowSrc} loading="lazy" alt="Arrow" className="primary-button-arrow" />
+                <img src={arrowSrc} loading="lazy" alt="Arrow" className="primary-button-arrow-hover" />
+              </div>
+            </div>
+          )}
+        </div>
+        <div className="primary-button-hover-bg"></div>
       </Link>
     );
   }

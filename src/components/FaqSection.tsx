@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { RollingButton } from '@/components/ui/RollingButton';
 
 export default function FaqSection() {
   return (
@@ -36,21 +37,7 @@ export default function FaqSection() {
                       <div className="faq-ans-divider"></div>
                       <p className="faq-details">Arooth provides end-to-end digital solutions, including web design, development, branding, digital marketing, UI/UX strategy, and SEO optimization — all tailored to help your business grow online.</p>
                       <div className="faq-button-wrap">
-                        <Link data-wf--primary-button--variant="white" href="/about-us" className="primary-button w-inline-block">
-                          <div className="primary-button-flex">
-                            <div className="primary-button-text-wrap">
-                              <div className="primary-button-text">More About Us</div>
-                              <div className="primary-button-text-hover">More About Us</div>
-                            </div>
-                            <div className="primary-button-arrow-wrapper">
-                              <div className="primary-button-arrow-wrap">
-                                <img src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/69108960e3284bb1a2e481a4_Button-Arrow.svg" loading="lazy" alt="Arrow" className="primary-button-arrow"/>
-                                <img src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/69108960e3284bb1a2e481a4_Button-Arrow.svg" loading="lazy" alt="Arrow" className="primary-button-arrow-hover"/>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="primary-button-hover-bg"></div>
-                        </Link>
+                        <RollingButton variant="white" href="/about-us" text="More About Us" />
                       </div>
                     </div>
                   </div>
@@ -77,21 +64,7 @@ export default function FaqSection() {
                       <div className="faq-ans-divider"></div>
                       <p className="faq-details">Arooth provides end-to-end digital solutions, including web design, development, branding, digital marketing, UI/UX strategy, and SEO optimization — all tailored to help your business grow online.</p>
                       <div className="faq-button-wrap">
-                        <Link data-wf--primary-button--variant="white" href="/about-us" className="primary-button w-inline-block">
-                          <div className="primary-button-flex">
-                            <div className="primary-button-text-wrap">
-                              <div className="primary-button-text">More About Us</div>
-                              <div className="primary-button-text-hover">More About Us</div>
-                            </div>
-                            <div className="primary-button-arrow-wrapper">
-                              <div className="primary-button-arrow-wrap">
-                                <img src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/69108960e3284bb1a2e481a4_Button-Arrow.svg" loading="lazy" alt="Arrow" className="primary-button-arrow"/>
-                                <img src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/69108960e3284bb1a2e481a4_Button-Arrow.svg" loading="lazy" alt="Arrow" className="primary-button-arrow-hover"/>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="primary-button-hover-bg"></div>
-                        </Link>
+                        <RollingButton variant="white" href="/about-us" text="More About Us" />
                       </div>
                     </div>
                   </div>
@@ -118,21 +91,7 @@ export default function FaqSection() {
                       <div className="faq-ans-divider"></div>
                       <p className="faq-details">Arooth provides end-to-end digital solutions, including web design, development, branding, digital marketing, UI/UX strategy, and SEO optimization — all tailored to help your business grow online.</p>
                       <div className="faq-button-wrap">
-                        <Link data-wf--primary-button--variant="white" href="/about-us" className="primary-button w-inline-block">
-                          <div className="primary-button-flex">
-                            <div className="primary-button-text-wrap">
-                              <div className="primary-button-text">More About Us</div>
-                              <div className="primary-button-text-hover">More About Us</div>
-                            </div>
-                            <div className="primary-button-arrow-wrapper">
-                              <div className="primary-button-arrow-wrap">
-                                <img src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/69108960e3284bb1a2e481a4_Button-Arrow.svg" loading="lazy" alt="Arrow" className="primary-button-arrow"/>
-                                <img src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/69108960e3284bb1a2e481a4_Button-Arrow.svg" loading="lazy" alt="Arrow" className="primary-button-arrow-hover"/>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="primary-button-hover-bg"></div>
-                        </Link>
+                        <RollingButton variant="white" href="/about-us" text="More About Us" />
                       </div>
                     </div>
                   </div>
@@ -159,21 +118,7 @@ export default function FaqSection() {
                       <div className="faq-ans-divider"></div>
                       <p className="faq-details">Arooth provides end-to-end digital solutions, including web design, development, branding, digital marketing, UI/UX strategy, and SEO optimization — all tailored to help your business grow online.</p>
                       <div className="faq-button-wrap">
-                        <Link data-wf--primary-button--variant="white" href="/about-us" className="primary-button w-inline-block">
-                          <div className="primary-button-flex">
-                            <div className="primary-button-text-wrap">
-                              <div className="primary-button-text">More About Us</div>
-                              <div className="primary-button-text-hover">More About Us</div>
-                            </div>
-                            <div className="primary-button-arrow-wrapper">
-                              <div className="primary-button-arrow-wrap">
-                                <img src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/69108960e3284bb1a2e481a4_Button-Arrow.svg" loading="lazy" alt="Arrow" className="primary-button-arrow"/>
-                                <img src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/69108960e3284bb1a2e481a4_Button-Arrow.svg" loading="lazy" alt="Arrow" className="primary-button-arrow-hover"/>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="primary-button-hover-bg"></div>
-                        </Link>
+                        <RollingButton variant="white" href="/about-us" text="More About Us" />
                       </div>
                     </div>
                   </div>
@@ -200,21 +145,7 @@ export default function FaqSection() {
                       <div className="faq-ans-divider"></div>
                       <p className="faq-details">Arooth provides end-to-end digital solutions, including web design, development, branding, digital marketing, UI/UX strategy, and SEO optimization — all tailored to help your business grow online.</p>
                       <div className="faq-button-wrap">
-                        <Link data-wf--primary-button--variant="white" href="/about-us" className="primary-button w-inline-block">
-                          <div className="primary-button-flex">
-                            <div className="primary-button-text-wrap">
-                              <div className="primary-button-text">More About Us</div>
-                              <div className="primary-button-text-hover">More About Us</div>
-                            </div>
-                            <div className="primary-button-arrow-wrapper">
-                              <div className="primary-button-arrow-wrap">
-                                <img src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/69108960e3284bb1a2e481a4_Button-Arrow.svg" loading="lazy" alt="Arrow" className="primary-button-arrow"/>
-                                <img src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/69108960e3284bb1a2e481a4_Button-Arrow.svg" loading="lazy" alt="Arrow" className="primary-button-arrow-hover"/>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="primary-button-hover-bg"></div>
-                        </Link>
+                        <RollingButton variant="white" href="/about-us" text="More About Us" />
                       </div>
                     </div>
                   </div>

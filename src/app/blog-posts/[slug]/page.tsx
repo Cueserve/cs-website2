@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { RollingButton } from '@/components/ui/RollingButton';
 
 const blogPostsData: Record<
   string,
@@ -103,17 +104,7 @@ export default function BlogPostPage({
             {post.content}
           </p>
 
-          <Link
-            href="/blogs"
-            className="primary-button w-variant-3b35c6e6-bf39-22a4-81e5-2d58550c88a7 w-inline-block"
-          >
-            <div className="primary-button-flex">
-              <div className="primary-button-text-wrap">
-                <div className="primary-button-text">← Back to Articles</div>
-                <div className="primary-button-text-hover">← Back to Articles</div>
-              </div>
-            </div>
-          </Link>
+          <RollingButton variant="alice-blue" href="/blogs" text="← Back to Articles" showArrow={false} />
         </div>
       </div>
     </div>

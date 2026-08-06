@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { RollingButton } from '@/components/ui/RollingButton';
 
 export default function Navbar() {
   const pathname = usePathname() || '/';
@@ -12,20 +13,25 @@ export default function Navbar() {
     return false;
   };
 
+  const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    window.location.href = '/';
+  };
+
   return (
     <div data-animation="default" data-collapse="all" data-duration="0" data-easing="ease" data-easing2="ease" role="banner" className="navbar w-nav">
       <div className="container navbar-container">
         <div className="navbar-wrap">
           <div className="navbar-flex-wrap">
             <div className="nav-flex-left">
-              <a href="/" className={`main-logo-wrap w-nav-brand ${isActive('/') ? 'w--current' : ''}`}>
+              <Link href="/" onClick={handleHomeClick} className={`main-logo-wrap w-nav-brand ${isActive('/') ? 'w--current' : ''}`}>
                 <img src="/cueserve-logo.png" loading="lazy" alt="Cueserve Logo" className="main-logo" style={{ maxHeight: '40px', width: 'auto' }} />
-              </a>
+              </Link>
               <div className="nav-links-wrapper">
                 <div className="nav-links-flex">
-                  <a href="/" className={`single-nav-link w-inline-block ${isActive('/') ? 'w--current' : ''}`}>
+                  <Link href="/" onClick={handleHomeClick} className={`single-nav-link w-inline-block ${isActive('/') ? 'w--current' : ''}`}>
                     <div>Home</div>
-                  </a>
+                  </Link>
                   <Link href="/about-us" className={`single-nav-link w-inline-block ${isActive('/about-us') ? 'w--current' : ''}`}>
                     <div>About Us</div>
                   </Link>
@@ -44,21 +50,7 @@ export default function Navbar() {
             <div className="nav-flex-right">
               <div className="nav-right-flex">
                 <div className="nav-button-wrap">
-                  <Link data-wf--primary-button--variant="blue" href="/contact-us" className="primary-button w-variant-4c2497dc-c520-3049-f2ee-2eb4bb579d66 w-inline-block">
-                    <div className="primary-button-flex">
-                      <div className="primary-button-text-wrap">
-                        <div className="primary-button-text w-variant-4c2497dc-c520-3049-f2ee-2eb4bb579d66">Contact Us</div>
-                        <div className="primary-button-text-hover w-variant-4c2497dc-c520-3049-f2ee-2eb4bb579d66">Contact Us</div>
-                      </div>
-                      <div className="primary-button-arrow-wrapper w-variant-4c2497dc-c520-3049-f2ee-2eb4bb579d66">
-                        <div className="primary-button-arrow-wrap">
-                          <img src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/6910991e7df760b9063f4b51_Button-Arrow-Blue.svg" loading="lazy" alt="Arrow" className="primary-button-arrow" />
-                          <img src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/6910991e7df760b9063f4b51_Button-Arrow-Blue.svg" loading="lazy" alt="Arrow" className="primary-button-arrow-hover" />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="primary-button-hover-bg"></div>
-                  </Link>
+                  <RollingButton variant="blue" href="/contact-us" text="Contact Us" />
                 </div>
                 <div className="navigations-wrapper">
                   <nav role="navigation" className="navigation w-nav-menu">
@@ -69,7 +61,7 @@ export default function Navbar() {
                             <div className="navigation-content-wrapper">
                               <div className="navigation-contents">
                                 <div className="navigation-links-flex">
-                                  <a href="/" className={`single-navigation-links w-inline-block ${isActive('/') ? 'w--current' : ''}`}>
+                                  <a href="/" onClick={handleHomeClick} className={`single-navigation-links w-inline-block ${isActive('/') ? 'w--current' : ''}`}>
                                     <div className="navigation-inline-wrap">
                                       <div className="navigation-text-flex">
                                         <div className="navigation-link-text">Home</div>

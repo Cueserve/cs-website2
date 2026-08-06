@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { RollingButton } from '@/components/ui/RollingButton';
 
 export const metadata = {
   title: 'Protected Page - Cueserve',
@@ -38,16 +39,7 @@ export default function ProtectedPage() {
             marginBottom: '20px',
           }}
         />
-        <Link
-          href="/"
-          className="primary-button w-variant-4c2497dc-c520-3049-f2ee-2eb4bb579d66 w-inline-block"
-        >
-          <div className="primary-button-flex">
-            <div className="primary-button-text-wrap">
-              <div className="primary-button-text">Submit</div>
-            </div>
-          </div>
-        </Link>
+        <RollingButton variant="blue" href="/" text="Submit" />
       </div>
     </div>
   );
