@@ -2,7 +2,7 @@ import AboutHeroBanner from '@/components/AboutHeroBanner';
 import AboutMainSection from '@/components/AboutMainSection';
 import TeamMembersSection from '@/components/TeamMembersSection';
 import ValuesSection from '@/components/ValuesSection';
-import TestimonialsSection from '@/components/TestimonialsSection';
+import AboutTestimonialsSection from '@/components/AboutTestimonialsSection';
 import FaqSection from '@/components/FaqSection';
 
 export const metadata = {
@@ -17,7 +17,7 @@ export default function AboutPage() {
       <AboutMainSection />
       <TeamMembersSection />
       <ValuesSection />
-      <TestimonialsSection />
+      <AboutTestimonialsSection />
       <FaqSection />
     </>
   );

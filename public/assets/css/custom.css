@@ -270,11 +270,14 @@
 .single-member-wrap {
   position: relative !important;
   overflow: hidden !important;
-  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
 }
 
 .single-member-wrap:hover {
-  transform: translateY(-5px) !important;
+  transform: none !important;
+}
+
+.member-image-wrap {
+  overflow: hidden !important;
 }
 
 .member-image {
@@ -282,7 +285,7 @@
 }
 
 .single-member-wrap:hover .member-image {
-  transform: scale(1.05) !important;
+  transform: scale(1.08) !important;
 }
 
 .member-name {
@@ -295,11 +298,11 @@
 
 /* About Us - Mission / Values Card Hover Effects */
 .single-mission-wrapper {
-  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+  transition: flex 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
 }
 
 .single-mission-wrapper:hover {
-  transform: translateY(-4px) !important;
+  /* Allow Webflow IX2 scroll transforms */
 }
 
 .mission-image {
@@ -310,13 +313,11 @@
   transform: scale(1.04) !important;
 }
 
+.mission-name-wrap,
+.mission-name,
 .mission-name-hover-bg {
-  transition: opacity 0.4s ease, transform 0.4s ease !important;
-}
-
-.single-mission-wrapper:hover .mission-name-hover-bg {
-  opacity: 1 !important;
-  transform: scale(1) !important;
+  pointer-events: none !important;
+  user-select: none !important;
 }
 
 /* Blog Card Hover Effects */
