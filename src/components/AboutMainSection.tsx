@@ -1,5 +1,5 @@
 import React from 'react';
-import RollingButton from '@/components/ui/RollingButton';
+import { RollingButton } from '@/components/ui/RollingButton';
 
 export default function AboutMainSection() {
   return (
@@ -75,7 +75,6 @@ export default function AboutMainSection() {
                   <p className="about-section-details">
                     We combine strategy, creativity, and technology to help brands grow in the modern digital landscape. Every project we take on is fueled by curiosity, guided by precision.
                   </p>
-                  <RollingButton text="More About Us" href="/about-us" />
                 </div>
                 <div className="about-us-image-wrap">
                   <img
