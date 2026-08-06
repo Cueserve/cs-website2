@@ -33,6 +33,12 @@ export default function ContactPage() {
 
   const servicesList = ['Development', 'UI/UX Design', 'Branding', 'Marketing'];
 
+  const isFormValid =
+    formData.name.trim() !== '' &&
+    formData.phone.trim() !== '' &&
+    formData.email.trim() !== '' &&
+    formData.message.trim() !== '';
+
   return (
     <>
       <div className="inner-page-top-bg">
@@ -64,26 +70,26 @@ export default function ContactPage() {
           </div>
 
           <div className="contact-wrapper">
-            <div className="contact-flex-wrap">
-              {/* Left Column */}
-              <div className="contact-flex-left-wrap">
-                <div className="contact-contents-wrap">
-                  <h2 className="conatct-title">Fill This Form.</h2>
+            {!submitted ? (
+              <div className="contact-flex-wrap">
+                {/* Left Column */}
+                <div className="contact-flex-left-wrap">
+                  <div className="contact-contents-wrap">
+                    <h2 className="conatct-title">Fill This Form.</h2>
+                  </div>
+                  <div className="contact-image-wrap">
+                    <img
+                      className="contact-image"
+                      src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/6918bc29c60a086055740d7e_Contact-Image.jpg"
+                      alt="Contact Image"
+                      loading="lazy"
+                    />
+                  </div>
                 </div>
-                <div className="contact-image-wrap">
-                  <img
-                    className="contact-image"
-                    src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/6918bc29c60a086055740d7e_Contact-Image.jpg"
-                    alt="Contact Image"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
 
-              {/* Right Column (Form) */}
-              <div className="contact-flex-right-wrap">
-                <div className="contact-form-wrap w-form">
-                  {!submitted ? (
+                {/* Right Column (Form) */}
+                <div className="contact-flex-right-wrap">
+                  <div className="contact-form-wrap w-form">
                     <form onSubmit={handleSubmit} className="contact-form-content">
                       <div className="contact-checkbox-wrapper">
                         <div className="contact-checkbox-title">Tell us about your projects*</div>
@@ -105,7 +111,7 @@ export default function ContactPage() {
                               >
                                 <span
                                   className="checkbox-label"
-                                  style={{ color: '#ffffff', fontWeight: isChecked ? 600 : 400 }}
+                                  style={{ color: '#ffffff', fontWeight: 400 }}
                                 >
                                   {service}
                                 </span>
@@ -169,18 +175,51 @@ export default function ContactPage() {
                         </div>
                       </div>
 
-                      <input type="submit" className="submit-button w-button" value="Get In Touch" />
+                      <input
+                        type="submit"
+                        className="submit-button w-button"
+                        value="Get In Touch"
+                        disabled={!isFormValid}
+                        style={{
+                          opacity: isFormValid ? 1 : 0.5,
+                          cursor: isFormValid ? 'pointer' : 'not-allowed',
+                          pointerEvents: isFormValid ? 'auto' : 'none',
+                        }}
+                      />
                     </form>
-                  ) : (
-                    <div className="contact-success-message-wrap w-form-done" style={{ display: 'block' }}>
-                      <div className="contact-success-message" style={{ fontSize: '1.2rem', padding: '30px' }}>
-                        Thank you for reaching out, <strong>{formData.name}</strong>! We will get back to you shortly at {formData.email}.
-                      </div>
-                    </div>
-                  )}
+                  </div>
                 </div>
               </div>
-            </div>
+            ) : (
+              <div
+                className="contact-success-message-wrap w-form-done"
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  minHeight: '380px',
+                  width: '100%',
+                }}
+              >
+                <div
+                  className="contact-success-message"
+                  style={{
+                    fontSize: '1.25rem',
+                    padding: '48px 64px',
+                    textAlign: 'center',
+                    maxWidth: '640px',
+                    backgroundColor: '#ffffff',
+                    color: '#0a2540',
+                    borderRadius: '24px',
+                    boxShadow: '0 12px 40px rgba(0, 0, 0, 0.08)',
+                    border: '1px solid rgba(12, 56, 90, 0.08)',
+                  }}
+                >
+                  Thank you for reaching out, <strong>{formData.name}</strong>!<br /><br />
+                  We have received your message and will get back to you shortly at <strong>{formData.email}</strong>.
+                </div>
+              </div>
+            )}
           </div>
         </div>
         <div className="section-divider"></div>
