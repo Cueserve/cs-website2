@@ -32,13 +32,18 @@ export function MobileMenu({
 }: Props) {
   const pathname = usePathname();
   const [activeIds, setActiveIds] = useState<Record<string, boolean>>({});
+  const isHomePage = pathname === "/" || pathname === "/home";
 
   useEffect(() => {
     const checkIds = () => {
       const ids: Record<string, boolean> = {};
       MEGA_MENU_ORDER.forEach((key) => {
         const id = TARGET_IDS[key];
-        ids[key] = !!document.getElementById(id);
+        if (isHomePage) {
+          ids[key] = !!document.getElementById(id);
+        } else {
+          ids[key] = true;
+        }
       });
       setActiveIds(ids);
     };
@@ -57,7 +62,7 @@ export function MobileMenu({
       clearTimeout(timer3);
       observer.disconnect();
     };
-  }, [pathname]);
+  }, [pathname, isHomePage]);
 
   return (
     <nav
@@ -69,10 +74,11 @@ export function MobileMenu({
           if (!activeIds[key]) return null;
 
           const targetId = TARGET_IDS[key];
+          const href = isHomePage ? `#${targetId}` : `/home#${targetId}`;
           return (
             <li key={key} className="w-full">
               <a
-                href={`#${targetId}`}
+                href={href}
                 onClick={onCloseNav}
                 className="flex w-full items-center justify-between rounded-2xl px-5 py-4 text-left text-xl font-paragraph font-normal transition-all duration-300 text-cs-ink hover:bg-[#f4f8ff] hover:text-brand-default"
               >

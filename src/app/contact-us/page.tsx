@@ -40,190 +40,174 @@ export default function ContactPage() {
     formData.message.trim() !== '';
 
   return (
-    <>
-      <div className="inner-page-top-bg">
-        <div className="inner-page-bg-overlay"></div>
-      </div>
+    <div id="contact" className="min-h-screen bg-cs-surface-tint flex flex-col justify-between pt-24 pb-12 font-paragraph">
+      <div className="w-[90%] xl:w-[82%] max-w-[1260px] mx-auto py-12">
+        {/* Banner Section */}
+        <div className="mb-16 text-center md:text-left">
+          <div className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider text-cs-dark-blue border border-cs-border bg-brand-subtle mb-6">
+            <svg
+              className="w-3.5 h-3.5 mr-2 text-cs-dark-blue"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              strokeWidth="2.5"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
+            </svg>
+            Get In Touch
+          </div>
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-cs-ink leading-tight font-display">
+            Contact <span className="text-cs-dark-blue">Us.</span>
+          </h1>
+          <p className="mt-6 text-lg text-cs-ink-muted max-w-2xl leading-relaxed">
+            At Cueserve, we offer a full range of creative and digital services designed to help brands stand out and succeed in a fast-evolving digital world.
+          </p>
+        </div>
 
-      <section className="inner-banner contact-us">
-        <div className="container">
-          <div className="inner-banner-content-wrap margin-bottom">
-            <div className="inner-banner-subtitle-wrap">
-              <div data-wf--subtitle--variant="base" className="subtitle-wrap">
-                <div className="subtitle-flex-wrap">
-                  <img
-                    src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/690f9e158664fc7bd2753513_Subtitle-Icon.svg"
-                    loading="lazy"
-                    alt="Subtitle Icon"
-                    className="subtitle-icon"
-                  />
-                  <div className="subtitle-text">Get In Touch</div>
-                </div>
+        {/* Contact Layout */}
+        <div className="bg-cs-surface rounded-3xl border border-cs-border overflow-hidden shadow-sm grid grid-cols-1 lg:grid-cols-12">
+          {/* Left Panel */}
+          <div className="lg:col-span-5 bg-cs-surface-dark text-text-inverse p-8 md:p-12 flex flex-col justify-between relative overflow-hidden">
+            <div className="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-400 via-blue-600 to-slate-950 pointer-events-none" />
+            
+            <div className="relative z-10">
+              <Link href="/" className="inline-block mb-12">
+                <img
+                  loading="lazy"
+                  src="/cueserve-logo.png"
+                  alt="Cueserve Logo"
+                  className="brightness-0 invert max-h-9 w-auto"
+                />
+              </Link>
+              
+              <h2 className="text-3xl font-semibold mb-6 font-display">Fill out the form.</h2>
+              <p className="text-text-inverse-muted max-w-xs leading-relaxed text-sm md:text-base">
+                Tell us about your project requirements and we will get back to you within 24 hours.
+              </p>
+            </div>
+
+            <div className="relative z-10 mt-12 pt-8 border-t border-cs-border-strong flex flex-col gap-4 text-sm text-text-inverse-muted">
+              <div className="flex items-center gap-3">
+                <span className="text-lg">✉</span>
+                <span>hello@cueserve.com</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-lg">☏</span>
+                <span>+1 (555) 019-2834</span>
               </div>
             </div>
-            <h1 className="inner-banner-title">
-              Contact <span className="inner-banner-title-mark">Us.</span>
-            </h1>
-            <p className="inner-banner-details">
-              At Cueserve, we offer a full range of creative and digital services designed to help brands stand out and succeed in a fast-evolving digital world.
-            </p>
           </div>
 
-          <div className="contact-wrapper">
+          {/* Right Panel (Form) */}
+          <div className="lg:col-span-7 p-8 md:p-12 bg-cs-surface">
             {!submitted ? (
-              <div className="contact-flex-wrap">
-                {/* Left Column */}
-                <div className="contact-flex-left-wrap">
-                  <div className="contact-contents-wrap">
-                    <h2 className="conatct-title">Fill This Form.</h2>
+              <form onSubmit={handleSubmit} className="space-y-8">
+                {/* Services Checklist */}
+                <div>
+                  <div className="text-sm font-semibold text-cs-ink mb-4">
+                    Tell us about your project *
                   </div>
-                  <div className="contact-image-wrap">
-                    <img
-                      className="contact-image"
-                      src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/6918bc29c60a086055740d7e_Contact-Image.jpg"
-                      alt="Contact Image"
-                      loading="lazy"
+                  <div className="flex flex-wrap gap-3">
+                    {servicesList.map((service) => {
+                      const isChecked = !!selectedServices[service];
+                      return (
+                        <button
+                          key={service}
+                          type="button"
+                          onClick={() => toggleService(service)}
+                          className={`px-5 py-2.5 rounded-full text-sm font-medium border transition-all duration-200 ${
+                            isChecked
+                              ? 'bg-cs-dark-blue text-text-inverse border-cs-dark-blue shadow-sm'
+                              : 'bg-cs-surface-tint text-cs-ink-muted border-cs-border hover:border-cs-border-strong'
+                          }`}
+                        >
+                          {service}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                {/* Form Fields */}
+                <div className="space-y-6">
+                  <div>
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Your Name *"
+                      required
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      className="w-full px-5 py-4 bg-cs-surface-tint border border-cs-border rounded-2xl text-cs-ink placeholder-cs-ink-subtle focus:outline-none focus:border-cs-dark-blue focus:bg-cs-surface transition-all text-sm"
+                    />
+                  </div>
+                  
+                  <div>
+                    <input
+                      type="tel"
+                      name="phone"
+                      placeholder="Phone Number *"
+                      required
+                      value={formData.phone}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      className="w-full px-5 py-4 bg-cs-surface-tint border border-cs-border rounded-2xl text-cs-ink placeholder-cs-ink-subtle focus:outline-none focus:border-cs-dark-blue focus:bg-cs-surface transition-all text-sm"
+                    />
+                  </div>
+
+                  <div>
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Email *"
+                      required
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      className="w-full px-5 py-4 bg-cs-surface-tint border border-cs-border rounded-2xl text-cs-ink placeholder-cs-ink-subtle focus:outline-none focus:border-cs-dark-blue focus:bg-cs-surface transition-all text-sm"
+                    />
+                  </div>
+
+                  <div>
+                    <textarea
+                      name="message"
+                      placeholder="Message *"
+                      rows={4}
+                      required
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      className="w-full px-5 py-4 bg-cs-surface-tint border border-cs-border rounded-2xl text-cs-ink placeholder-cs-ink-subtle focus:outline-none focus:border-cs-dark-blue focus:bg-cs-surface transition-all text-sm resize-none"
                     />
                   </div>
                 </div>
 
-                {/* Right Column (Form) */}
-                <div className="contact-flex-right-wrap">
-                  <div className="contact-form-wrap w-form">
-                    <form onSubmit={handleSubmit} className="contact-form-content">
-                      <div className="contact-checkbox-wrapper">
-                        <div className="contact-checkbox-title">Tell us about your projects*</div>
-                        <div className="contact-checkbox-flex">
-                          {servicesList.map((service) => {
-                            const isChecked = !!selectedServices[service];
-                            return (
-                              <button
-                                key={service}
-                                type="button"
-                                className={`single-checkbox-wrap ${isChecked ? 'active-checkbox' : ''}`}
-                                style={{
-                                  backgroundColor: isChecked ? '#000000' : 'rgba(255, 255, 255, 0.2)',
-                                  border: 'none',
-                                  outline: 'none',
-                                  cursor: 'pointer',
-                                }}
-                                onClick={() => toggleService(service)}
-                              >
-                                <span
-                                  className="checkbox-label"
-                                  style={{ color: '#ffffff', fontWeight: 400 }}
-                                >
-                                  {service}
-                                </span>
-                              </button>
-                            );
-                          })}
-                        </div>
-                      </div>
-
-                      <div className="contact-fields-wrapper">
-                        <div className="single-conatct-field-wrap">
-                          <input
-                            className="contact-field w-input"
-                            maxLength={256}
-                            name="name"
-                            placeholder="Your Name *"
-                            type="text"
-                            id="name"
-                            required
-                            value={formData.name}
-                            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                          />
-                        </div>
-                        <div className="single-conatct-field-wrap">
-                          <input
-                            className="contact-field w-input"
-                            maxLength={256}
-                            name="Phone-Number"
-                            placeholder="Phone Number *"
-                            type="tel"
-                            id="Phone-Number"
-                            required
-                            value={formData.phone}
-                            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          />
-                        </div>
-                        <div className="single-conatct-field-wrap">
-                          <input
-                            className="contact-field w-input"
-                            maxLength={256}
-                            name="email"
-                            placeholder="Email *"
-                            type="email"
-                            id="email"
-                            required
-                            value={formData.email}
-                            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          />
-                        </div>
-                        <div className="single-conatct-field-wrap">
-                          <textarea
-                            id="Message"
-                            name="Message"
-                            maxLength={5000}
-                            placeholder="Message *"
-                            required
-                            className="contact-field message w-input"
-                            value={formData.message}
-                            onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                          ></textarea>
-                        </div>
-                      </div>
-
-                      <input
-                        type="submit"
-                        className="submit-button w-button"
-                        value="Get In Touch"
-                        disabled={!isFormValid}
-                        style={{
-                          opacity: isFormValid ? 1 : 0.5,
-                          cursor: isFormValid ? 'pointer' : 'not-allowed',
-                          pointerEvents: isFormValid ? 'auto' : 'none',
-                        }}
-                      />
-                    </form>
-                  </div>
+                {/* Submit */}
+                <div>
+                  <button
+                    type="submit"
+                    disabled={!isFormValid}
+                    className={`w-full py-4 px-6 rounded-2xl font-semibold text-sm transition-all duration-300 ${
+                      isFormValid
+                        ? 'bg-cs-dark-blue text-text-inverse hover:bg-cs-dark-blue-hover shadow-md cursor-pointer'
+                        : 'bg-cs-border-strong text-cs-ink-subtle cursor-not-allowed'
+                    }`}
+                  >
+                    Get In Touch
+                  </button>
                 </div>
-              </div>
+              </form>
             ) : (
-              <div
-                className="contact-success-message-wrap w-form-done"
-                style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  minHeight: '380px',
-                  width: '100%',
-                }}
-              >
-                <div
-                  className="contact-success-message"
-                  style={{
-                    fontSize: '1.25rem',
-                    padding: '48px 64px',
-                    textAlign: 'center',
-                    maxWidth: '640px',
-                    backgroundColor: '#ffffff',
-                    color: '#0a2540',
-                    borderRadius: '24px',
-                    boxShadow: '0 12px 40px rgba(0, 0, 0, 0.08)',
-                    border: '1px solid rgba(12, 56, 90, 0.08)',
-                  }}
-                >
-                  Thank you for reaching out, <strong>{formData.name}</strong>!<br /><br />
-                  We have received your message and will get back to you shortly at <strong>{formData.email}</strong>.
+              <div className="flex flex-col items-center justify-center min-h-[380px] text-center p-6 bg-cs-surface">
+                <div className="w-16 h-16 bg-brand-subtle rounded-full flex items-center justify-center mb-6 text-cs-dark-blue text-2xl font-bold">
+                  ✓
                 </div>
+                <h3 className="text-2xl font-bold text-cs-ink mb-2">Thank you, {formData.name}!</h3>
+                <p className="text-cs-ink-muted max-w-md leading-relaxed text-sm">
+                  We've successfully received your message and will get back to you shortly at <strong className="text-cs-ink">{formData.email}</strong>.
+                </p>
               </div>
             )}
           </div>
         </div>
-        <div className="section-divider"></div>
-      </section>
-    </>
+      </div>
+    </div>
   );
 }

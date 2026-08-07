@@ -20,13 +20,18 @@ const TARGET_IDS: Record<MenuKey, string> = {
 export function DesktopNav() {
   const pathname = usePathname();
   const [activeIds, setActiveIds] = useState<Record<string, boolean>>({});
+  const isHomePage = pathname === "/" || pathname === "/home";
 
   useEffect(() => {
     const checkIds = () => {
       const ids: Record<string, boolean> = {};
       MEGA_MENU_ORDER.forEach((key) => {
         const id = TARGET_IDS[key];
-        ids[key] = !!document.getElementById(id);
+        if (isHomePage) {
+          ids[key] = !!document.getElementById(id);
+        } else {
+          ids[key] = true;
+        }
       });
       setActiveIds(ids);
     };
@@ -45,7 +50,7 @@ export function DesktopNav() {
       clearTimeout(timer3);
       observer.disconnect();
     };
-  }, [pathname]);
+  }, [pathname, isHomePage]);
 
   return (
     <div className="relative hidden md:block">
@@ -54,10 +59,11 @@ export function DesktopNav() {
           if (!activeIds[key]) return null;
 
           const targetId = TARGET_IDS[key];
+          const href = isHomePage ? `#${targetId}` : `/home#${targetId}`;
           return (
             <div key={key}>
               <a
-                href={`#${targetId}`}
+                href={href}
                 className={navItemClass(false)}
               >
                 {NAV_LABELS[key]}
