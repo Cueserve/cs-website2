@@ -170,7 +170,7 @@ export default function ProjectDetailClient({ project }: { project: ProjectData 
 
           {/* Navigation Back Button */}
           <div style={{ marginTop: '4rem', textAlign: 'center' }}>
-            <RollingButton variant="alice-blue" href="/projects" text="← View All Projects" showArrow={false} />
+            <RollingButton variant="secondary" href="/projects" text="← View All Projects" showArrow={false} />
           </div>
         </div>
 
