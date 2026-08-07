@@ -78,10 +78,7 @@ export default async function ServiceDetailPage({
       <section className="relative pt-[160px] pb-0 bg-gradient-to-b from-[#e3f0ff] to-white overflow-hidden">
         <div className="mx-auto w-[90%] xl:w-[82%] max-w-[1260px] flex flex-col items-center text-center">
           
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-[13px] uppercase tracking-wider text-brand-default border border-brand-default/30 bg-[#f4f8ff] w-fit mb-6 font-medium">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-            </svg>
+          <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full text-[13px] uppercase tracking-wider text-brand-default border border-brand-default/30 bg-[#f4f8ff] w-fit mb-6 font-medium">
             <span>{service.tag}</span>
           </div>
           
@@ -89,7 +86,7 @@ export default async function ServiceDetailPage({
             {service.name}
           </h1>
           
-          <p className="text-[17px] sm:text-[19px] text-[var(--color-text-secondary)] max-w-2xl mb-12 sm:mb-16 leading-relaxed">
+          <p className="text-[17px] sm:text-[19px] text-[var(--color-text-secondary)] max-w-2xl mb-20 sm:mb-24 leading-relaxed">
             {service.description}
           </p>
 
