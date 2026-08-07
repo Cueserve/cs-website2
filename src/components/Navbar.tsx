@@ -41,6 +41,9 @@ export default function Navbar() {
                   <Link href="/projects" className={`single-nav-link w-inline-block ${isActive('/projects') ? 'w--current' : ''}`}>
                     <div>Works</div>
                   </Link>
+                  <Link href="/blog" className={`single-nav-link w-inline-block ${isActive('/blog') ? 'w--current' : ''}`}>
+                    <div>Blog</div>
+                  </Link>
                   <Link href="/contact-us" className={`single-nav-link w-inline-block ${isActive('/contact-us') ? 'w--current' : ''}`}>
                     <div>Contact</div>
                   </Link>
@@ -99,6 +102,17 @@ export default function Navbar() {
                                       <div className="navigation-text-flex">
                                         <div className="navigation-link-text">Works</div>
                                         <div className="navigation-link-count">(05)</div>
+                                      </div>
+                                    </div>
+                                    <div className="navigation-link-border">
+                                      <div className="navigation-link-border-inner"></div>
+                                    </div>
+                                  </Link>
+                                  <Link href="/blog" className={`single-navigation-links w-inline-block ${isActive('/blog') ? 'w--current' : ''}`}>
+                                    <div className="navigation-inline-wrap">
+                                      <div className="navigation-text-flex">
+                                        <div className="navigation-link-text">Blog</div>
+                                        <div className="navigation-link-count">(06)</div>
                                       </div>
                                     </div>
                                     <div className="navigation-link-border">

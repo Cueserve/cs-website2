@@ -3,33 +3,17 @@
 import React from "react";
 import { RollingButton } from "@/components/ui/RollingButton";
 import { CircleArrow } from "@/components/ui/CircleArrow";
+import { blogPosts } from "@/app/blog/data";
+import Link from "next/link";
 
-const articles = [
-  {
-    id: 1,
-    category: "Advice",
-    date: "Nov 14, 2025",
-    title: "Designing for Emotion: The Secret to Memorable Brands.",
-    image: "/assets/images/home/Blog-Image-1.jpg",
-    link: "#"
-  },
-  {
-    id: 2,
-    category: "Strategy",
-    date: "Dec 02, 2025",
-    title: "How to Build a Design System that Scales.",
-    image: "/assets/images/home/Blog-Image-2.jpg",
-    link: "#"
-  },
-  {
-    id: 3,
-    category: "Design",
-    date: "Jan 18, 2026",
-    title: "The Evolution of Digital Interfaces.",
-    image: "/assets/images/home/Blog-Image-3.jpg",
-    link: "#"
-  }
-];
+const articles = blogPosts.slice(0, 3).map((post) => ({
+  id: post.id,
+  category: post.category,
+  date: post.date,
+  title: post.title,
+  image: post.image,
+  slug: post.slug,
+}));
 
 export function ArticlesSection() {
   return (
@@ -51,7 +35,7 @@ export function ArticlesSection() {
           </p>
           <RollingButton
             text="View All Articles"
-            href="#"
+            href="/blog"
             variant="secondary"
             className="border-none bg-brand-subtle !shadow-none hover:bg-brand-muted"
           />
@@ -72,10 +56,10 @@ export function ArticlesSection() {
               <h3 className="text-xl md:text-[18px] lg:text-2xl font-paragraph font-normal text-neutral-900 leading-[1.4] mb-4 lg:mb-8 w-[90%] md:w-full mx-auto md:mx-0">
                 {article.title}
               </h3>
-              <div className="flex items-center justify-center md:justify-start gap-4 cursor-pointer group">
+              <Link href={`/blog/${article.slug}`} className="flex items-center justify-center md:justify-start gap-4 cursor-pointer group">
                 <span className="font-paragraph text-sm font-normal text-neutral-900 group-hover:text-brand-default transition-colors">Read More</span>
                 <CircleArrow className="bg-brand-default text-white !w-6 !h-6 md:!w-7 md:!h-7 lg:!w-8 lg:!h-8" iconClassName="!w-3 !h-3" />
-              </div>
+              </Link>
             </div>
           ))}
 
