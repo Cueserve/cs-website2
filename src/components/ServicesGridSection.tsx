@@ -44,7 +44,7 @@ export default function ServicesGridSection() {
       <div className="w-[90%] xl:w-[82%] max-w-[1260px] mx-auto">
         {/* Quote / Header */}
         <div className="max-w-4xl mx-auto mb-20 text-center md:text-left">
-          <h2 className="text-quote text-cs-ink text-center md:text-left">
+          <h2 className="text-2xl md:text-3xl leading-relaxed text-cs-ink text-center md:text-left">
             “ We prioritize trust and believe in honesty, transparency, and reliability. We consistently deliver and maintain open communication to build trust with our clients. ”
           </h2>
         </div>

@@ -88,13 +88,12 @@ export default function TeamMembersSection() {
           {teamMembers.map((member) => (
             <div key={member.id} className="group flex flex-col p-2 rounded-[28px] bg-[#f4f8ff] border border-transparent transition-all duration-300">
               
-              {/* Member Image Area */}
-              <div className="relative w-full aspect-[5/4] rounded-[20px] bg-[#6699ff] overflow-hidden flex-shrink-0">
+              <div className="relative w-full aspect-[5/4] rounded-[20px] bg-neutral-100 overflow-hidden flex-shrink-0">
                 <img
                   src={member.image}
                   loading="lazy"
                   alt={member.name}
-                  className="w-full h-full object-cover grayscale mix-blend-multiply transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
 
