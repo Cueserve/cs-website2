@@ -111,13 +111,14 @@
 
 @media screen and (max-width: 767px) {
   .tech-logo-item {
-    margin: 0 24px !important;
-    height: 42px !important;
+    margin: 0 16px !important;
+    height: 32px !important;
   }
 
   .tech-logo-img {
-    height: 38px !important;
-    max-width: 140px !important;
+    height: 28px !important;
+    max-width: 100px !important;
+    object-fit: contain !important;
   }
 
   .after-banner-ticker-wrap {
@@ -1109,58 +1110,240 @@ screen and (max-height: 820px) and (min-width: 992px) {
 }
 
 /* ==========================================================================
-   Mobile / Tablet Hero — Vision Animation Hidden Below 1024px
+   Hero Section — Visibility Routing
+   Desktop  (≥1024px):   desktop Vision scroll section
+   Tablet   (768–1023px): desktop section, scroll-pin DISABLED (static)
+   Mobile   (<768px):     custom mobile hero (centered text only)
    ========================================================================== */
 
-/* Desktop: hide mobile hero, show Vision scroll section */
-.mobile-hero-section {
-  display: none !important;
+/* Default (desktop): hide mobile hero */
+.mobile-hero-section  { display: none !important; }
+.desktop-vision-section { display: block !important; }
+
+/* Mobile only (<768px): swap — show custom hero, hide desktop section */
+@media screen and (max-width: 767px) {
+  .mobile-hero-section  { display: block !important; }
+  .desktop-vision-section { display: none !important; }
 }
 
-.desktop-vision-section {
-  display: block !important;
-}
-
-/* Mobile + Tablet (< 1024px): show mobile hero, hide Vision scroll section */
-@media (max-width: 1023px) {
-  .mobile-hero-section {
-    display: block !important;
+/* ── Tablet (768–1023px): keep desktop section but kill scroll animation ── */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .banner-section {
+    overflow-y: visible !important;
   }
 
-  .desktop-vision-section {
+  /* Reduce icon size for tablet */
+  .tech-logo-item {
+    height: 40px !important;
+    margin: 0 32px !important;
+  }
+  .tech-logo-img {
+    height: 36px !important;
+    max-width: 120px !important;
+    object-fit: contain !important;
+  }
+
+  /* Ensure desktop section shows */
+  .desktop-vision-section { display: block !important; }
+  .mobile-hero-section    { display: none !important; }
+
+  /* Remove the tall scroll-reserve height */
+  .banner-vh-wrap {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  /* Un-stick the sticky wrapper */
+  .banner-sticky-wrap {
+    position: relative !important;
+    top: 0 !important;
+    height: auto !important;
+  }
+
+  /* Let the wrapper size itself to content */
+  .banner-wrapper {
+    height: auto !important;
+    min-height: 0 !important;
+    position: relative !important;
+  }
+
+  /* The letters layout block — turn into normal flow */
+  .banner-letters-wrap,
+  .banner-letters-row,
+  .banner-letters-flex {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    position: relative !important;
+  }
+
+  /* Hide ONLY the decorative letter SVGs */
+  .single-banner-letter,
+  .single-banner-letter img,
+  .banner-letter-o {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  /* after-banner-wrapper: expand to full width (IX2 sizes it to 22.5%) */
+  .after-banner-wrapper {
+    width: 100% !important;
+    animation: none !important;
+    position: relative !important;
+  }
+
+  /* after-banner-wrap: the hero card itself — position relative so bg is contained */
+  .after-banner-inner,
+  .after-banner-wrap {
+    position: relative !important;
+    height: auto !important;
+    min-height: 420px !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    animation: none !important;
+  }
+
+  /* Background image */
+  .banner-bg-wrap {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    display: block !important;
+    z-index: 0 !important;
+    top: 0 !important;
+  }
+
+  .banner-bg-image {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center 25% !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* White fade shape at bottom of bg image */
+  .banner-bg-shape {
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* Content wrap */
+  .after-banner-content-wrap {
+    position: relative !important;
+    z-index: 1 !important;
+    padding: 2.5rem 2rem 2.5rem 1.5rem !important;
+    box-sizing: border-box !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    /* Shift wording slightly up and right */
+    transform: translate(25px, -70px) !important;
+    /* Adjust text wrap to match the expected break points */
+    max-width: 27rem !important;
+  }
+
+  /* Title: normal flow, no transform on the h2 itself */
+  .after-banner-title {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  /* Restore the "—" dash line: it lives INSIDE the title and uses
+     transform: translate(0, 35px) to vertically center on the text baseline.
+     We keep its own transform intact — don't reset it here. */
+  .after-banner-title-line {
+    visibility: visible !important;
+    opacity: 1 !important;
+    /* Restore its original 35px drop so it aligns with Vision For the */
+    transform: translate(0, 35px) !important;
+    display: inline-block !important;
+  }
+
+  /* Other text children */
+  .after-banner-title-mark,
+  .after-banner-details {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  /* Button container */
+  .after-banner-content-wrap > div,
+  .after-banner-content-wrap a,
+  .after-banner-content-wrap button {
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* Remove bottom bar elements */
+  .banner-container,
+  .banner-content-wrapper,
+  .banner-content-bottom,
+  .banner-borders-wrapper {
     display: none !important;
   }
+
+  /* Add space above the icon scroller */
+  .after-banner-ticker-wrap {
+    margin-top: 3.5rem !important;
+    transform: none !important;
+  }
 }
 
-/* Mobile hero layout */
+
+
+
+/* ==========================================================================
+   Mobile Hero — Arooth-matching layout
+   Tablet (768-1023): banner image as CSS bg on LEFT, text floats RIGHT
+   Mobile (<768):    gradient bg only, centered text
+   ========================================================================== */
+
+/* ── Section: tablet default — image as background on left side ───────── */
 .mobile-hero-section {
   position: relative;
-  min-height: auto;
   overflow: hidden;
-  background-color: #edf3ff !important;
+  background-color: #cce0ff;
+  background-image: url('https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/69393d89707a466887665505_Banner-Image-p-800.jpg');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 45% auto;
 }
 
+/* ── Inner: push content to right half ──────────────────────────── */
 .mobile-hero-inner {
-  position: relative;
-  min-height: auto;
   display: flex;
-  align-items: center;
-  padding: 7rem 0 3.5rem;
-  z-index: 2;
+  justify-content: flex-end;
+  width: 100%;
+  min-height: 420px;
+  padding-top: 4.5rem;
+  padding-bottom: 2.5rem;
 }
 
-.mobile-hero-content {
-  position: relative;
-  z-index: 3;
+/* ── Content column: right 55% ──────────────────────────────── */
+.mobile-hero-content-col {
+  width: 57%;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  justify-content: center;
+  gap: 1.1rem;
+  padding: 2rem 2rem 2rem 1.5rem;
 }
 
+/* Typography */
 .mobile-hero-title {
-  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.2;
   color: #0a2540 !important;
   margin: 0;
 }
@@ -1170,11 +1353,11 @@ screen and (max-height: 820px) and (min-width: 992px) {
 }
 
 .mobile-hero-desc {
-  font-size: clamp(0.95rem, 2.5vw, 1.125rem);
+  font-size: 0.9375rem;
   color: #3f4756 !important;
   line-height: 1.65;
-  max-width: 480px;
   margin: 0;
+  max-width: 320px;
 }
 
 .mobile-hero-buttons {
@@ -1182,61 +1365,54 @@ screen and (max-height: 820px) and (min-width: 992px) {
   align-items: center;
   gap: 0.875rem;
   flex-wrap: wrap;
+  margin-top: 0.25rem;
 }
 
-/* Background image & Squared Grid */
-.mobile-hero-bg {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-}
+/* ── Mobile (<768px): no bg image, gradient, centered text ──────────── */
+@media screen and (max-width: 767px) {
+  .mobile-hero-section {
+    position: relative;
+    overflow-y: visible !important;
+    background: linear-gradient(180deg, #d3e7ff 0%, #ffffff 100%) !important;
+  }
 
-.mobile-hero-squared-grid {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(12, 56, 90, 0.12) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(12, 56, 90, 0.12) 1px, transparent 1px),
-    linear-gradient(rgba(12, 56, 90, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(12, 56, 90, 0.04) 1px, transparent 1px);
-  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
-  background-position: center center;
-  opacity: 0.6;
-}
+  .mobile-hero-inner {
+    justify-content: center;
+    min-height: auto;
+    padding: 6.5rem 1.5rem 3rem;
+  }
 
-.mobile-borders-wrapper {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  height: 100% !important;
-  padding: 0 !important;
-}
+  .mobile-hero-content-col {
+    width: 100%;
+    max-width: 380px;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    gap: 1.25rem;
+    margin: 0 auto;
+  }
 
-.mobile-borders-wrapper .banner-borders-flex {
-  height: 100% !important;
-  max-height: none !important;
-}
-
-.mobile-hero-bg-overlay {
-  display: none;
-}
-
-/* Tablet (768px–1023px): centre-align content */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .mobile-hero-content {
-    align-items: center !important;
-    text-align: center !important;
+  .mobile-hero-title {
+    font-size: clamp(1.75rem, 7vw, 2.25rem);
   }
 
   .mobile-hero-desc {
-    max-width: 560px !important;
-    margin: 0 auto !important;
+    max-width: 100%;
   }
 
   .mobile-hero-buttons {
-    justify-content: center !important;
+    justify-content: center;
+  }
+}
+
+/* ── Small mobile (479px) ─────────────────────────────────────────── */
+@media screen and (max-width: 479px) {
+  .mobile-hero-inner {
+    padding: 6rem 1.25rem 2.5rem;
+  }
+
+  .mobile-hero-title {
+    font-size: clamp(1.625rem, 8vw, 2rem);
   }
 }
 

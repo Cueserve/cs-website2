@@ -80,6 +80,80 @@ export default function HeroBanner() {
     };
   }, []);
 
+  // On tablet (768–1023px): strip Webflow IX2's inline visibility:hidden
+  // so the after-banner hero content becomes visible without scroll.
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const fixTabletVisibility = () => {
+      const isTablet = window.innerWidth >= 768 && window.innerWidth <= 1023;
+      if (!isTablet) return;
+
+      // Elements to make visible (but keep their own transforms intact)
+      const visibleSelectors = [
+        '.after-banner-wrapper',
+        '.after-banner-inner',
+        '.after-banner-wrap',
+        '.after-banner-content-wrap',
+        '.after-banner-title',
+        '.after-banner-title-mark',
+        '.after-banner-details',
+        '.banner-bg-wrap',
+        '.banner-bg-image',
+        '.banner-bg-shape',
+      ];
+
+      visibleSelectors.forEach((sel) => {
+        document.querySelectorAll<HTMLElement>(sel).forEach((el) => {
+          el.style.visibility = 'visible';
+          el.style.opacity = '1';
+          if (!el.classList.contains('after-banner-title-line')) {
+            // Don't reset transform on the dash line — it needs translate(0,35px)
+            el.style.removeProperty('transform');
+          }
+          el.style.removeProperty('animation');
+        });
+      });
+
+      // The — dash line needs its specific transform preserved
+      document.querySelectorAll<HTMLElement>('.after-banner-title-line').forEach((el) => {
+        el.style.visibility = 'visible';
+        el.style.opacity = '1';
+        el.style.display = 'inline-block';
+        el.style.transform = 'translate(0, 35px)';
+      });
+
+      // Reset bg wrap position
+      document.querySelectorAll<HTMLElement>('.banner-bg-wrap').forEach((el) => {
+        el.style.position = 'absolute';
+        el.style.visibility = 'visible';
+        el.style.opacity = '1';
+        el.style.top = '0';
+      });
+
+      // Shift the image down using object-position so it doesn't leave a gap at the top
+      document.querySelectorAll<HTMLElement>('.banner-bg-image').forEach((el) => {
+        el.style.objectPosition = 'center 25%';
+        el.style.transform = 'none';
+      });
+    };
+
+
+    // Run immediately and again after a short delay (after IX2 may have fired)
+    fixTabletVisibility();
+    const t1 = setTimeout(fixTabletVisibility, 300);
+    const t2 = setTimeout(fixTabletVisibility, 800);
+    const t3 = setTimeout(fixTabletVisibility, 1500);
+
+    window.addEventListener('resize', fixTabletVisibility);
+    return () => {
+      clearTimeout(t1);
+      clearTimeout(t2);
+      clearTimeout(t3);
+      window.removeEventListener('resize', fixTabletVisibility);
+    };
+  }, []);
+
   const renderLogoGroup = (keyPrefix: string) => (
     <>
       {techItems.map((item, index) => (
@@ -187,29 +261,24 @@ export default function HeroBanner() {
       {/* Mobile / Tablet static hero — shown only below 1024px */}
       <section className="banner-section mobile-hero-section">
         <div className="mobile-hero-inner">
-          <div className="container" style={{ position: 'relative', zIndex: 3 }}>
-            <div className="mobile-hero-content">
-              <h1 className="mobile-hero-title">
-                Crafting Modern <span className="mobile-hero-mark">Vision</span> For the Ambitious Brands
-              </h1>
-              <p className="mobile-hero-desc">
-                We blend creativity with strategy to build digital experiences that move brands forward.
-              </p>
-              <div className="mobile-hero-buttons">
-                <RollingButton variant="blue" href="/contact-us" text="Book a Free Call" />
-                <RollingButton variant="alice-blue" href="/contact-us" text="Get Started Now" />
-              </div>
+          <div className="mobile-hero-content-col">
+            <h1 className="mobile-hero-title">
+              Crafting Modern <span className="mobile-hero-mark">Vision For the</span> Ambitious Brands
+            </h1>
+            <p className="mobile-hero-desc">
+              We blend creativity with strategy to build digital experiences that move brands forward. From crafting standout websites.
+            </p>
+            <div className="mobile-hero-buttons">
+              <RollingButton variant="blue" href="/contact-us" text="Book a Free Call" />
+              <RollingButton variant="white" href="/contact-us" text="Get Started Now" />
             </div>
           </div>
-          <div className="mobile-hero-bg">
-            <div className="mobile-hero-squared-grid" />
-          </div>
-          <div className="banner-borders-wrapper mobile-borders-wrapper">
-            <div className="banner-borders-flex">
-              <div className="banner-border-line"></div>
-              <div className="banner-border-line"></div>
-              <div className="banner-border-line"></div>
-            </div>
+        </div>
+        <div className="after-banner-ticker-wrap" style={{ position: 'relative', marginTop: '4.5rem', paddingBottom: '2rem', transform: 'none' }}>
+          <div className="after-banner-ticker-flex">
+            {renderLogoGroup('group-1')}
+            {renderLogoGroup('group-2')}
+            {renderLogoGroup('group-3')}
           </div>
         </div>
       </section>
