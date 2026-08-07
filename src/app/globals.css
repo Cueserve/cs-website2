@@ -1405,6 +1405,37 @@ screen and (max-height: 820px) and (min-width: 992px) {
   .mobile-hero-buttons {
     justify-content: center;
   }
+
+  .single-award-wrap {
+    height: auto !important;
+    padding: 2.5rem 2rem !important;
+  }
+
+  .services .section-title {
+    font-weight: 500 !important;
+    color: #1a1a1a !important;
+  }
+  
+  .services .section-title-mark {
+    color: #0052cc !important;
+  }
+
+  .service-tags-flex {
+    flex-wrap: wrap !important;
+    flex-direction: row !important;
+    gap: 0.5rem !important;
+  }
+
+  .service-tab-link-image-wrap {
+    width: 8.5rem !important;
+    height: 9.5rem !important;
+    max-width: 8.5rem !important;
+    border-radius: 1rem !important;
+  }
+
+  .service-tab-link-content-flex {
+    align-items: flex-start !important;
+  }
 }
 
 /* ── Small mobile (479px) ─────────────────────────────────────────── */
@@ -1447,9 +1478,4 @@ screen and (max-height: 820px) and (min-width: 992px) {
   border-color: transparent !important;
   outline: none !important;
   box-shadow: none !important;
-}
-
-/* Hide subtitle icon image globally from all section subtitle pills */
-.subtitle-icon {
-  display: none !important;
 }
