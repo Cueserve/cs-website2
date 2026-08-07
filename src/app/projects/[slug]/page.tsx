@@ -139,12 +139,13 @@ export function generateStaticParams() {
   return Object.keys(projectsData).map((slug) => ({ slug }));
 }
 
-export default function ProjectDetailPage({
+export default async function ProjectDetailPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const project = projectsData[params.slug];
+  const { slug } = await params;
+  const project = projectsData[slug];
 
   if (!project) {
     notFound();

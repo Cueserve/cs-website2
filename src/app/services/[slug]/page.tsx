@@ -1,62 +1,57 @@
 import React from 'react';
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { RollingButton } from '@/components/ui/RollingButton';
 
-const servicesData: Record<
+export const servicesData: Record<
   string,
-  { name: string; tag: string; description: string; features: string[] }
+  { name: string; tag: string; description: string; features: { title: string; desc: string }[]; about: string; why: string; image: string }
 > = {
   'brand-identity': {
     name: 'Brand Identity',
-    tag: 'Branding & Visual Design',
-    description:
-      'We build iconic brand identities that connect emotionally with your audience and make your business unforgettable.',
+    tag: 'Service Details',
+    description: 'At Cueserve, we offer a full range of creative and digital services designed to help brands stand out and succeed in a fast-evolving digital world.',
+    image: 'https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/691b6f774ec996a8e2c70ec8_Service-Image-1.jpg',
+    about: 'At its core, UI is the visual aspect of a digital product. It encompasses everything a user interacts with — from buttons and icons to the overall layout. The goal is to create aesthetically pleasing and intuitive design that guides users seamlessly through their journey.',
+    why: 'In the digital landscape, UI/UX design isn\'t just about creating visually appealing interfaces; it\'s about crafting experiences that resonate with users, leaving a lasting impression. The synergy of design principles, user-centric thinking, and technological innovation paves the way for digital products that not only meet but exceed user expectations.',
     features: [
-      'Logo Design & Marks',
-      'Brand Guidelines & Typography',
-      'Color Palette & Visual Strategy',
-      'Art Direction & Imagery',
-      'Brand Positioning Strategy',
+      { title: 'Research', desc: 'Dive into the minds of users. Understand their needs, preferences, and pain points through surveys, interviews, and usability testing.' },
+      { title: 'Wireframing and Prototyping', desc: 'Create low-fidelity wireframes and interactive prototypes to visualize the product\'s structure and flow before diving into full-fledged design and development.' },
+      { title: 'Usability Testing', desc: 'Gather feedback early and often. Conduct usability testing to identify any stumbling blocks or areas for improvement in the user journey.' },
+      { title: 'Accessibility', desc: 'Design with inclusivity in mind. Ensure that your product is accessible to users with diverse abilities by following accessibility standards.' },
     ],
   },
   'ui-ux-strategy': {
     name: 'UI/UX Strategy',
-    tag: 'User Experience & Interface',
-    description:
-      'User-centric interfaces engineered for high conversion rates, intuitive user flows, and modern aesthetic elegance.',
+    tag: 'Service Details',
+    description: 'User-centric interfaces engineered for high conversion rates, intuitive user flows, and modern aesthetic elegance.',
+    image: 'https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/691b6f78b7687e089bcefb63_Service-Image-2.jpg',
+    about: 'At its core, UI is the visual aspect of a digital product. It encompasses everything a user interacts with — from buttons and icons to the overall layout.',
+    why: 'In the digital landscape, UI/UX design isn\'t just about creating visually appealing interfaces; it\'s about crafting experiences that resonate with users.',
     features: [
-      'User Research & Persona Mapping',
-      'Wireframing & Interactive Prototypes',
-      'Design System Architecture',
-      'Usability Testing & Iteration',
-      'Responsive Cross-Platform UI',
+      { title: 'User Research', desc: 'Dive into the minds of users. Understand their needs.' },
+      { title: 'Design System', desc: 'Create comprehensive design systems for scale.' },
     ],
   },
   'digital-marketing': {
     name: 'Digital Marketing',
-    tag: 'Growth & Performance',
-    description:
-      'Data-driven digital marketing strategies designed to amplify brand presence and convert visitors into loyal customers.',
+    tag: 'Service Details',
+    description: 'Data-driven digital marketing strategies designed to amplify brand presence and convert visitors into loyal customers.',
+    image: 'https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/691b6f788a0e5a2c37a0f8c3_Service-Image-3.jpg',
+    about: 'Marketing is the visual aspect of a digital product. It encompasses everything a user interacts with.',
+    why: 'In the digital landscape, marketing isn\'t just about creating visually appealing ads.',
     features: [
-      'Search Engine Optimization (SEO)',
-      'Content Marketing Strategy',
-      'Social Media Branding',
-      'Pay-Per-Click (PPC) Campaigns',
-      'Conversion Rate Optimization',
+      { title: 'SEO', desc: 'Search Engine Optimization for organic growth.' },
+      { title: 'PPC', desc: 'Pay per click campaigns.' },
     ],
   },
   'product-design': {
     name: 'Product Design',
-    tag: 'Digital Product Development',
-    description:
-      'Transforming complex ideas into sleek digital SaaS platforms, web software, and mobile application experiences.',
+    tag: 'Service Details',
+    description: 'Transforming complex ideas into sleek digital SaaS platforms, web software, and mobile application experiences.',
+    image: 'https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/691b6f78afdb6c6634ed7aea_Service-Image-4.jpg',
+    about: 'Product design encompasses everything a user interacts with — from buttons and icons to the overall layout.',
+    why: 'In the digital landscape, product design isn\'t just about creating visually appealing interfaces.',
     features: [
-      'End-to-End Product Architecture',
-      'SaaS Platform UX Design',
-      'Mobile App UI/UX',
-      'Design Handoff & Developer Specs',
-      'Continuous Feature Optimization',
+      { title: 'Architecture', desc: 'End-to-End Product Architecture.' },
     ],
   },
 };
@@ -65,64 +60,89 @@ export function generateStaticParams() {
   return Object.keys(servicesData).map((slug) => ({ slug }));
 }
 
-export default function ServiceDetailPage({
+export default async function ServiceDetailPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const service = servicesData[params.slug];
+  const { slug } = await params;
+  const service = servicesData[slug];
 
   if (!service) {
     notFound();
   }
 
-return (
-    <section
-      className="section"
-      style={{
-        minHeight: '70vh',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        paddingTop: '100px',
-        paddingBottom: '100px',
-        position: 'relative',
-        overflow: 'hidden',
-      }}
-    >
-      <div className="container" style={{ position: 'relative', zIndex: 2, textAlign: 'center' }}>
-        <div style={{ maxWidth: '680px', margin: '0 auto', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+  return (
+    <div className="w-full bg-white text-[var(--color-text-primary)]">
+      {/* Hero Section (gradient) */}
+      <section className="relative pt-[160px] pb-0 bg-gradient-to-b from-[#e3f0ff] to-white overflow-hidden">
+        <div className="mx-auto w-[90%] xl:w-[82%] max-w-[1260px] flex flex-col items-center text-center">
           
-          {/* Subtitle tag */}
-          <div className="section-subtile-wrap" style={{ marginBottom: '24px' }}>
-            <div data-wf--subtitle--variant="borders" className="subtitle-wrap w-variant-89dd2e21-7faa-27ca-a536-110057684450">
-              <div className="subtitle-flex-wrap">
-                <img
-                  src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/690f9e158664fc7bd2753513_Subtitle-Icon.svg"
-                  loading="lazy"
-                  alt="Subtitle Icon"
-                  className="subtitle-icon"
-                />
-                <div className="subtitle-text">News &amp; Articles</div>
-              </div>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-[13px] uppercase tracking-wider text-brand-default border border-brand-default/30 bg-[#f4f8ff] w-fit mb-6 font-medium">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+            </svg>
+            <span>{service.tag}</span>
+          </div>
+          
+          <h1 className="text-[3rem] sm:text-[4rem] font-medium text-cs-ink mb-6 leading-[1.1]">
+            {service.name}
+          </h1>
+          
+          <p className="text-[17px] sm:text-[19px] text-[var(--color-text-secondary)] max-w-2xl mb-12 sm:mb-16 leading-relaxed">
+            {service.description}
+          </p>
+
+          <div className="w-full relative h-[300px] sm:h-[500px] md:h-[700px] rounded-t-[32px] sm:rounded-t-[64px] overflow-hidden">
+            <img 
+              src={service.image} 
+              alt={service.name} 
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Content Section */}
+      <section className="py-16 sm:py-24">
+        <div className="mx-auto w-[90%] xl:w-[82%] max-w-[1260px]">
+          <div className="max-w-[900px]">
+            {/* About The Service */}
+          <div className="mb-16">
+            <h2 className="text-[2rem] font-medium mb-6 text-cs-ink tracking-tight">About The Service.</h2>
+            <p className="text-[17px] sm:text-[19px] text-[var(--color-text-secondary)] leading-[1.6]">
+              {service.about}
+            </p>
+          </div>
+
+          {/* What is part of this service */}
+          <div className="mb-16">
+            <h2 className="text-[2rem] font-medium mb-8 text-cs-ink tracking-tight">What is the part of this services?</h2>
+            <div className="flex flex-col gap-6">
+              {service.features.map((feat, idx) => (
+                <div key={idx} className="flex flex-col sm:flex-row gap-2 items-start">
+                  <span className="text-[17px] sm:text-[19px] font-medium text-cs-ink whitespace-nowrap pt-1">
+                    {idx + 1}. {feat.title}:
+                  </span>
+                  <p className="text-[17px] sm:text-[19px] text-[var(--color-text-secondary)] leading-[1.6] pt-1">
+                    {feat.desc}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* Heading */}
-          <h1
-            className="section-title"
-            style={{
-              fontSize: 'clamp(2.5rem, 5vw, 4rem)',
-              fontWeight: 700,
-              lineHeight: 1.15,
-              color: '#0a2540',
-              marginBottom: '20px',
-            }}
-          >
-            Our Service page is <span className="section-title-mark">Coming Soon</span>
-          </h1>
+          {/* Why you should take the service from us */}
+          <div>
+            <h2 className="text-[2rem] font-medium mb-6 text-cs-ink tracking-tight">Why you should take the service from us?</h2>
+            <p className="text-[17px] sm:text-[19px] text-[var(--color-text-secondary)] leading-[1.6]">
+              {service.why}
+            </p>
+          </div>
+
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }
