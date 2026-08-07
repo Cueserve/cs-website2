@@ -62,11 +62,6 @@ export default function AboutMainSection() {
 
   return (
     <section id="about" className="relative z-20 bg-white py-16 sm:py-24 xl:py-32 overflow-hidden">
-      {/* 
-        Align with navbar: The navbar in Navbar.tsx uses "container navbar-container" 
-        Wait, in the home page it uses w-[90%] xl:w-[82%] max-w-[1260px] mx-auto. 
-        We will stick to the exact same wrapper as the home page AboutSection to ensure consistency.
-      */}
       <div className="w-[90%] xl:w-[82%] max-w-[1260px] mx-auto">
         <div className="mb-8 sm:mb-12">
           <span className="inline-flex items-center px-4 py-1.5 rounded-full text-label uppercase tracking-wider text-brand-default border border-brand-default/30 bg-[#f4f8ff]">

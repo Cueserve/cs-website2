@@ -17,7 +17,7 @@ export function DesktopNav() {
       <nav className="flex items-center gap-3 rounded-[99px] border border-[#D1E0FF] bg-white p-[10px]" aria-label="Primary">
         {MEGA_MENU_ORDER.map((key) => {
           const href = NAV_HREFS[key];
-          const isActive = pathname === href || (href !== '/' && pathname.startsWith(href));
+          const isActive = pathname === href || (href === '/' && pathname === '/home') || (href !== '/' && pathname.startsWith(href));
 
           return (
             <div key={key}>

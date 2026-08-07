@@ -2369,7 +2369,7 @@ figure {
   line-height: var(--_font-weight-line-height---line-heights--lh-150);
   font-weight: var(--_font-weight-line-height---font-weights--regular);
   letter-spacing: -.02em;
-  padding: .375rem 1.5rem;
+  padding: .375rem 1rem;
 }
 
 .single-nav-link.w--current {

@@ -30,13 +30,15 @@ export function Header() {
         ].join(" ")}
       >
         {/* Logo */}
-        <Link
-          href="/"
-          aria-label="Cueserve home"
-          className="shrink-0 flex items-center"
-        >
-          <Logo className="h-[24px] w-auto" />
-        </Link>
+        <div className="rounded-[99px] border border-[#D1E0FF] bg-white px-5 h-[60px] flex items-center">
+          <Link
+            href="/"
+            aria-label="Cueserve home"
+            className="shrink-0 flex items-center"
+          >
+            <Logo className="h-[24px] w-auto" />
+          </Link>
+        </div>
 
         {/* Center Nav Links */}
         <div className="hidden xl:flex items-center">

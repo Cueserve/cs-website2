@@ -32,7 +32,7 @@ export function MobileMenu({
       <ul className="mx-auto flex w-full flex-col gap-2 px-6">
         {MEGA_MENU_ORDER.map((key) => {
           const href = NAV_HREFS[key];
-          const isActive = pathname === href || (href !== '/' && pathname.startsWith(href));
+          const isActive = pathname === href || (href === '/' && pathname === '/home') || (href !== '/' && pathname.startsWith(href));
 
           return (
             <li key={key} className="w-full">

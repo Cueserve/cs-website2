@@ -58,6 +58,7 @@ export const MEGA_MENU_ORDER: MenuKey[] = [
   "about",
   "services",
   "ourWork",
+  "blog",
   "contact",
 ];
 
