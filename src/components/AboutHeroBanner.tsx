@@ -17,8 +17,8 @@ export default function AboutHeroBanner() {
 
   return (
     <section className="relative pt-[180px] pb-[80px] overflow-hidden bg-gradient-to-b from-[#e3f0ff] to-white text-[var(--color-text-primary)]">
-      <div className="mx-auto px-6 max-w-[var(--spacing-content)] w-full">
-        <div className="flex flex-col lg:flex-row gap-8 items-center lg:items-start justify-between mb-24 text-center lg:text-left">
+      <div className="mx-auto w-[90%] xl:w-[82%] max-w-[1260px]">
+        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center lg:items-start justify-between mb-24 text-center lg:text-left">
           <motion.div 
             className="flex-1 lg:flex-[1.5] flex flex-col items-center lg:items-start w-full"
             initial={{ opacity: 0, y: 30 }}
@@ -46,8 +46,8 @@ export default function AboutHeroBanner() {
       {/* Infinite Marquee */}
       <div className="relative w-full flex overflow-hidden py-8">
         <motion.div
-          className="flex flex-nowrap whitespace-nowrap items-center gap-12"
-          animate={{ x: [0, -1416] }}
+          className="flex flex-nowrap whitespace-nowrap items-center gap-12 w-max"
+          animate={{ x: [0, "-50%"] }}
           transition={{ repeat: Infinity, ease: 'linear', duration: 25 }}
         >
           {/* We repeat the array twice for seamless loop */}
@@ -61,14 +61,14 @@ export default function AboutHeroBanner() {
                 className={`flex-shrink-0 flex items-center justify-center overflow-hidden ${
                   isImage
                     ? 'w-[350px] h-[350px] rounded-full bg-gray-200' 
-                    : 'w-[175px] h-[350px] rounded-l-full'
-                } ${!isImage && isBlueShape ? 'bg-[var(--color-brand-default)]' : ''} ${!isImage && !isBlueShape ? 'bg-white' : ''}`}
+                    : 'w-[175px] h-[350px]'
+                }`}
               >
                 {/* Image or Shape */}
                 <img
                   src={item.src}
                   alt={isImage ? "Work" : "Shape"}
-                  className={`w-full h-full ${isImage ? 'object-cover' : 'object-cover'}`}
+                  className={`w-full h-full ${isImage ? 'object-cover' : 'object-contain'}`}
                 />
               </div>
             );

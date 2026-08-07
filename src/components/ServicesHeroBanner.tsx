@@ -49,8 +49,8 @@ export default function ServicesHeroBanner() {
       {/* Infinite Marquee */}
       <div className="relative w-full flex overflow-hidden py-8">
         <motion.div
-          className="flex flex-nowrap whitespace-nowrap items-center gap-12"
-          animate={{ x: [0, -1416] }}
+          className="flex flex-nowrap whitespace-nowrap items-center gap-12 w-max"
+          animate={{ x: [0, "-50%"] }}
           transition={{ repeat: Infinity, ease: 'linear', duration: 25 }}
         >
           {/* We repeat the array twice for seamless loop */}
