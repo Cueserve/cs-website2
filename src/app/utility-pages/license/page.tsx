@@ -15,7 +15,7 @@ export default function LicensePage() {
           <p style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '1.1rem', lineHeight: 1.6, marginBottom: '32px' }}>
             All photography, typography, icons, and assets utilized in the Cueserve website digital experience are licensed for royalty-free commercial and creative applications.
           </p>
-          <RollingButton variant="blue" href="/" text="Return Home" />
+          <RollingButton variant="primary" href="/" text="Return Home" />
         </div>
       </div>
     </div>

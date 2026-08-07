@@ -1,1565 +1,411 @@
-/* Webflow shared stylesheet from CDN */
-@import url('https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/css/arooth.webflow.shared.aea604727.css');
-
-/* ==========================================================================
-   Cueserve Brand Overrides & Custom Enhancements
-   ========================================================================== */
-
-/* Cueserve brand tokens */
-:root {
-  --cueserve-blue: #2d8cff;
-  --cueserve-navy: #0a2540;
-}
-
-/* Logo sizing */
-.main-logo,
-.footer-logo {
-  height: 28px;
-  width: auto;
-  max-width: 180px;
-  object-fit: contain;
-}
-
-.footer-logo {
-  height: 32px;
-}
-
-@media screen and (max-width: 767px) {
-
-  .main-logo,
-  .footer-logo {
-    height: 24px;
-    max-width: 150px;
-  }
-}
-
-/* Hide "Made in Webflow" badge */
-.w-webflow-badge {
-  display: none !important;
-}
-
-/* ==========================================================================
-   1. Home Page Tech Stack Marquee Ticker
-   ========================================================================== */
-
-@keyframes marquee-infinite {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-
-  100% {
-    transform: translate3d(-33.3333%, 0, 0);
-  }
-}
-
-.after-banner-ticker-wrap {
-  visibility: visible !important;
-  opacity: 1 !important;
-  display: block !important;
-  overflow: hidden !important;
-  width: 100% !important;
-  position: absolute !important;
-  bottom: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  padding: 24px 0 18px 0 !important;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.45) 40%, rgba(255, 255, 255, 0.88) 75%, #ffffff 100%) !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  border: none !important;
-  box-shadow: none !important;
-  z-index: 30 !important;
-  margin: 0 !important;
-}
-
-.after-banner-ticker-flex {
-  display: flex !important;
-  align-items: center !important;
-  width: max-content !important;
-  animation: marquee-infinite 35s linear infinite !important;
-  will-change: transform;
-}
-
-.after-banner-ticker-flex:hover {
-  /* animation-play-state: paused !important; */
-}
-
-.tech-logo-item {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  margin: 0 48px !important;
-  height: 72px !important;
-  flex-shrink: 0 !important;
-}
-
-.tech-logo-img {
-  height: 68px !important;
-  width: auto !important;
-  max-width: 280px !important;
-  object-fit: contain !important;
-  opacity: 1 !important;
-  filter: none !important;
-  transition: transform 0.3s ease !important;
-}
-
-.tech-logo-item:hover .tech-logo-img {
-  opacity: 1 !important;
-  transform: scale(1.08) !important;
-  filter: none !important;
-}
-
-@media screen and (max-width: 767px) {
-  .tech-logo-item {
-    margin: 0 16px !important;
-    height: 32px !important;
-  }
-
-  .tech-logo-img {
-    height: 28px !important;
-    max-width: 100px !important;
-    object-fit: contain !important;
-  }
-
-  .after-banner-ticker-wrap {
-    padding: 16px 0 12px 0 !important;
-  }
-}
-
-/* ==========================================================================
-   2. Services & About Inner Banner Marquee Ticker
-   ========================================================================== */
-
-@keyframes service-ticker-infinite {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-
-  100% {
-    transform: translate3d(-33.3333%, 0, 0);
-  }
-}
-
-.service-banner-ticker-wrap {
-  overflow: hidden !important;
-  width: 100% !important;
-  position: relative !important;
-}
-
-.service-banner-ticker-flex {
-  display: flex !important;
-  width: max-content !important;
-  animation: service-ticker-infinite 35s linear infinite !important;
-  will-change: transform;
-}
-
-.service-banner-ticker-flex:hover {
-  animation-play-state: running !important;
-}
-
-/* ==========================================================================
-   3. Universal Interactive Hover Effects Across All Pages
-   ========================================================================== */
-
-/* Primary & Secondary Button Hover Effects */
-.primary-button,
-.secondary-button {
-  position: relative !important;
-  overflow: hidden !important;
-  transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1) !important;
-}
-
-.more-button {
-  position: relative !important;
-  overflow: visible !important;
-  transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1) !important;
-}
-
-/* Services Page Card Hover Effects */
-.single-service-wrap {
-  position: relative !important;
-  transition: border-color 0.35s ease, box-shadow 0.35s ease !important;
-  overflow: hidden !important;
-}
-
-.single-service-wrap:hover {
-  transform: none !important;
-  box-shadow: 0 16px 40px rgba(0, 82, 204, 0.2) !important;
-}
-
-/* Original background height movement */
-.single-service-hover-bg {
-  transition: height 0.4s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.4s ease !important;
-}
-
-.single-service-wrap:hover .single-service-hover-bg {
-  height: 100% !important;
-  opacity: 1 !important;
-}
-
-.single-service-icon {
-  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
-}
-
-.single-service-wrap:hover .single-service-icon {
-  transform: none !important;
-}
-
-.single-service-name {
-  transition: color 0.3s ease !important;
-}
-
-.single-service-wrap:hover .single-service-name {
-  color: #ffffff !important;
-}
-
-.single-service-wrap:hover .single-service-details {
-  color: rgba(255, 255, 255, 0.9) !important;
-}
-
-/* Completely lock button and all children static in place */
-.service-more-buttons-wrap,
-.service-more-buttons-wrap *,
-.service-more-button,
-.service-more-button *,
-.more-button,
-.more-button *,
-.more-button-flex,
-.more-button-flex *,
-.more-button-text,
-.more-button-arrow-wrap {
-  transform: none !important;
-  animation: none !important;
-  position: static !important;
-}
-
-.service-more-buttons-wrap {
-  position: relative !important;
-  margin-top: 1.375rem !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-}
-
-.service-more-button {
-  position: relative !important;
-  display: flex !important;
-}
-
-.more-button {
-  position: relative !important;
-  display: inline-block !important;
-  overflow: visible !important;
-}
-
-/* Force overflow visible on all button containers to prevent arrow clipping */
-.service-buttons-wrapper,
-.single-service-button-wrap,
-.service-button-wrap,
-.more-button-flex,
-.more-button-arrow-wrap,
-.service-card-content-bottom {
-  overflow: visible !important;
-}
-
-.more-button-flex {
-  position: relative !important;
-  display: flex !important;
-  align-items: center !important;
-  gap: 0.75rem !important;
-}
-
-.more-button-arrow-wrap {
-  position: relative !important;
-  background-color: var(--primary) !important;
-  border-radius: 50% !important;
-  width: 2.25rem !important;
-  height: 2.25rem !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  transition: background-color 0.3s ease !important;
-}
-
-.more-button-text {
-  color: var(--eerie-black) !important;
-  transition: color 0.3s ease !important;
-}
-
-.more-button-arrow-hover,
-.more-button-hover-bg,
-.service-more-button.absolute {
-  display: none !important;
-}
-
-.single-service-wrap:hover .more-button-text {
-  color: #ffffff !important;
-}
-
-.single-service-wrap:hover .more-button-arrow-wrap {
-  background-color: #ffffff !important;
-}
-
-.single-service-wrap:hover .more-button-arrow {
-  filter: brightness(0) saturate(100%) invert(32%) sepia(96%) saturate(2280%) hue-rotate(208deg) brightness(100%) contrast(108%) !important;
-  -webkit-filter: brightness(0) saturate(100%) invert(32%) sepia(96%) saturate(2280%) hue-rotate(208deg) brightness(100%) contrast(108%) !important;
-  opacity: 1 !important;
-}
-
-/* Projects / Works Page Card Hover Effects */
-.single-project-wrap {
-  position: relative !important;
-  overflow: hidden !important;
-  border-radius: 1.5rem !important;
-  transition: border-color 0.35s ease, box-shadow 0.35s ease !important;
-}
-
-.single-project-wrap:hover {
-  transform: none !important;
-  box-shadow: 0 16px 40px rgba(0, 82, 204, 0.15) !important;
-}
-
-.single-project-image-wrap {
-  overflow: hidden !important;
-  display: block !important;
-  position: relative !important;
-  border-radius: 1.5rem !important;
-}
-
-.project-image.single-project {
-  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
-}
-
-.single-project-wrap:hover .project-image.single-project {
-  transform: none !important;
-}
-
-/* Top-Right Arrow Circle: turns white background with royal blue arrow */
-.project-arrow-button.single-project {
-  transition: background-color 0.35s ease, transform 0.35s ease !important;
-}
-
-.single-project-wrap:hover .project-arrow-button.single-project {
-  transform: none !important;
-  background-color: #ffffff !important;
-}
-
-.single-project-wrap:hover .project-button-arrow.single-project,
-.single-project-wrap:hover .project-button-arrow {
-  filter: brightness(0) saturate(100%) invert(32%) sepia(96%) saturate(2280%) hue-rotate(208deg) brightness(100%) contrast(108%) !important;
-  -webkit-filter: brightness(0) saturate(100%) invert(32%) sepia(96%) saturate(2280%) hue-rotate(208deg) brightness(100%) contrast(108%) !important;
-}
-
-/* Bottom Bar Background Height Expansion */
-.single-project-hover-bg {
-  transition: height 0.4s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.4s ease !important;
-}
-
-.single-project-wrap:hover .single-project-hover-bg {
-  height: 100% !important;
-  opacity: 1 !important;
-}
-
-/* Bottom Bar Typography & Dot turn White on Hover */
-.single-project-name {
-  transition: color 0.3s ease !important;
-}
-
-.single-project-wrap:hover .single-project-name {
-  color: #ffffff !important;
-}
-
-.single-project-category {
-  transition: color 0.3s ease !important;
-}
-
-.single-project-wrap:hover .single-project-category {
-  color: #ffffff !important;
-}
-
-.single-project-cat-dot {
-  transition: background-color 0.3s ease !important;
-}
-
-.single-project-wrap:hover .single-project-cat-dot {
-  background-color: #ffffff !important;
-}
-
-/* Single Project Details Tabs Side-by-Side Grid & Vertical Timeline Line */
-.project-single-details-wrapper {
-  margin-bottom: 4rem !important;
-  width: 100% !important;
-}
-
-.project-details-tab {
-  display: grid !important;
-  grid-template-columns: 1fr auto !important;
-  grid-column-gap: 3.75rem !important;
-  grid-row-gap: 2.5rem !important;
-  align-items: center !important;
-  width: 100% !important;
-  max-width: 100% !important;
-}
-
-.project-details-tab-content {
-  grid-column: 1 !important;
-  grid-row: 1 !important;
-  width: 100% !important;
-}
-
-.project-details-tabs-menu {
-  grid-column: 2 !important;
-  grid-row: 1 !important;
-  position: relative !important;
-  display: flex !important;
-  flex-direction: column !important;
-  grid-row-gap: 2.75rem !important;
-  white-space: nowrap !important;
-}
-
-.project-details-tabs-link {
-  background-color: transparent !important;
-  padding: 0 0 0 1.75rem !important;
-  position: relative !important;
-  border: none !important;
-  cursor: pointer !important;
-  text-align: left !important;
-}
-
-.project-tabs-link-dot {
-  z-index: 2 !important;
-  background-color: #dbe7ff !important;
-  border-radius: 50% !important;
-  width: 0.75rem !important;
-  height: 0.75rem !important;
-  position: absolute !important;
-  left: 0 !important;
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-  transition: background-color 0.3s ease !important;
-}
-
-.project-details-tabs-link.w--current .project-tabs-link-dot {
-  background-color: #0052cc !important;
-}
-
-.project-tabs-link-border {
-  z-index: 1 !important;
-  background-color: #dbe7ff !important;
-  width: 1px !important;
-  height: 10rem !important;
-  position: absolute !important;
-  left: 0.3125rem !important;
-  top: -1.75rem !important;
-}
-
-.project-overview-details-wrap {
-  border-radius: 2rem !important;
-  background-color: #edf3ff !important;
-  padding: 2.5rem 3.25rem !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
-}
-
-.project-overview-details {
-  color: #3f4756 !important;
-  font-size: 1.125rem !important;
-  line-height: 1.6 !important;
-  margin: 0 !important;
-}
-
-@keyframes heroLoaderSpin {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes heroOrbitSpin {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes heroGridPulse {
-
-  0%,
-  100% {
-    opacity: 0.6;
-  }
-
-  50% {
-    opacity: 1;
-  }
-}
+@import "tailwindcss";
+
+@theme {
+  /* ── Fonts ──────────────────────────────────────────────── */
+  --font-display: var(--font-space-grotesk);
+  --font-primary: var(--font-dm-sans);
+  --font-mono: var(--font-jetbrains-mono);
+  --font-title: var(--font-instrument-sans), sans-serif;
+  --font-paragraph: var(--font-poppins), sans-serif;
+
+  /* ── Tokens.json Primitives: Colors ─────────────────────── */
+  --color-blue-900: #00359e;
+  --color-blue-800: #0040c1;
+  --color-blue-700: #0042c5;
+  --color-blue-500: #2970ff;
+  --color-blue-400: #256dff;
+  --color-blue-200: #c2e0ff;
+  --color-blue-150: #d1e0ff;
+  --color-blue-100: #eff4ff;
+  --color-blue-50: #f5faff;
+
+  --color-neutral-1000: #000000;
+  --color-neutral-950: #090909;
+  --color-neutral-900: #111827;
+  --color-neutral-800: #212121;
+  --color-neutral-600: #4b5563;
+  --color-neutral-500: #6b7280;
+  --color-neutral-100: #f9f9f9;
+  --color-neutral-0: #ffffff;
+
+  /* ── Tokens.json Semantic: Brand, Text, BG, Border ──────── */
+  --color-brand-default: var(--color-blue-800);
+  --color-brand-hover: var(--color-blue-900);
+  --color-brand-subtle: var(--color-blue-100);
+  --color-brand-muted: var(--color-blue-150);
+
+  --color-text-primary: var(--color-neutral-950);
+  --color-text-secondary: var(--color-neutral-600);
+  --color-text-tertiary: var(--color-neutral-500);
+  --color-text-muted: rgba(33, 33, 33, 0.7);
+  --color-text-inverse: var(--color-neutral-0);
+  --color-text-inverse-muted: rgba(255, 255, 255, 0.8);
+  --color-text-brand: var(--color-blue-800);
+
+  --color-bg-page: var(--color-neutral-0);
+  --color-bg-subtle: var(--color-neutral-100);
+  --color-bg-tinted: var(--color-blue-50);
+  --color-bg-brand: var(--color-blue-800);
+  --color-bg-inverse: var(--color-neutral-900);
+  --color-bg-overlay: rgba(33, 33, 33, 0.7);
+
+  --color-border-subtle: var(--color-blue-100);
+  --color-border-default: var(--color-blue-150);
+  --color-border-strong: var(--color-blue-200);
+  --color-border-brand: var(--color-blue-800);
+
+  /* ── Tokens.json Primitives: Radius ─────────────────────── */
+  --radius-xs: 12px;
+  --radius-sm: 16px;
+  --radius-md: 20px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-xxl: 40px;
+  --radius-3xl: 60px;
+  --radius-button: 100px;
+  --radius-circle: 200px;
+
+  /* ── Tokens.json Shadows ────────────────────────────────── */
+  --shadow-card: 0 2px 8px rgba(17, 24, 39, 0.12);
+  --shadow-control: 0 0 0 1px rgba(0, 0, 0, 0.10), 0 1px 3px rgba(0, 0, 0, 0.10);
+  --shadow-focus: 0 0 0 3px rgba(41, 112, 255, 0.40);
+
+  /* ── Legacy cs-* Aliases (Mapped directly to official tokens.json variables) ── */
+  --color-cs-dark-blue: var(--color-blue-800);
+  --color-cs-dark-blue-hover: var(--color-blue-900);
+  --color-cs-dark-blue-mid: var(--color-blue-700);
+  --color-cs-light-blue: var(--color-blue-500);
+  --color-cs-light-blue-hover: var(--color-blue-400);
+  --color-cs-light-blue-soft: var(--color-blue-200);
+  --color-cs-surface: var(--color-bg-page);
+  --color-cs-surface-tint: var(--color-bg-tinted);
+  --color-cs-surface-subtle: var(--color-bg-subtle);
+  --color-cs-surface-accent: var(--color-blue-100);
+  --color-cs-surface-dark: var(--color-bg-inverse);
+  --color-cs-border: var(--color-border-default);
+  --color-cs-border-strong: var(--color-border-strong);
+  --color-cs-border-accent: var(--color-border-subtle);
+  --color-cs-ink: var(--color-text-primary);
+  --color-cs-ink-muted: var(--color-text-secondary);
+  --color-cs-ink-subtle: var(--color-text-tertiary);
+  --color-cs-ink-faint: var(--color-blue-200);
+  --color-cs-ink-trace: var(--color-blue-150);
+  --color-cs-ink-ghost: var(--color-blue-100);
+
+  /* ── Typography scale (brand overrides) ─────────────────── */
+  --leading-tight: 1.15;
+  --leading-snug: 1.3;
+  --leading-relaxed: 1.65;
+  --tracking-wide: 0.05em;
+  --tracking-wider: 0.1em;
+
+  /* ── Layout ─────────────────────────────────────────────── */
+  --spacing-page: 75rem;
+  /* 1200px — max content column */
+  --spacing-content: 53.75rem;
+  /* 860px  — prose / narrow content */
+  --spacing-gutter: 1.5rem;
+  /* 24px   — horizontal page padding */
+  --spacing-section: 5rem;
+  /* 80px   — vertical section rhythm */
 
-@keyframes heroGlowPulse {
+  /* ── Shadows (Legacy aliases mapped to official tokens.json shadows) ── */
+  --shadow-cs-sm: var(--shadow-control);
+  --shadow-cs-md: var(--shadow-card);
+  --shadow-cs-lg: var(--shadow-card);
+  --shadow-cs-xl: var(--shadow-focus);
+  --shadow-cs-glow: var(--shadow-focus);
 
-  0%,
-  100% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 0.7;
-  }
-
-  50% {
-    transform: translate(-50%, -50%) scale(1.15);
-    opacity: 1;
-  }
-}
-
-@keyframes heroScanLine {
-  0% {
-    top: -2px;
-  }
-
-  100% {
-    top: 100%;
-  }
-}
-
-@keyframes heroLogoPulse {
-
-  0%,
-  100% {
-    opacity: 0.7;
-  }
+  /* ── Hero floating-card animations ──────────────────────── */
+  --animate-cs-float-a: cs-float-a 4s ease-in-out infinite;
+  --animate-cs-float-b: cs-float-b 5s ease-in-out infinite;
+  --animate-cs-float-c: cs-float-c 4.5s ease-in-out infinite;
+  --animate-cs-float-slow: cs-float-b 6s ease-in-out infinite;
+  --animate-cs-float-pill-a: cs-float-pill-a 6.5s ease-in-out infinite;
+  --animate-cs-float-pill-b: cs-float-pill-b 7.2s ease-in-out infinite;
+  --animate-cs-float-metric: cs-float-metric 8s ease-in-out infinite;
 
-  50% {
-    opacity: 1;
-  }
-}
-
-@keyframes heroTextFade {
-
-  0%,
-  100% {
-    opacity: 0.6;
-  }
-
-  50% {
-    opacity: 1;
-  }
-}
+  @keyframes cs-float-a {
 
-@keyframes heroProgressFill {
-  0% {
-    transform: scaleX(0);
-  }
+    0%,
+    100% {
+      transform: translateY(0);
+    }
 
-  100% {
-    transform: scaleX(1);
+    50% {
+      transform: translateY(-8px);
+    }
   }
-}
-
-/* Service Tab Dot, Image & Tags Wrapper Default Expansion */
-.service-name-dot {
-  display: block !important;
-  width: 0.625rem !important;
-  height: 0.625rem !important;
-  border-radius: 50% !important;
-  background-color: #0052cc !important;
-  margin-right: 0.75rem !important;
-  flex-shrink: 0 !important;
-}
 
-.service-tab-link-image-wrap {
-  display: flex !important;
-  width: 15rem !important;
-  height: 8.5rem !important;
-  max-width: 15rem !important;
-  flex-shrink: 0 !important;
-  align-self: center !important;
-  border-radius: 1.25rem !important;
-  overflow: hidden !important;
-}
+  @keyframes cs-float-b {
 
-/* Hide images for inactive tabs on Desktop & Mobile */
-.service-tab-link:not(.active):not(.w--current) .service-tab-link-image-wrap {
-  display: none !important;
-}
+    0%,
+    100% {
+      transform: translateY(0);
+    }
 
-/* Show images for all tabs ONLY on Tablet */
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .service-tab-link:not(.active):not(.w--current) .service-tab-link-image-wrap {
-    display: flex !important;
+    50% {
+      transform: translateY(-10px);
+    }
   }
-  
-  /* Make the active tab's image vertical on tablet */
-  .service-tab-link.active .service-tab-link-image-wrap,
-  .service-tab-link.w--current .service-tab-link-image-wrap {
-    width: 8.5rem !important;
-    height: 11rem !important;
-    max-width: 8.5rem !important;
-  }
-}
-
-.service-tab-link-image {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  border-radius: 1.25rem !important;
-}
-
-.service-tab-link.w--current .service-name,
-.service-tab-link.active .service-name {
-  color: #0052cc !important;
-}
-
-.service-tab-link.w--current .service-tags-wrapper,
-.service-tab-link.active .service-tags-wrapper {
-  display: block !important;
-  height: auto !important;
-  max-height: 500px !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  overflow: visible !important;
-}
-
-.service-tab-link.w--current .service-tags-flex,
-.service-tab-link.active .service-tags-flex {
-  display: flex !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
-/* Contact Form Left Image Height Alignment */
-.contact-flex-wrap {
-  display: flex !important;
-  align-items: stretch !important;
-}
-
-.contact-flex-left-wrap {
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: space-between !important;
-  height: auto !important;
-}
-
-.contact-contents-wrap {
-  margin-bottom: 1.25rem !important;
-  padding: 0 !important;
-}
-
-.conatct-title {
-  margin: 0 !important;
-  padding: 0 !important;
-  line-height: 1.2 !important;
-  display: flex !important;
-  align-items: center !important;
-  height: 2.25rem !important;
-}
-
-.contact-checkbox-title {
-  color: #ffffff !important;
-  font-size: 1.25rem !important;
-  font-weight: 500 !important;
-  margin: 0 0 1.25rem 0 !important;
-  padding: 0 !important;
-  line-height: 1.2 !important;
-  display: flex !important;
-  align-items: center !important;
-  height: 2.25rem !important;
-}
-
-.contact-checkbox-wrapper {
-  margin-bottom: 2.5rem !important;
-}
-
-/* Contact Pills Styling (Single Line & White Text on Solid Black Selected Pill) */
-.contact-checkbox-flex {
-  display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: nowrap !important;
-  align-items: center !important;
-  gap: 0.5rem !important;
-  width: 100% !important;
-}
-
-.subtitle-icon {
-  display: none !important;
-}
-
-.single-checkbox-wrap {
-  position: relative !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  padding: 0.5rem 1rem !important;
-  border-radius: 100px !important;
-  cursor: pointer !important;
-  transition: background-color 0.25s ease, color 0.25s ease !important;
-  margin: 0 !important;
-  user-select: none !important;
-  flex-shrink: 0 !important;
-  white-space: nowrap !important;
-  background-color: rgba(255, 255, 255, 0.2) !important;
-  border: none !important;
-  outline: none !important;
-}
-
-.single-checkbox-wrap:not(.active-checkbox) {
-  background-color: rgba(255, 255, 255, 0.2) !important;
-  border: none !important;
-  color: #ffffff !important;
-}
-
-.single-checkbox-wrap:not(.active-checkbox) *,
-.single-checkbox-wrap:not(.active-checkbox) .checkbox-label,
-.single-checkbox-wrap:not(.active-checkbox) .w-form-label {
-  color: #ffffff !important;
-}
-
-.single-checkbox-wrap.active-checkbox {
-  background-color: #000000 !important;
-  background-image: none !important;
-  border-color: #000000 !important;
-  color: #ffffff !important;
-}
-
-.single-checkbox-wrap.active-checkbox *,
-.single-checkbox-wrap.active-checkbox .checkbox-label,
-.single-checkbox-wrap.active-checkbox .w-form-label {
-  color: #ffffff !important;
-}
-
-.contact-checkbox {
-  display: none !important;
-}
-
-.checkbox-label,
-.w-form-label {
-  margin: 0 !important;
-  padding: 0 !important;
-  color: #ffffff !important;
-  font-size: 0.875rem !important;
-  line-height: 1 !important;
-}
-
-.contact-image-wrap {
-  flex: 1 !important;
-  display: flex !important;
-  width: 100% !important;
-  height: 100% !important;
-  min-height: 22rem !important;
-  border-radius: 1.5rem !important;
-  overflow: hidden !important;
-}
-
-.contact-image {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  border-radius: 1.5rem !important;
-}
 
-.single-project-name {
-  transition: color 0.3s ease !important;
-}
-
-.single-project-wrap:hover .single-project-name {
-  color: #2d8cff !important;
-}
-
-.single-project-hover-bg {
-  transition: opacity 0.4s ease !important;
-}
-
-.single-project-wrap:hover .single-project-hover-bg {
-  opacity: 1 !important;
-}
-
-/* About Us - Team Member Card Hover Effects */
-.single-member-wrap {
-  position: relative !important;
-  overflow: hidden !important;
-}
-
-.single-member-wrap:hover {
-  transform: none !important;
-}
-
-.member-image-wrap {
-  overflow: hidden !important;
-}
-
-.member-image {
-  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1) !important;
-}
-
-.single-member-wrap:hover .member-image {
-  transform: scale(1.08) !important;
-}
-
-.member-name {
-  transition: color 0.3s ease !important;
-}
-
-.single-member-wrap:hover .member-name {
-  color: #2d8cff !important;
-}
-
-/* About Us - Mission / Values Card Hover Effects */
-.single-mission-wrapper {
-  transition: flex 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
-}
-
-.single-mission-wrapper:hover {
-  /* Allow Webflow IX2 scroll transforms */
-}
-
-.mission-image {
-  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1) !important;
-}
-
-.single-mission-wrapper:hover .mission-image {
-  transform: scale(1.04) !important;
-}
-
-.mission-name-wrap,
-.mission-name,
-.mission-name-hover-bg {
-  pointer-events: none !important;
-  user-select: none !important;
-}
-
-/* Blog Card Hover Effects */
-.single-blog-wrap {
-  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
-}
-
-.single-blog-wrap:hover {
-  transform: translateY(-5px) !important;
-}
-
-.blog-image {
-  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1) !important;
-}
-
-.single-blog-wrap:hover .blog-image {
-  transform: scale(1.05) !important;
-}
-
-.single-blog-title {
-  transition: color 0.3s ease !important;
-}
-
-.single-blog-wrap:hover .single-blog-title {
-  color: #2d8cff !important;
-}
-
-/* Contact Us Page Image & Form Checkbox */
-.contact-image {
-  visibility: visible !important;
-  opacity: 1 !important;
-  filter: none !important;
-  width: 100% !important;
-  height: auto !important;
-  border-radius: 20px !important;
-  object-fit: cover !important;
-}
-
-.contact-checkbox.w--redirected-checked {
-  background-color: #2d8cff !important;
-  border-color: #2d8cff !important;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") !important;
-  background-size: 14px 14px !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-}
+  @keyframes cs-float-c {
 
-.single-checkbox-wrap.active-checkbox .checkbox-label {
-  color: #ffffff !important;
-}
+    0%,
+    100% {
+      transform: translateY(0);
+    }
 
-/* ==========================================================================
-   4. Page Load Entrance Animations for Hero Banner
-   ========================================================================== */
-
-@keyframes letterUp {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
+    50% {
+      transform: translateY(-6px);
+    }
   }
 
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+  /* ── Organic 2D Elliptical Floating for About Section Pills (Hardware Accelerated) ── */
+  @keyframes cs-float-pill-a {
 
-@keyframes slideFromLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-60px);
-  }
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0) rotate(0deg);
+    }
 
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
+    25% {
+      transform: translate3d(8px, -14px, 0) rotate(2deg);
+    }
 
-@keyframes slideFromRight {
-  0% {
-    opacity: 0;
-    transform: translateX(60px);
-  }
+    50% {
+      transform: translate3d(0, -26px, 0) rotate(0deg);
+    }
 
-  100% {
-    opacity: 1;
-    transform: translateX(0);
+    75% {
+      transform: translate3d(-8px, -12px, 0) rotate(-2deg);
+    }
   }
-}
-
-/* Staggered letter entrance animation on page load (V-I-S-I-O-N) */
-.single-banner-letter._01 {
-  animation: letterUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
-}
-
-.single-banner-letter._02 {
-  animation: letterUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.18s both;
-}
-
-.single-banner-letter._03 {
-  animation: letterUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.26s both;
-}
-
-.single-banner-letter._04 {
-  animation: letterUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.34s both;
-}
-
-.after-banner-wrapper {
-  width: 22.5%;
-  animation: letterUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.42s both;
-}
 
-.single-banner-letter._05 {
-  animation: letterUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
-}
+  @keyframes cs-float-pill-b {
 
-/* Bottom container horizontal entrance animation on page load */
-.banner-details-wrap {
-  animation: slideFromLeft 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both;
-}
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0) rotate(0deg);
+    }
 
-.banner-button-wrap {
-  animation: slideFromRight 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.52s both;
-}
+    25% {
+      transform: translate3d(-10px, 14px, 0) rotate(-2deg);
+    }
 
+    50% {
+      transform: translate3d(0, 26px, 0) rotate(0deg);
+    }
 
-/* ==========================================================================
-   4. Smaller Screen Hero Banner Clearance Fix
-   ========================================================================== */
-@media screen and (max-width: 1400px) and (min-width: 992px),
-screen and (max-height: 820px) and (min-width: 992px) {
-  .banner-content-wrapper {
-    padding-top: 5rem !important;
-    padding-bottom: 3.5rem !important;
+    75% {
+      transform: translate3d(10px, 12px, 0) rotate(2deg);
+    }
   }
 
-  .banner-borders-wrapper {
-    padding-top: 7rem !important;
-    padding-bottom: 5rem !important;
-  }
+  @keyframes cs-float-metric {
 
-  .banner-borders-flex {
-    height: 35.75rem !important;
-    max-height: 54vh !important;
-  }
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0) scale(1);
+    }
 
-  .banner-content-bottom {
-    grid-column-gap: 1.5rem !important;
-    grid-row-gap: 1.5rem !important;
+    50% {
+      transform: translate3d(0, -12px, 0) scale(1.018);
+    }
   }
 }
 
-/* ==========================================================================
-   5. Large Screen Spacing Adjustments Between Heading Lines, Paragraph, and Button
-   ========================================================================== */
-@media screen and (min-width: 1401px) {
-  .after-banner-title {
-    line-height: 1.25 !important;
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --animate-cs-float-a: none;
+    --animate-cs-float-b: none;
+    --animate-cs-float-c: none;
+    --animate-cs-float-slow: none;
   }
-
-  .after-banner-details {
-    margin-top: 1rem !important;
-    margin-bottom: 1.375rem !important;
-    font-size: 1.05rem !important;
-    line-height: 1.6 !important;
-  }
-}
-
-.after-banner-details {
-  margin-top: 1rem !important;
-  margin-bottom: 1.375rem !important;
-  font-size: 1rem !important;
-  line-height: 1.6 !important;
-}
-
-/* ==========================================================================
-   Static Awards Section Overrides
-   ========================================================================== */
-.awards-vh-wrap {
-  height: auto !important;
-  min-height: 0 !important;
-  display: block !important;
-  position: relative !important;
-  transform: none !important;
-}
-
-.awards-grid-wrap {
-  display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important;
-  grid-column-gap: 1.5rem !important;
-  grid-row-gap: 2rem !important;
-  position: relative !important;
-  transform: none !important;
-  width: 100% !important;
-  height: auto !important;
-}
-
-.award-item-wrap,
-.award-item-wrap *,
-.single-award-wrap {
-  transform: none !important;
-  transition: none !important;
-  animation: none !important;
-  position: relative !important;
-  top: auto !important;
-  left: auto !important;
-  right: auto !important;
-  bottom: auto !important;
-  width: 100% !important;
-  max-width: none !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
-.single-award-wrap {
-  height: 21.75rem !important;
-  border-radius: 2rem !important;
-  background-color: #f4f7fa !important;
-  padding: 4rem 2.5rem 5rem !important;
 }
 
-.service-tab-link.active .service-name,
-.service-tab-link.w--current .service-name {
-  color: #2d8cff !important;
+html {
+  scroll-behavior: smooth;
 }
 
-.service-name-dot {
-  background-color: #2d8cff !important;
+body {
+  font-family: var(--font-primary), system-ui, sans-serif;
+  background-color: var(--color-cs-surface);
+  color: var(--color-cs-ink);
+  -webkit-font-smoothing: antialiased;
 }
 
-@keyframes serviceCardOpen {
-  from {
-    opacity: 0;
-    transform: translateY(-8px) scale(0.97);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
+::-webkit-scrollbar {
+  width: 6px;
 }
 
-.service-tab-link.active .service-tags-wrapper,
-.service-tab-link.active .service-tab-link-image-wrap,
-.service-tab-link.w--current .service-tags-wrapper,
-.service-tab-link.w--current .service-tab-link-image-wrap {
-  animation: serviceCardOpen 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
-}
-
-@media screen and (max-width: 991px) {
-  .awards-grid-wrap {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
+::-webkit-scrollbar-track {
+  background: var(--color-cs-surface-tint);
 }
 
-/* Removed 1fr override to maintain 2 columns on mobile */
-/* Services Page Banner: Bottom to Top Fade Up (No Blur) */
-@keyframes bannerFadeUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+::-webkit-scrollbar-thumb {
+  background: var(--color-cs-border-accent);
+  border-radius: 3px;
 }
 
-/* About Us Page Banner: Horizontal Entrance (No Blur) */
-@keyframes bannerFadeLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-35px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
+/* ── Centralized Typography Utility Classes (Per tokens.json & DESIGN.md) ── */
+@utility text-hero-title {
+  font-family: var(--font-title), sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  font-size: clamp(2.5rem, 8.5vw, 3.5rem);
 
-@keyframes bannerFadeRight {
-  0% {
-    opacity: 0;
-    transform: translateX(35px);
+  @media (min-width: 1280px) {
+    font-size: clamp(3rem, 4.8vw, 5rem);
   }
 
-  100% {
-    opacity: 1;
-    transform: translateX(0);
+  @media (min-width: 1536px) {
+    font-size: clamp(3.5rem, 4.4vw, 4.875rem);
   }
-}
-
-.inner-banner-content-wrap {
-  animation: bannerFadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
-}
-
-.feature-banner-content-left {
-  animation: bannerFadeLeft 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
 }
 
-.feature-banner-content-right {
-  animation: bannerFadeRight 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+@utility text-para {
+  font-family: var(--font-paragraph), sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  font-size: clamp(1rem, 1.25vw, 1.25rem);
 }
 
-/* Enforce zero blur and sharp visibility */
-.inner-banner,
-.inner-banner *,
-.feature-banner-content-wrap,
-.feature-banner-content-wrap * {
-  filter: none !important;
-  -webkit-filter: none !important;
-  backdrop-filter: none !important;
+@utility text-btn {
+  font-family: var(--font-paragraph), sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+  font-size: 1.125rem;
 }
 
-/* ==========================================================================
-   Hero Section — Visibility Routing
-   Desktop  (≥1024px):   desktop Vision scroll section
-   Tablet   (768–1023px): desktop section, scroll-pin DISABLED (static)
-   Mobile   (<768px):     custom mobile hero (centered text only)
-   ========================================================================== */
-
-/* Default (desktop): hide mobile hero */
-.mobile-hero-section  { display: none !important; }
-.desktop-vision-section { display: block !important; }
-
-/* Mobile only (<768px): swap — show custom hero, hide desktop section */
-@media screen and (max-width: 767px) {
-  .mobile-hero-section  { display: block !important; }
-  .desktop-vision-section { display: none !important; }
+@utility text-nav {
+  font-family: var(--font-paragraph), sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-size: 1rem;
 }
-
-/* ── Tablet (768–1023px): keep desktop section but kill scroll animation ── */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .banner-section {
-    overflow-y: visible !important;
-  }
-
-  /* Reduce icon size for tablet */
-  .tech-logo-item {
-    height: 40px !important;
-    margin: 0 32px !important;
-  }
-  .tech-logo-img {
-    height: 36px !important;
-    max-width: 120px !important;
-    object-fit: contain !important;
-  }
-
-  /* Ensure desktop section shows */
-  .desktop-vision-section { display: block !important; }
-  .mobile-hero-section    { display: none !important; }
-
-  /* Remove the tall scroll-reserve height */
-  .banner-vh-wrap {
-    height: auto !important;
-    min-height: 0 !important;
-  }
-
-  /* Un-stick the sticky wrapper */
-  .banner-sticky-wrap {
-    position: relative !important;
-    top: 0 !important;
-    height: auto !important;
-  }
-
-  /* Let the wrapper size itself to content */
-  .banner-wrapper {
-    height: auto !important;
-    min-height: 0 !important;
-    position: relative !important;
-  }
-
-  /* The letters layout block — turn into normal flow */
-  .banner-letters-wrap,
-  .banner-letters-row,
-  .banner-letters-flex {
-    display: block !important;
-    width: 100% !important;
-    height: auto !important;
-    position: relative !important;
-  }
-
-  /* Hide ONLY the decorative letter SVGs */
-  .single-banner-letter,
-  .single-banner-letter img,
-  .banner-letter-o {
-    display: none !important;
-    visibility: hidden !important;
-  }
-
-  /* after-banner-wrapper: expand to full width (IX2 sizes it to 22.5%) */
-  .after-banner-wrapper {
-    width: 100% !important;
-    animation: none !important;
-    position: relative !important;
-  }
-
-  /* after-banner-wrap: the hero card itself — position relative so bg is contained */
-  .after-banner-inner,
-  .after-banner-wrap {
-    position: relative !important;
-    height: auto !important;
-    min-height: 420px !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    animation: none !important;
-  }
-
-  /* Background image */
-  .banner-bg-wrap {
-    position: absolute !important;
-    inset: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    overflow: hidden !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    display: block !important;
-    z-index: 0 !important;
-    top: 0 !important;
-  }
-
-  .banner-bg-image {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    object-position: center 25% !important;
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    transform: none !important;
-  }
-
-  /* White fade shape at bottom of bg image */
-  .banner-bg-shape {
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-
-  /* Content wrap */
-  .after-banner-content-wrap {
-    position: relative !important;
-    z-index: 1 !important;
-    padding: 2.5rem 2rem 2.5rem 1.5rem !important;
-    box-sizing: border-box !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    /* Shift wording slightly up and right */
-    transform: translate(25px, -70px) !important;
-    /* Adjust text wrap to match the expected break points */
-    max-width: 27rem !important;
-  }
-
-  /* Title: normal flow, no transform on the h2 itself */
-  .after-banner-title {
-    visibility: visible !important;
-    opacity: 1 !important;
-    transform: none !important;
-    animation: none !important;
-  }
-
-  /* Restore the "—" dash line: it lives INSIDE the title and uses
-     transform: translate(0, 35px) to vertically center on the text baseline.
-     We keep its own transform intact — don't reset it here. */
-  .after-banner-title-line {
-    visibility: visible !important;
-    opacity: 1 !important;
-    /* Center it with the text */
-    transform: none !important;
-    vertical-align: middle !important;
-    display: inline-block !important;
-  }
-
-  /* Other text children */
-  .after-banner-title-mark,
-  .after-banner-details {
-    visibility: visible !important;
-    opacity: 1 !important;
-    transform: none !important;
-    animation: none !important;
-  }
-
-  /* Button container */
-  .after-banner-content-wrap > div,
-  .after-banner-content-wrap a,
-  .after-banner-content-wrap button {
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-
-  /* Remove bottom bar elements */
-  .banner-container,
-  .banner-content-wrapper,
-  .banner-content-bottom,
-  .banner-borders-wrapper {
-    display: none !important;
-  }
 
-  /* Add space above the icon scroller */
-  .after-banner-ticker-wrap {
-    margin-top: 3.5rem !important;
-    transform: none !important;
-  }
+/* ── Official tokens.json Typography Composite Utilities ──── */
+@utility text-title-display {
+  font-family: var(--font-title), sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  font-size: clamp(4rem, 15vw, 13.5rem);
 }
-
-
-
-
-/* ==========================================================================
-   Mobile Hero — Arooth-matching layout
-   Tablet (768-1023): banner image as CSS bg on LEFT, text floats RIGHT
-   Mobile (<768):    gradient bg only, centered text
-   ========================================================================== */
 
-/* ── Section: tablet default — image as background on left side ───────── */
-.mobile-hero-section {
-  position: relative;
-  overflow: hidden;
-  background-color: #cce0ff;
-  background-image: url('https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/69393d89707a466887665505_Banner-Image-p-800.jpg');
-  background-repeat: no-repeat;
-  background-position: left center;
-  background-size: 45% auto;
+@utility text-title-xl {
+  font-family: var(--font-title), sans-serif;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-size: clamp(3rem, 10vw, 8.875rem);
 }
 
-/* ── Inner: push content to right half ──────────────────────────── */
-.mobile-hero-inner {
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-  min-height: 420px;
-  padding-top: 4.5rem;
-  padding-bottom: 2.5rem;
+@utility text-title-lg {
+  font-family: var(--font-title), sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-size: clamp(2.5rem, 7vw, 6.25rem);
 }
 
-/* ── Content column: right 55% ──────────────────────────────── */
-.mobile-hero-content-col {
-  width: 57%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1.1rem;
-  padding: 2rem 2rem 2rem 1.5rem;
+@utility text-h1 {
+  font-family: var(--font-title), sans-serif;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  font-size: clamp(2.25rem, 5vw, 4rem);
 }
 
-/* Typography */
-.mobile-hero-title {
-  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+@utility text-h2 {
+  font-family: var(--font-title), sans-serif;
   font-weight: 400;
   line-height: 1.2;
-  color: #0c385a !important;
-  margin: 0;
+  letter-spacing: -0.03em;
+  font-size: clamp(2rem, 4vw, 3.25rem);
 }
 
-.mobile-hero-highlight {
-  color: #0050d5 !important;
-}
-
-.mobile-hero-desc {
-  font-size: 0.9375rem;
-  color: #5c6a7a !important;
-  line-height: 1.5;
+@utility text-h3 {
+  font-family: var(--font-title), sans-serif;
   font-weight: 400;
-  margin: 0;
-  max-width: 340px;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
 }
 
-.mobile-hero-buttons {
-  display: flex;
-  align-items: center;
-  gap: 0.875rem;
-  flex-wrap: wrap;
-  margin-top: 0.25rem;
+@utility text-h4 {
+  font-family: var(--font-title), sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
 }
 
-/* ── Mobile (<768px): no bg image, gradient, centered text ──────────── */
-@media screen and (max-width: 767px) {
-  .mobile-hero-section {
-    position: relative;
-    overflow-y: visible !important;
-    background: linear-gradient(180deg, #d3e7ff 0%, #ffffff 100%) !important;
-  }
-
-  .mobile-hero-inner {
-    justify-content: center;
-    min-height: auto;
-    padding: 6.5rem 1.5rem 3rem;
-  }
-
-  .mobile-hero-content-col {
-    width: 100%;
-    max-width: 380px;
-    align-items: center;
-    text-align: center;
-    padding: 0;
-    gap: 1.25rem;
-    margin: 0 auto;
-  }
-
-  .mobile-hero-title {
-    font-size: clamp(2.25rem, 8vw, 2.75rem);
-    letter-spacing: -0.03em;
-  }
-
-  .mobile-hero-desc {
-    max-width: 100%;
-  }
-
-  .mobile-hero-buttons {
-    justify-content: center;
-  }
-
-  .single-award-wrap {
-    height: auto !important;
-    padding: 2.5rem 2rem !important;
-  }
-
-  .services .section-title {
-    font-weight: 500 !important;
-    color: #1a1a1a !important;
-  }
-  
-  .services .section-title-mark {
-    color: #0052cc !important;
-  }
-
-  .service-tags-flex {
-    flex-wrap: wrap !important;
-    flex-direction: row !important;
-    gap: 0.5rem !important;
-  }
-
-  .service-tab-link-image-wrap {
-    width: 8.5rem !important;
-    height: 9.5rem !important;
-    max-width: 8.5rem !important;
-    border-radius: 1rem !important;
-  }
-
-  .service-tab-link-content-flex {
-    align-items: flex-start !important;
-  }
+@utility text-h5 {
+  font-family: var(--font-title), sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: -0.03em;
+  font-size: 1.75rem;
 }
 
-/* ── Tablet & Mobile (991px and below) ─────────────────────────────────────────── */
-@media screen and (max-width: 991px) {
-  /* Disable sticky scroll for Values section on mobile */
-  .mission-vh-wrap {
-    height: auto !important;
-  }
-  .mission-sticky-wrap {
-    position: static !important;
-  }
-
-  /* Values Section Stack Layout - Expand all cards */
-  .mission-flex-wrap {
-    flex-direction: column !important;
-    gap: 2rem !important;
-  }
-  
-  .single-mission-wrapper .mission-card-wrap {
-    display: flex !important;
-  }
-  
-  .mission-contents-flex {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-  }
-  
-  .single-mission-wrapper .mission-image-wrap {
-    max-width: 100% !important;
-    width: 100% !important;
-    margin-top: 1.5rem !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-  
-  .mission-image {
-    width: 100% !important;
-    max-height: 250px !important;
-    object-fit: cover !important;
-  }
-
-  /* Force active styles for all mission name pills */
-  .single-mission-wrapper .mission-name {
-    color: #111111 !important;
-  }
-  .single-mission-wrapper .mission-name-hover-bg {
-    opacity: 0 !important;
-  }
+@utility text-h6 {
+  font-family: var(--font-title), sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: -0.03em;
+  font-size: 1.375rem;
 }
 
-/* ── Small mobile (479px) ─────────────────────────────────────────── */
-@media screen and (max-width: 479px) {
-  .mobile-hero-inner {
-    padding: 6rem 1.25rem 2.5rem;
-  }
-
-  .mobile-hero-title {
-    font-size: clamp(1.625rem, 8vw, 2rem);
-  }
+@utility text-body-lg {
+  font-family: var(--font-paragraph), sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  font-size: 1.25rem;
 }
 
-/* Remove background, borders, outlines, and box shadows from project/work cards entirely (both hovered and non-hovered) */
-.single-project-wrap,
-.single-project-wrap .single-project-content-wrap,
-.single-project-wrap .single-project-contents-flex,
-.single-project-wrap .single-project-wrapper,
-.single-project-wrap .single-project-contents,
-.single-project-wrap .project-content-wrap,
-.single-project-wrap .single-project-contents-flex,
-.single-project-wrapper,
-.single-project-wrapper .single-project-contents,
-.single-project-wrapper .project-content-wrap,
-.single-project-wrapper .single-project-content-wrap,
-.single-projects-row .single-project-wrapper .single-project-contents,
-.single-projects-row .single-project-wrapper .project-content-wrap,
-.projects-flex-wrapper .single-project-wrapper,
-.projects-flex-wrapper .single-project-contents,
-.projects-flex-wrapper .project-content-wrap,
-.single-project-wrap:hover,
-.single-project-wrapper:hover,
-.single-project-contents:hover,
-.project-content-wrap:hover,
-.single-project-content-wrap:hover {
-  background-color: transparent !important;
-  background: transparent !important;
-  border: none !important;
-  border-width: 0 !important;
-  border-color: transparent !important;
-  outline: none !important;
-  box-shadow: none !important;
+@utility text-body-md {
+  font-family: var(--font-paragraph), sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  font-size: 1.125rem;
+}
+
+@utility text-body-base {
+  font-family: var(--font-paragraph), sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  font-size: 1rem;
+}
+
+@utility text-body-sm {
+  font-family: var(--font-paragraph), sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  font-size: 0.875rem;
+}
+
+@utility text-label {
+  font-family: var(--font-paragraph), sans-serif;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-size: 0.875rem;
+}
+
+@utility text-caption {
+  font-family: var(--font-paragraph), sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0;
+  font-size: 0.75rem;
 }

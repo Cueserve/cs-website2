@@ -15,7 +15,7 @@ export default function ProjectsPage() {
       </div>
 
       {/* Inner Hero Banner */}
-      <section className="inner-banner">
+      <section id="projects" className="inner-banner">
         <div className="container">
           <div className="inner-banner-content-wrap margin-bottom">
             <div className="inner-banner-subtitle-wrap">

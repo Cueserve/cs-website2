@@ -28,7 +28,7 @@ export default function ChangelogPage() {
               Full release of Cueserve Next.js web platform, featuring dynamic React components, interactive tabs, testimonial slider, and FAQ accordion.
             </p>
           </div>
-          <RollingButton variant="blue" href="/" text="Return Home" />
+          <RollingButton variant="primary" href="/" text="Return Home" />
         </div>
       </div>
     </div>

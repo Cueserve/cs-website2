@@ -4,7 +4,7 @@ import { RollingButton } from '@/components/ui/RollingButton';
 
 export default function AboutMainSection() {
   return (
-    <section className="section about-us">
+    <section id="about" className="section about-us">
       <div className="container">
         <div className="about-us-title-wrapper mb-0">
           <div className="about-us-title-flex">

@@ -25,7 +25,7 @@ export default function StyleGuidePage() {
             </div>
           </div>
 
-          <RollingButton variant="blue" href="/" text="Return Home" />
+          <RollingButton variant="primary" href="/" text="Return Home" />
         </div>
       </div>
     </div>

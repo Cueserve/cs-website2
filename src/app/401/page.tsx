@@ -39,7 +39,7 @@ export default function ProtectedPage() {
             marginBottom: '20px',
           }}
         />
-        <RollingButton variant="blue" href="/" text="Submit" />
+        <RollingButton variant="primary" href="/" text="Submit" />
       </div>
     </div>
   );

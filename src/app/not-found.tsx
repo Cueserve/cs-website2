@@ -28,7 +28,7 @@ export default function NotFound() {
         >
           The page you are looking for doesn’t exist or has been moved.
         </p>
-        <RollingButton variant="blue" href="/" text="Back To Home" />
+        <RollingButton variant="primary" href="/" text="Back To Home" />
       </div>
     </div>
   );
