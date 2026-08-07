@@ -81,7 +81,7 @@
 }
 
 .after-banner-ticker-flex:hover {
-  animation-play-state: paused !important;
+  /* animation-play-state: paused !important; */
 }
 
 .tech-logo-item {
@@ -1297,8 +1297,9 @@ screen and (max-height: 820px) and (min-width: 992px) {
   .after-banner-title-line {
     visibility: visible !important;
     opacity: 1 !important;
-    /* Restore its original 35px drop so it aligns with Vision For the */
-    transform: translate(0, 35px) !important;
+    /* Center it with the text */
+    transform: none !important;
+    vertical-align: middle !important;
     display: inline-block !important;
   }
 
@@ -1470,6 +1471,54 @@ screen and (max-height: 820px) and (min-width: 992px) {
 
   .service-tab-link-content-flex {
     align-items: flex-start !important;
+  }
+}
+
+/* ── Tablet & Mobile (991px and below) ─────────────────────────────────────────── */
+@media screen and (max-width: 991px) {
+  /* Disable sticky scroll for Values section on mobile */
+  .mission-vh-wrap {
+    height: auto !important;
+  }
+  .mission-sticky-wrap {
+    position: static !important;
+  }
+
+  /* Values Section Stack Layout - Expand all cards */
+  .mission-flex-wrap {
+    flex-direction: column !important;
+    gap: 2rem !important;
+  }
+  
+  .single-mission-wrapper .mission-card-wrap {
+    display: flex !important;
+  }
+  
+  .mission-contents-flex {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  
+  .single-mission-wrapper .mission-image-wrap {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-top: 1.5rem !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  .mission-image {
+    width: 100% !important;
+    max-height: 250px !important;
+    object-fit: cover !important;
+  }
+
+  /* Force active styles for all mission name pills */
+  .single-mission-wrapper .mission-name {
+    color: #111111 !important;
+  }
+  .single-mission-wrapper .mission-name-hover-bg {
+    opacity: 0 !important;
   }
 }
 

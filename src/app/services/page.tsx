@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import FaqSection from '@/components/FaqSection';
+import AboutTestimonialsSection from '@/components/AboutTestimonialsSection';
 
 export const metadata = {
   title: 'Services - Cueserve',
@@ -155,6 +156,9 @@ export default function ServicesPage() {
         </div>
         <div className="section-divider"></div>
       </section>
+
+      {/* Testimonials Section */}
+      <AboutTestimonialsSection />
 
       {/* FAQ Section */}
       <FaqSection />

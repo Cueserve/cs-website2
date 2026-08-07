@@ -15,7 +15,7 @@ export default function TestimonialsSection() {
           </div>
           <h3 className="testimonial-title">Our success is measured by the satisfaction of our clients. We <span className="testimonial-title-mark">take pride in building long partnerships.</span></h3>
         </div>
-        <div data-delay="4000" data-animation="fade" className="slider testimonials w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="1000" data-infinite="true">
+        <div data-delay="4000" data-animation="slide" className="slider testimonials w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="1000" data-infinite="true">
           <div className="testimonial-slider-mask w-slider-mask">
             <div className="testimonials-slider-item w-slide">
               <div className="single-testimonial-wrap">

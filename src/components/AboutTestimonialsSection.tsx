@@ -57,6 +57,31 @@ export default function AboutTestimonialsSection() {
 
   return (
     <section className="section testimonials about-testimonials" style={{ padding: '6rem 0' }}>
+      <style>{`
+        .about-testimonials-track {
+          display: flex;
+          gap: 1.5rem;
+          transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+          --slide-width: calc(33.333% - 1rem);
+          --slide-shift: calc(33.333% + 0.5rem);
+        }
+        .about-testimonial-card {
+          flex: 0 0 var(--slide-width);
+          min-width: 280px;
+        }
+        @media (max-width: 767px) {
+          .about-testimonials-track {
+            --slide-width: 85%;
+            --slide-shift: calc(85% + 1.5rem);
+          }
+          .about-testimonial-card {
+            min-width: unset;
+          }
+          .about-testimonials .section-title {
+            font-size: clamp(1.5rem, 5vw, 2.5rem) !important;
+          }
+        }
+      `}</style>
       <div className="container">
         {/* Centered Header */}
         <div className="section-title-wrapper margin-bottom" style={{ textAlign: 'center', maxWidth: '54rem', margin: '0 auto 3.5rem' }}>
@@ -73,7 +98,7 @@ export default function AboutTestimonialsSection() {
               </div>
             </div>
           </div>
-          <h2 className="section-title" style={{ textAlign: 'center', fontSize: '2.5rem', lineHeight: '1.25' }}>
+          <h2 className="section-title" style={{ textAlign: 'center', lineHeight: '1.25' }}>
             Our success is measured by the satisfaction of our clients. We{' '}
             <span className="section-title-mark">
               take pride in building long partnerships.
@@ -88,20 +113,16 @@ export default function AboutTestimonialsSection() {
           style={{ overflow: 'hidden', width: '100%', position: 'relative' }}
         >
           <div
+            className="about-testimonials-track"
             style={{
-              display: 'flex',
-              gap: '1.5rem',
-              transform: `translateX(-${currentIndex * (100 / 3 + 0.5)}%)`,
-              transition: 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
+              transform: `translateX(calc(-${currentIndex} * var(--slide-shift)))`,
             }}
           >
             {testimonials.map((t) => (
               <div
                 key={t.id}
-                className="single-testimonial-wrap"
+                className="single-testimonial-wrap about-testimonial-card"
                 style={{
-                  flex: '0 0 calc(33.333% - 1rem)',
-                  minWidth: '280px',
                   backgroundColor: '#edf3ff',
                   borderRadius: '1.75rem',
                   padding: '0.75rem',
@@ -114,7 +135,7 @@ export default function AboutTestimonialsSection() {
                     backgroundColor: '#ffffff',
                     border: '1px solid #e1ebfc',
                     borderRadius: '1.25rem',
-                    padding: '2rem 1.75rem 1.75rem',
+                    padding: '1.5rem 1.25rem',
                     height: '100%',
                     display: 'flex',
                     flexDirection: 'column',
@@ -152,7 +173,7 @@ export default function AboutTestimonialsSection() {
                     <div className="testimonial-content-divider" style={{ height: '1px', backgroundColor: '#0d071914', marginBottom: '1.25rem' }} />
 
                     {/* Quote text */}
-                    <p className="testimonial-details" style={{ fontSize: '1rem', lineHeight: '1.5', color: '#111111', margin: 0, letterSpacing: '-0.03em' }}>
+                    <p className="testimonial-details" style={{ fontSize: '0.9rem', lineHeight: '1.5', color: '#111111', margin: 0, letterSpacing: '-0.03em' }}>
                       {t.quote}
                     </p>
                   </div>
