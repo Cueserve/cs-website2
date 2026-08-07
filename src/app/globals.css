@@ -163,10 +163,15 @@
 
 /* Primary & Secondary Button Hover Effects */
 .primary-button,
-.more-button,
 .secondary-button {
   position: relative !important;
   overflow: hidden !important;
+  transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+.more-button {
+  position: relative !important;
+  overflow: visible !important;
   transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1) !important;
 }
 
@@ -244,6 +249,17 @@
 .more-button {
   position: relative !important;
   display: inline-block !important;
+  overflow: visible !important;
+}
+
+/* Force overflow visible on all button containers to prevent arrow clipping */
+.service-buttons-wrapper,
+.single-service-button-wrap,
+.service-button-wrap,
+.more-button-flex,
+.more-button-arrow-wrap,
+.service-card-content-bottom {
+  overflow: visible !important;
 }
 
 .more-button-flex {
@@ -564,6 +580,26 @@
   overflow: hidden !important;
 }
 
+/* Hide images for inactive tabs on Desktop & Mobile */
+.service-tab-link:not(.active):not(.w--current) .service-tab-link-image-wrap {
+  display: none !important;
+}
+
+/* Show images for all tabs ONLY on Tablet */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .service-tab-link:not(.active):not(.w--current) .service-tab-link-image-wrap {
+    display: flex !important;
+  }
+  
+  /* Make the active tab's image vertical on tablet */
+  .service-tab-link.active .service-tab-link-image-wrap,
+  .service-tab-link.w--current .service-tab-link-image-wrap {
+    width: 8.5rem !important;
+    height: 11rem !important;
+    max-width: 8.5rem !important;
+  }
+}
+
 .service-tab-link-image {
   width: 100% !important;
   height: 100% !important;
@@ -644,6 +680,10 @@
   align-items: center !important;
   gap: 0.5rem !important;
   width: 100% !important;
+}
+
+.subtitle-icon {
+  display: none !important;
 }
 
 .single-checkbox-wrap {
@@ -1043,12 +1083,7 @@ screen and (max-height: 820px) and (min-width: 992px) {
   }
 }
 
-@media screen and (max-width: 600px) {
-  .awards-grid-wrap {
-    grid-template-columns: 1fr !important;
-  }
-}
-
+/* Removed 1fr override to maintain 2 columns on mobile */
 /* Services Page Banner: Bottom to Top Fade Up (No Blur) */
 @keyframes bannerFadeUp {
   0% {

@@ -172,16 +172,14 @@ export default function ServicesSection() {
                               )}
                             </div>
 
-                            {isActive && (
-                              <div className="service-tab-link-image-wrap">
-                                <img
-                                  loading="lazy"
-                                  src={service.image}
-                                  alt={service.name}
-                                  className="service-tab-link-image"
-                                />
-                              </div>
-                            )}
+                            <div className="service-tab-link-image-wrap">
+                              <img
+                                loading="lazy"
+                                src={service.image}
+                                alt={service.name}
+                                className="service-tab-link-image"
+                              />
+                            </div>
                           </div>
                         </div>
                         <div className="service-tab-link-divider"></div>
