@@ -1,90 +1,80 @@
+'use client';
+
 import React from 'react';
+import { motion } from 'framer-motion';
 
 export default function AboutHeroBanner() {
-  const tickerShapesAndImages = (
-    <>
-      <img
-        src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/691a1d07a40ba87bac99f0b7_Service-Banner-Shape-1.png"
-        loading="lazy"
-        alt="Service Shape"
-        className="service-banner-ticker-shape"
-      />
-      <img
-        src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/691a1d08c8e3fb09fce6078c_Service-Banner-Image-1.jpg"
-        loading="lazy"
-        alt="Service Image"
-        className="service-banner-ticker-image about"
-      />
-      <img
-        src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/691a1d073128e3f19ab5a222_Service-Banner-Shape-3.png"
-        loading="lazy"
-        alt="Service Shape"
-        className="service-banner-ticker-shape"
-      />
-      <img
-        src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/691a1d0882b2236cd282fe37_Service-Banner-Image-2.jpg"
-        loading="lazy"
-        alt="Service Image"
-        className="service-banner-ticker-image about"
-      />
-      <img
-        src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/691a1d0788a52f5da2435d75_Service-Banner-Shape-4.png"
-        loading="lazy"
-        alt="Service Shape"
-        className="service-banner-ticker-shape"
-      />
-      <img
-        src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/691a1d084673eda36d3786d4_Service-Banner-Image-3.jpg"
-        loading="lazy"
-        alt="Service Image"
-        className="service-banner-ticker-image about"
-      />
-      <img
-        src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/691a1d079061c2bb210bd10d_Service-Banner-Shape-2.png"
-        loading="lazy"
-        alt="Service Shape"
-        className="service-banner-ticker-shape"
-      />
-    </>
-  );
+  // Placeholder images for the marquee (replacing CDN)
+  const tickerItems = [
+    { type: 'shape', src: '/assets/images/about-us/Service-Banner-Shape-1.png' },
+    { type: 'image', src: '/assets/images/about-us/Service-Banner-Image-1.jpg' },
+    { type: 'shape', src: '/assets/images/about-us/Service-Banner-Shape-2.png' },
+    { type: 'image', src: '/assets/images/about-us/Service-Banner-Image-2.jpg' },
+    { type: 'shape', src: '/assets/images/about-us/Service-Banner-Shape-3.png' },
+    { type: 'image', src: '/assets/images/about-us/Service-Banner-Image-3.jpg' },
+    { type: 'shape', src: '/assets/images/about-us/Service-Banner-Shape-4.png' },
+  ];
 
   return (
-    <>
-      <div className="inner-page-top-bg">
-        <div className="inner-page-bg-overlay"></div>
+    <section className="relative pt-[180px] pb-[80px] overflow-hidden bg-gradient-to-b from-[#e3f0ff] to-white text-[var(--color-text-primary)]">
+      <div className="mx-auto px-6 max-w-[var(--spacing-content)] w-full">
+        <div className="flex flex-col lg:flex-row gap-8 items-center lg:items-start justify-between mb-24 text-center lg:text-left">
+          <motion.div 
+            className="flex-1 lg:flex-[1.5] flex flex-col items-center lg:items-start w-full"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
+            <h1 className="text-h2 font-medium max-w-2xl">
+              Crafting The Future Of Digital{' '}
+              <span className="text-[var(--color-brand-default)]">Brands.</span>
+            </h1>
+          </motion.div>
+          <motion.div 
+            className="flex-1 lg:max-w-md pt-4 flex flex-col items-center lg:items-start w-full"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+          >
+            <p className="text-body-base text-[var(--color-text-secondary)]">
+              At Cueserve, we believe that great design goes beyond visuals — it’s about creating meaningful digital experiences that connect people and brands.
+            </p>
+          </motion.div>
+        </div>
       </div>
-      <section className="inner-banner">
-        <div className="container navbar-container">
-          <div className="feature-banner-content-wrap">
-            <div className="feature-banner-content-flex">
-              <div className="feature-banner-content-left">
-                <h1 className="inner-banner-title mb-0">
-                  Crafting The Future Of Digital{' '}
-                  <span className="inner-banner-title-mark">Brands.</span>
-                </h1>
+
+      {/* Infinite Marquee */}
+      <div className="relative w-full flex overflow-hidden py-8">
+        <motion.div
+          className="flex flex-nowrap whitespace-nowrap items-center gap-12"
+          animate={{ x: [0, -1416] }}
+          transition={{ repeat: Infinity, ease: 'linear', duration: 25 }}
+        >
+          {/* We repeat the array twice for seamless loop */}
+          {[...tickerItems, ...tickerItems].map((item, index) => {
+            const isImage = item.type === 'image';
+            const isBlueShape = item.type === 'shape' && index % 2 === 0;
+
+            return (
+              <div
+                key={index}
+                className={`flex-shrink-0 flex items-center justify-center overflow-hidden ${
+                  isImage
+                    ? 'w-[350px] h-[350px] rounded-full bg-gray-200' 
+                    : 'w-[175px] h-[350px] rounded-l-full'
+                } ${!isImage && isBlueShape ? 'bg-[var(--color-brand-default)]' : ''} ${!isImage && !isBlueShape ? 'bg-white' : ''}`}
+              >
+                {/* Image or Shape */}
+                <img
+                  src={item.src}
+                  alt={isImage ? "Work" : "Shape"}
+                  className={`w-full h-full ${isImage ? 'object-cover' : 'object-cover'}`}
+                />
               </div>
-              <div className="feature-banner-content-right">
-                <p className="inner-banner-details">
-                  At Arooth, we believe that great design goes beyond visuals — it’s about creating meaningful digital experiences that connect people and brands.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="service-banner-ticker-wrap">
-          <div className="service-banner-ticker-flex">
-            <div className="service-banner-ticker-item">
-              {tickerShapesAndImages}
-            </div>
-            <div className="service-banner-ticker-item">
-              {tickerShapesAndImages}
-            </div>
-            <div className="service-banner-ticker-item">
-              {tickerShapesAndImages}
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
+            );
+          })}
+        </motion.div>
+      </div>
+    </section>
   );
 }

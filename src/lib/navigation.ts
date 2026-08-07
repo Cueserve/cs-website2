@@ -72,11 +72,11 @@ export const NAV_LABELS: Record<MenuKey, string> = {
 };
 
 export const NAV_HREFS: Record<MenuKey, string> = {
-  home: "/home",
-  about: "/about",
+  home: "/",
+  about: "/about-us",
   services: "/services",
   solutions: "/solutions",
-  ourWork: "/case-studies",
+  ourWork: "/projects",
   blog: "/blog",
 };
 

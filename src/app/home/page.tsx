@@ -7,7 +7,7 @@ import { ServicesSection } from "./_components/ServicesSection";
 import { ProjectsSection } from "./_components/ProjectsSection";
 import { TestimonialSection } from "./_components/Testimonials/TestimonialSection";
 import { ArticlesSection } from "./_components/ArticlesSection";
-import { FaqSection } from "./_components/FaqSection";
+import FaqSection from "@/components/FaqSection";
 
 export default function HomePage() {
   return (

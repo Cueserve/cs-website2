@@ -1,6 +1,7 @@
-"use client";
+'use client';
 
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 export default function AboutTestimonialsSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -10,30 +11,26 @@ export default function AboutTestimonialsSection() {
     {
       id: 1,
       name: 'Emma Johnson',
-      companyLogo: 'https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/691cdb118f5abb33fd2d45fd_Testimonial-Logo.svg',
-      avatar: 'https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/691cdaedad24e443801fc6e0_Testimonial-Image-1.jpg',
-      quote: '“Working with Arooth was a seamless experience from start to finish. Their team truly understood our vision and brought it to life through a stunning digital identity. The results exceeded our expectations.”',
+      avatar: '/assets/images/about-us/Testimonial-Image-1.jpg',
+      quote: '“Working with Cueserve was a seamless experience from start to finish. Their team truly understood our vision and brought it to life through a stunning digital identity. The results exceeded our expectations.”',
     },
     {
       id: 2,
       name: 'Emma Johnson',
-      companyLogo: 'https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/691cdb118f5abb33fd2d45fd_Testimonial-Logo.svg',
-      avatar: 'https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/691cdaee30cffad6d75f74b4_Testimonial-Image-2.jpg',
-      quote: '“Arooth delivered exactly what we were looking for—clean design, clear structure, and a strong brand presence. Their attention to detail and creative approach made the entire process effortless.”',
+      avatar: '/assets/images/about-us/Testimonial-Image-2.jpg',
+      quote: '“Cueserve delivered exactly what we were looking for—clean design, clear structure, and a strong brand presence. Their attention to detail and creative approach made the entire process effortless.”',
     },
     {
       id: 3,
       name: 'Emma Johnson',
-      companyLogo: 'https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/691cdb118f5abb33fd2d45fd_Testimonial-Logo.svg',
-      avatar: 'https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/691cdaeeb6faec471807e4a4_Testimonial-Image-3.jpg',
-      quote: '“The team at Arooth transformed our innovative ideas into a polished and professional digital experience. Communication was smooth, timelines were consistently met, and the final outcome was exceptionally impressive.”',
+      avatar: '/assets/images/about-us/Testimonial-Image-3.jpg',
+      quote: '“The team at Cueserve transformed our innovative ideas into a polished and professional digital experience. Communication was smooth, timelines were consistently met, and the final outcome was exceptionally impressive.”',
     },
     {
       id: 4,
       name: 'Emma Johnson',
-      companyLogo: 'https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/691cdb118f5abb33fd2d45fd_Testimonial-Logo.svg',
-      avatar: 'https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/691cdaeef6f6713e50ba3c26_Testimonial-Image-4.jpg',
-      quote: '“From concept to execution, Arooth handled everything with precision and creativity. The final design perfectly reflects our brand and has received overwhelmingly positive feedback from our clients.”',
+      avatar: '/assets/images/about-us/Testimonial-Image-4.jpg',
+      quote: '“From concept to execution, Cueserve handled everything with precision and creativity. The final design perfectly reflects our brand and has received overwhelmingly positive feedback from our clients.”',
     },
   ];
 
@@ -41,66 +38,32 @@ export default function AboutTestimonialsSection() {
     if (isPaused) return;
 
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
+      setCurrentIndex((prev) => (prev === testimonials.length - 3 ? 0 : prev + 1));
     }, 4000);
 
     return () => clearInterval(interval);
   }, [isPaused, testimonials.length]);
 
   const handlePrev = () => {
-    setCurrentIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
+    setCurrentIndex((prev) => (prev === 0 ? testimonials.length - 3 : prev - 1));
   };
 
   const handleNext = () => {
-    setCurrentIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
+    setCurrentIndex((prev) => (prev === testimonials.length - 3 ? 0 : prev + 1));
   };
 
   return (
-    <section className="section testimonials about-testimonials" style={{ padding: '6rem 0' }}>
-      <style>{`
-        .about-testimonials-track {
-          display: flex;
-          gap: 1.5rem;
-          transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-          --slide-width: calc(33.333% - 1rem);
-          --slide-shift: calc(33.333% + 0.5rem);
-        }
-        .about-testimonial-card {
-          flex: 0 0 var(--slide-width);
-          min-width: 280px;
-        }
-        @media (max-width: 767px) {
-          .about-testimonials-track {
-            --slide-width: 85%;
-            --slide-shift: calc(85% + 1.5rem);
-          }
-          .about-testimonial-card {
-            min-width: unset;
-          }
-          .about-testimonials .section-title {
-            font-size: clamp(1.5rem, 5vw, 2.5rem) !important;
-          }
-        }
-      `}</style>
-      <div className="container">
+    <section className="py-24 xl:py-32 bg-white text-cs-ink overflow-hidden">
+      <div className="w-[90%] xl:w-[82%] max-w-[1260px] mx-auto">
+        
         {/* Centered Header */}
-        <div className="section-title-wrapper margin-bottom" style={{ textAlign: 'center', maxWidth: '54rem', margin: '0 auto 3.5rem' }}>
-          <div className="section-subtile-wrap" style={{ display: 'flex', justifyContent: 'center', marginBottom: '1rem' }}>
-            <div data-wf--subtitle--variant="borders" className="subtitle-wrap w-variant-89dd2e21-7faa-27ca-a536-110057684450">
-              <div className="subtitle-flex-wrap">
-                <img
-                  src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/690f9e158664fc7bd2753513_Subtitle-Icon.svg"
-                  loading="lazy"
-                  alt="Subtitle Icon"
-                  className="subtitle-icon"
-                />
-                <div className="subtitle-text">Our Testimonials</div>
-              </div>
-            </div>
+        <div className="flex flex-col items-center justify-center text-center mb-16 gap-6 max-w-[900px] mx-auto">
+          <div className="inline-flex items-center px-4 py-1.5 rounded-full text-label uppercase tracking-wider text-brand-default border border-brand-default/30 bg-[#f4f8ff]">
+            <span>Our Testimonials</span>
           </div>
-          <h2 className="section-title" style={{ textAlign: 'center', lineHeight: '1.25' }}>
+          <h2 className="text-4xl md:text-5xl font-display font-normal text-cs-ink leading-tight">
             Our success is measured by the satisfaction of our clients. We{' '}
-            <span className="section-title-mark">
+            <span className="text-brand-default">
               take pride in building long partnerships.
             </span>
           </h2>
@@ -108,132 +71,88 @@ export default function AboutTestimonialsSection() {
 
         {/* Carousel Grid Wrapper */}
         <div
+          className="relative w-full"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
-          style={{ overflow: 'hidden', width: '100%', position: 'relative' }}
         >
-          <div
-            className="about-testimonials-track"
-            style={{
-              transform: `translateX(calc(-${currentIndex} * var(--slide-shift)))`,
+          <motion.div
+            className="flex gap-6"
+            animate={{
+              x: `calc(-${currentIndex} * (33.333% + 1.5rem))`,
             }}
+            transition={{
+              type: "spring",
+              stiffness: 100,
+              damping: 20,
+              mass: 1
+            }}
+            style={{ width: '100%' }}
           >
             {testimonials.map((t) => (
               <div
                 key={t.id}
-                className="single-testimonial-wrap about-testimonial-card"
-                style={{
-                  backgroundColor: '#edf3ff',
-                  borderRadius: '1.75rem',
-                  padding: '0.75rem',
-                  boxSizing: 'border-box',
-                }}
+                className="w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.3333%-1rem)] shrink-0"
               >
-                <div
-                  className="testimonial-content-wrapper"
-                  style={{
-                    backgroundColor: '#ffffff',
-                    border: '1px solid #e1ebfc',
-                    borderRadius: '1.25rem',
-                    padding: '1.5rem 1.25rem',
-                    height: '100%',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'space-between',
-                    boxSizing: 'border-box',
-                  }}
-                >
-                  <div>
-                    {/* Top Author Row */}
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.25rem' }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.875rem' }}>
+                {/* Thick border effect using nested divs */}
+                <div className="bg-[#f4f8ff] p-[10px] rounded-[36px] h-full flex flex-col">
+                  <div className="bg-white rounded-[26px] p-8 h-full flex flex-col justify-start">
+                    
+                    {/* Top Row: Author & Quote Icon */}
+                    <div className="flex items-start justify-between mb-8">
+                      <div className="flex items-center gap-4">
                         <img
                           src={t.avatar}
                           alt={t.name}
-                          style={{ width: '3rem', height: '3rem', borderRadius: '50%', objectFit: 'cover' }}
+                          className="w-12 h-12 rounded-full object-cover bg-gray-200 shrink-0"
                         />
-                        <div>
-                          <img src={t.companyLogo} alt="Logo" style={{ height: '1.2rem', marginBottom: '0.2rem' }} />
-                          <div className="testimonial-author-name" style={{ fontSize: '0.9rem', color: '#111111', fontStyle: 'italic', letterSpacing: '-0.04em' }}>
+                        <div className="flex flex-col items-start gap-1 justify-center">
+                          <div className="text-base text-cs-ink font-medium">
                             {t.name}
                           </div>
                         </div>
                       </div>
-                      {/* Quote Icon */}
-                      <div>
-                        <img
-                          src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/691cdb2fd8ce6cc23415e725_Testimonial-Quote.svg"
-                          alt="Quote"
-                          style={{ width: '2rem' }}
-                        />
+                      
+                      {/* Giant Quote Icon */}
+                      <div className="text-[#e2ebfc] shrink-0">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.571 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                        </svg>
                       </div>
                     </div>
 
-                    {/* Divider */}
-                    <div className="testimonial-content-divider" style={{ height: '1px', backgroundColor: '#0d071914', marginBottom: '1.25rem' }} />
-
                     {/* Quote text */}
-                    <p className="testimonial-details" style={{ fontSize: '0.9rem', lineHeight: '1.5', color: '#111111', margin: 0, letterSpacing: '-0.03em' }}>
+                    <p className="text-sm font-paragraph leading-relaxed text-cs-ink">
                       {t.quote}
                     </p>
                   </div>
                 </div>
               </div>
             ))}
-          </div>
+          </motion.div>
         </div>
 
-        {/* Centered Navigation Buttons */}
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1rem', marginTop: '2.5rem' }}>
+        {/* Navigation Buttons */}
+        <div className="flex justify-center items-center gap-4 mt-12">
           <button
             onClick={handlePrev}
             aria-label="Previous Testimonial"
-            style={{
-              width: '3rem',
-              height: '3rem',
-              borderRadius: '50%',
-              backgroundColor: '#edf3ff',
-              border: 'none',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              cursor: 'pointer',
-              transition: 'background-color 0.2s ease',
-            }}
-            onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#d8e5ff')}
-            onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#edf3ff')}
+            className="w-10 h-10 rounded-full bg-[#f4f8ff] hover:bg-[#e2ebfc] text-cs-ink flex items-center justify-center transition-colors"
           >
-            <img
-              src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/691099d2ad33ce03facdb99e_Arrow-Left-Black.svg"
-              alt="Prev"
-              style={{ width: '1rem', height: '1rem' }}
-            />
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M15 18l-6-6 6-6"/>
+            </svg>
           </button>
           <button
             onClick={handleNext}
             aria-label="Next Testimonial"
-            style={{
-              width: '3rem',
-              height: '3rem',
-              borderRadius: '50%',
-              backgroundColor: '#edf3ff',
-              border: 'none',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              cursor: 'pointer',
-              transition: 'background-color 0.2s ease',
-            }}
-            onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#d8e5ff')}
-            onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#edf3ff')}
+            className="w-10 h-10 rounded-full bg-[#f4f8ff] hover:bg-[#e2ebfc] text-cs-ink flex items-center justify-center transition-colors"
           >
-            <img
-              src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/691099d2cb74b898d73240fe_Arrow-Right-Black.svg"
-              alt="Next"
-              style={{ width: '1rem', height: '1rem' }}
-            />
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M9 18l6-6-6-6"/>
+            </svg>
           </button>
         </div>
+
       </div>
     </section>
   );

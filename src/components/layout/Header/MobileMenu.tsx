@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 import {
   MEGA_MENU_ORDER,
   NAV_LABELS,
+  NAV_HREFS,
 } from "@/lib/navigation";
 import type { MenuKey } from "@/lib/navigation";
 
@@ -15,15 +16,6 @@ interface Props {
   onCloseNav: () => void;
 }
 
-const TARGET_IDS: Record<MenuKey, string> = {
-  home: "home",
-  about: "about",
-  services: "services",
-  solutions: "solutions",
-  ourWork: "projects",
-  blog: "blog",
-};
-
 export function MobileMenu({
   mobileNavOpen,
   openMobileMenu,
@@ -31,38 +23,6 @@ export function MobileMenu({
   onCloseNav,
 }: Props) {
   const pathname = usePathname();
-  const [activeIds, setActiveIds] = useState<Record<string, boolean>>({});
-  const isHomePage = pathname === "/" || pathname === "/home";
-
-  useEffect(() => {
-    const checkIds = () => {
-      const ids: Record<string, boolean> = {};
-      MEGA_MENU_ORDER.forEach((key) => {
-        const id = TARGET_IDS[key];
-        if (isHomePage) {
-          ids[key] = !!document.getElementById(id);
-        } else {
-          ids[key] = true;
-        }
-      });
-      setActiveIds(ids);
-    };
-
-    checkIds();
-    const timer1 = setTimeout(checkIds, 50);
-    const timer2 = setTimeout(checkIds, 300);
-    const timer3 = setTimeout(checkIds, 1000);
-
-    const observer = new MutationObserver(checkIds);
-    observer.observe(document.body, { childList: true, subtree: true });
-
-    return () => {
-      clearTimeout(timer1);
-      clearTimeout(timer2);
-      clearTimeout(timer3);
-      observer.disconnect();
-    };
-  }, [pathname, isHomePage]);
 
   return (
     <nav
@@ -71,22 +31,21 @@ export function MobileMenu({
     >
       <ul className="mx-auto flex w-full flex-col gap-2 px-6">
         {MEGA_MENU_ORDER.map((key) => {
-          if (!activeIds[key]) return null;
+          const href = NAV_HREFS[key];
+          const isActive = pathname === href || (href !== '/' && pathname.startsWith(href));
 
-          const targetId = TARGET_IDS[key];
-          const href = isHomePage ? `#${targetId}` : `/home#${targetId}`;
           return (
             <li key={key} className="w-full">
-              <a
+              <Link
                 href={href}
                 onClick={onCloseNav}
-                className="flex w-full items-center justify-between rounded-2xl px-5 py-4 text-left text-xl font-paragraph font-normal transition-all duration-300 text-cs-ink hover:bg-[#f4f8ff] hover:text-brand-default"
+                className={`flex w-full items-center justify-between rounded-2xl px-5 py-4 text-left text-xl font-paragraph font-normal transition-all duration-300 ${isActive ? 'bg-[#f4f8ff] text-brand-default' : 'text-cs-ink hover:bg-[#f4f8ff] hover:text-brand-default'}`}
               >
                 {NAV_LABELS[key]}
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="opacity-40">
                   <path d="M9 18l6-6-6-6" />
                 </svg>
-              </a>
+              </Link>
             </li>
           );
         })}

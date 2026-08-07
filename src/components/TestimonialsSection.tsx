@@ -27,7 +27,6 @@ export default function TestimonialsSection() {
                     <div className="testimonial-content-inner">
                       <div className="testimonial-content-top-wrap">
                         <div className="testimonial-author-info-wrap">
-                          <img loading="lazy" src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/691cdb118f5abb33fd2d45fd_Testimonial-Logo.svg" alt="Testimonial Logo" className="testimonial-logo" />
                           <div className="testimonial-author-name">Emma Johnson</div>
                         </div>
                         <div className="testimonial-quote-wrap">
@@ -36,7 +35,7 @@ export default function TestimonialsSection() {
                       </div>
                       <div className="testimonial-content-divider"></div>
                       <div className="testimonial-details-wrap">
-                        <p className="testimonial-details">“Working with Arooth was a seamless experience from start to finish. Their team truly understood our vision and brought it to life through a stunning digital identity. The results exceeded our expectations.”</p>
+                        <p className="testimonial-details">“Working with Cueserve was a seamless experience from start to finish. Their team truly understood our vision and brought it to life through a stunning digital identity. The results exceeded our expectations.”</p>
                       </div>
                     </div>
                   </div>
@@ -53,7 +52,6 @@ export default function TestimonialsSection() {
                     <div className="testimonial-content-inner">
                       <div className="testimonial-content-top-wrap">
                         <div className="testimonial-author-info-wrap">
-                          <img loading="lazy" src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/691cdb118f5abb33fd2d45fd_Testimonial-Logo.svg" alt="Testimonial Logo" className="testimonial-logo" />
                           <div className="testimonial-author-name">Emma Johnson</div>
                         </div>
                         <div className="testimonial-quote-wrap">
@@ -62,7 +60,7 @@ export default function TestimonialsSection() {
                       </div>
                       <div className="testimonial-content-divider"></div>
                       <div className="testimonial-details-wrap">
-                        <p className="testimonial-details">“Arooth delivered exactly what we were looking for—clean design, clear structure, and a strong brand presence. Their attention to detail and creative approach made the entire process effortless.”</p>
+                        <p className="testimonial-details">“Cueserve delivered exactly what we were looking for—clean design, clear structure, and a strong brand presence. Their attention to detail and creative approach made the entire process effortless.”</p>
                       </div>
                     </div>
                   </div>
@@ -79,7 +77,6 @@ export default function TestimonialsSection() {
                     <div className="testimonial-content-inner">
                       <div className="testimonial-content-top-wrap">
                         <div className="testimonial-author-info-wrap">
-                          <img loading="lazy" src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/691cdb118f5abb33fd2d45fd_Testimonial-Logo.svg" alt="Testimonial Logo" className="testimonial-logo" />
                           <div className="testimonial-author-name">Emma Johnson</div>
                         </div>
                         <div className="testimonial-quote-wrap">
@@ -88,7 +85,7 @@ export default function TestimonialsSection() {
                       </div>
                       <div className="testimonial-content-divider"></div>
                       <div className="testimonial-details-wrap">
-                        <p className="testimonial-details">“The team at Arooth transformed our ideas into a polished and professional digital experience. Communication was smooth, timelines were met, and the final outcome was exceptional.”</p>
+                        <p className="testimonial-details">“The team at Cueserve transformed our ideas into a polished and professional digital experience. Communication was smooth, timelines were met, and the final outcome was exceptional.”</p>
                       </div>
                     </div>
                   </div>
@@ -105,7 +102,6 @@ export default function TestimonialsSection() {
                     <div className="testimonial-content-inner">
                       <div className="testimonial-content-top-wrap">
                         <div className="testimonial-author-info-wrap">
-                          <img loading="lazy" src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/691cdb118f5abb33fd2d45fd_Testimonial-Logo.svg" alt="Testimonial Logo" className="testimonial-logo" />
                           <div className="testimonial-author-name">Emma Johnson</div>
                         </div>
                         <div className="testimonial-quote-wrap">
@@ -114,7 +110,7 @@ export default function TestimonialsSection() {
                       </div>
                       <div className="testimonial-content-divider"></div>
                       <div className="testimonial-details-wrap">
-                        <p className="testimonial-details">“From concept to execution, Arooth handled everything with precision and creativity. The final design perfectly reflects our brand and has received great feedback from our clients.”</p>
+                        <p className="testimonial-details">“From concept to execution, Cueserve handled everything with precision and creativity. The final design perfectly reflects our brand and has received great feedback from our clients.”</p>
                       </div>
                     </div>
                   </div>
