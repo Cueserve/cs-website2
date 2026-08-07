@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { gsap, ScrollTrigger } from "@/lib/gsap";
+import { gsap } from "@/lib/gsap";
 import { AnimatedLogo } from "@/components/ui/AnimatedLogo";
 
 const BOOT_MESSAGES = [

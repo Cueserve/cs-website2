@@ -17,9 +17,9 @@ interface Props {
 }
 
 export function MobileMenu({
-  mobileNavOpen,
-  openMobileMenu,
-  onAccordionToggle,
+  mobileNavOpen: _mobileNavOpen,
+  openMobileMenu: _openMobileMenu,
+  onAccordionToggle: _onAccordionToggle,
   onCloseNav,
 }: Props) {
   const pathname = usePathname();

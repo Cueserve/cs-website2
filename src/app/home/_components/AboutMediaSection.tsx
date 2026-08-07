@@ -25,7 +25,7 @@ export function AboutMediaSection() {
 
   useGSAP(
     () => {
-      let mm = gsap.matchMedia();
+      const mm = gsap.matchMedia();
 
       mm.add("(min-width: 1024px)", () => {
         if (!videoPinContainerRef.current || !videoWrapperRef.current || !statsWrapperRef.current) return;
@@ -86,7 +86,7 @@ export function AboutMediaSection() {
   // Cinematic Float & Settle Entrance Animation
   useGSAP(
     () => {
-      let mm = gsap.matchMedia();
+      const mm = gsap.matchMedia();
 
       mm.add("(min-width: 1024px)", () => {
         const wrappers = gsap.utils.toArray<HTMLElement>(".service-card-wrapper");

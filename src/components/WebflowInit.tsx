@@ -8,10 +8,10 @@ export default function WebflowInit() {
 
   useEffect(() => {
     const handleInit = () => {
-      // @ts-ignore
+      // @ts-expect-error Webflow global not typed
       if (typeof window !== 'undefined' && window.Webflow) {
         try {
-          // @ts-ignore
+          // @ts-expect-error Webflow global not typed
           const ix2 = window.Webflow.require('ix2');
           if (ix2 && typeof ix2.init === 'function') {
             ix2.init();

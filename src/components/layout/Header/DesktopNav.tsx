@@ -7,7 +7,6 @@ import {
   NAV_LABELS,
   NAV_HREFS,
 } from "@/lib/navigation";
-import type { MenuKey } from "@/lib/navigation";
 
 export function DesktopNav() {
   const pathname = usePathname();

@@ -60,7 +60,7 @@ export default async function BlogDetailPage({
 
             {post.quote && (
               <blockquote className="border-l-4 border-[#0051ff] pl-6 sm:pl-8 py-2 my-12 text-[18px] sm:text-[20px] font-medium text-cs-ink leading-relaxed italic">
-                "{post.quote}"
+                &ldquo;{post.quote}&rdquo;
               </blockquote>
             )}
 

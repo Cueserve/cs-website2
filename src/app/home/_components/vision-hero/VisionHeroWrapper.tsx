@@ -49,8 +49,8 @@ export const VisionHeroWrapper: React.FC<VisionHeroWrapperProps> = ({
       const heroTicker = clipEl.querySelector("[data-hero-ticker]");
 
       // Calculate exact offset to move the pill to viewport center, and the scale needed to fill the viewport from there
-      let mediaRect = mediaEl.getBoundingClientRect();
-      let parentRect = stickyViewportRef.current.getBoundingClientRect();
+      const mediaRect = mediaEl.getBoundingClientRect();
+      const parentRect = stickyViewportRef.current.getBoundingClientRect();
       let baseL0 = mediaRect.left - parentRect.left;
       let baseT0 = mediaRect.top - parentRect.top;
       let baseW0 = mediaRect.width;

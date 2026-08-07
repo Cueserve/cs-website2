@@ -11,10 +11,7 @@ export function Header() {
   const {
     scrolled,
     mobileNavOpen,
-    openMenu,
     openMobileMenu,
-    openDesktopMenu,
-    closeDesktopMenu,
     toggleMobileNav,
     closeMobileNav,
     toggleMobileAccordion,
@@ -25,7 +22,7 @@ export function Header() {
       {/* Top Navbar Pill */}
       <div
         className={[
-          "pointer-events-auto w-[90%] xl:w-[82%] max-w-[1260px] rounded-full border border-[#D1E0FF] transition-all duration-500 pl-6 pr-[10px] py-2 sm:py-2.5 xl:py-[clamp(0.5rem,1.2vh,0.625rem)] flex items-center justify-between shadow-md",
+          "pointer-events-auto w-[90%] xl:w-[82%] max-w-[1260px] rounded-full border border-[#D1E0FF] transition-all duration-500 pl-2 pr-[10px] py-2 sm:py-2.5 xl:py-[clamp(0.5rem,1.2vh,0.625rem)] flex items-center justify-between shadow-md",
           scrolled ? "bg-white/95 backdrop-blur-md" : "bg-white/92 backdrop-blur-md",
         ].join(" ")}
       >
