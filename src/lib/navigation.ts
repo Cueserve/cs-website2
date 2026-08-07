@@ -15,7 +15,7 @@ import {
 
 // ── Types ──────────────────────────────────────────────────────────────────
 
-export type MenuKey = "home" | "about" | "services" | "solutions" | "ourWork" | "blog";
+export type MenuKey = "home" | "about" | "services" | "solutions" | "ourWork" | "blog" | "contact";
 
 export interface ShowcaseItem {
   Icon: (props: SVGProps<SVGSVGElement>) => ReactNode;
@@ -57,9 +57,8 @@ export const MEGA_MENU_ORDER: MenuKey[] = [
   "home",
   "about",
   "services",
-  "solutions",
   "ourWork",
-  "blog",
+  "contact",
 ];
 
 export const NAV_LABELS: Record<MenuKey, string> = {
@@ -69,6 +68,7 @@ export const NAV_LABELS: Record<MenuKey, string> = {
   solutions: "Solutions",
   ourWork: "Our Work",
   blog: "Blog",
+  contact: "Contact",
 };
 
 export const NAV_HREFS: Record<MenuKey, string> = {
@@ -78,6 +78,7 @@ export const NAV_HREFS: Record<MenuKey, string> = {
   solutions: "/solutions",
   ourWork: "/projects",
   blog: "/blog",
+  contact: "/contact",
 };
 
 // ── Menu Data (source: docs/cs-content/megamenu.md) ───────────────────────

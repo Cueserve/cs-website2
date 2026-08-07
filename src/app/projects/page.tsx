@@ -1,11 +1,44 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { ArrowUpRight } from 'lucide-react';
 import FaqSection from '@/components/FaqSection';
 
-export const metadata = {
-  title: 'Works & Projects - Cueserve',
-  description: 'Explore our latest design, development, and branding projects.',
-};
+const projects = [
+  { 
+    id: 'pixel-forge', 
+    title: 'Pixel Forge', 
+    category: 'UI/UX Design', 
+    image: '/assets/images/projects/Project-Image-1.jpg' 
+  },
+  { 
+    id: 'studio-nova', 
+    title: 'Studio Nova', 
+    category: 'UI/UX Design', 
+    image: '/assets/images/projects/Project-Image-2.jpg' 
+  },
+  { 
+    id: 'brand-orbit', 
+    title: 'Brand Orbit', 
+    category: 'UI/UX Design', 
+    image: '/assets/images/projects/Project-Image-3.jpg', 
+    isLarge: true 
+  },
+  { 
+    id: 'vision-core', 
+    title: 'Vision Core', 
+    category: 'UI/UX Design', 
+    image: '/assets/images/projects/Project-Image-4.jpg' 
+  },
+  { 
+    id: 'design-flow', 
+    title: 'Design Flow', 
+    category: 'UI/UX Design', 
+    image: '/assets/images/projects/Project-Image-5.jpg' 
+  },
+];
 
 export default function ProjectsPage() {
   return (
@@ -14,219 +47,83 @@ export default function ProjectsPage() {
         <div className="inner-page-bg-overlay"></div>
       </div>
 
-      {/* Inner Hero Banner */}
-      <section id="projects" className="inner-banner">
-        <div className="container">
-          <div className="inner-banner-content-wrap margin-bottom">
-            <div className="inner-banner-subtitle-wrap">
-              <div data-wf--subtitle--variant="base" className="subtitle-wrap">
-                <div className="subtitle-flex-wrap">
-                  <img
-                    src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/690f9e158664fc7bd2753513_Subtitle-Icon.svg"
-                    loading="lazy"
-                    alt="Subtitle Icon"
-                    className="subtitle-icon"
-                  />
-                  <div className="subtitle-text">Our Works</div>
+      <main className="w-full bg-white">
+        {/* Hero Section with Gradient */}
+        <div className="w-full flex flex-col items-center pt-[180px] pb-20 bg-gradient-to-b from-[#e3f0ff] to-white">
+          <section className="w-[90%] xl:w-[82%] max-w-[1260px] mx-auto">
+            <div className="flex flex-col items-center justify-center text-center">
+              <motion.div 
+                className="flex flex-col items-center w-full"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+              >
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-label uppercase tracking-wider text-brand-default border border-brand-default/30 bg-[#f4f8ff] w-fit mb-6">
+                  <span>Our Works</span>
                 </div>
-              </div>
+                <h1 className="text-h2 font-medium max-w-2xl mb-4 text-cs-ink">
+                  Our Latest{' '}
+                  <span className="text-[var(--color-brand-default)]">Projects.</span>
+                </h1>
+              </motion.div>
+              <motion.div 
+                className="flex flex-col items-center w-full max-w-2xl"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+              >
+                <p className="text-body-base text-[var(--color-text-secondary)]">
+                  At Cueserve, we offer a full range of creative and digital services designed to help brands stand out and succeed in a fast-evolving digital world.
+                </p>
+              </motion.div>
             </div>
-            <h1 className="inner-banner-title">
-              Our Latest <span className="inner-banner-title-mark">Projects.</span>
-            </h1>
-            <p className="inner-banner-details">
-              At Cueserve, we offer a full range of creative and digital services designed to help brands stand out and succeed in a fast-evolving digital world.
-            </p>
-          </div>
-
-          {/* All Projects Container */}
-          <div className="all-projects-wrap">
-            {/* Row 1: 2 Columns */}
-            <div className="project-collection-row">
-              <div className="projects-grid-wrap">
-                {/* Project 1: Pixel Forge */}
-                <div className="single-project-wrap">
-                  <Link href="/projects/pixel-forge" className="single-project-image-wrap w-inline-block">
-                    <img
-                      src="https://cdn.prod.website-files.com/6916390ccd119327e597f20f/69163c9d9db2b8811c1f2f51_Project-Image-1.jpg"
-                      loading="lazy"
-                      alt="Pixel Forge"
-                      className="project-image single-project"
-                    />
-                    <div className="project-arrow-button single-project">
-                      <img
-                        src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/691a1357349460d0603446de_Project-Button-Arrow.svg"
-                        loading="lazy"
-                        alt="Project Arrow"
-                        className="project-button-arrow single-project"
-                      />
-                    </div>
-                  </Link>
-                  <div className="single-project-content-wrap">
-                    <div className="single-project-contents-flex">
-                      <div className="project-name-wrap single-project">
-                        <Link href="/projects/pixel-forge" className="single-project-name">
-                          Pixel Forge
-                        </Link>
-                      </div>
-                      <div className="single-project-category-wrap">
-                        <div className="single-project-cat-dot"></div>
-                        <div className="single-project-category">UI/UX Design</div>
-                      </div>
-                    </div>
-                    <div className="single-project-hover-bg"></div>
-                  </div>
-                </div>
-
-                {/* Project 2: Studio Nova */}
-                <div className="single-project-wrap">
-                  <Link href="/projects/studio-nova" className="single-project-image-wrap w-inline-block">
-                    <img
-                      src="https://cdn.prod.website-files.com/6916390ccd119327e597f20f/69163ca08474f6ede5554410_Project-Image-2.jpg"
-                      loading="lazy"
-                      alt="Studio Nova"
-                      className="project-image single-project"
-                    />
-                    <div className="project-arrow-button single-project">
-                      <img
-                        src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/691a1357349460d0603446de_Project-Button-Arrow.svg"
-                        loading="lazy"
-                        alt="Project Arrow"
-                        className="project-button-arrow single-project"
-                      />
-                    </div>
-                  </Link>
-                  <div className="single-project-content-wrap">
-                    <div className="single-project-contents-flex">
-                      <div className="project-name-wrap single-project">
-                        <Link href="/projects/studio-nova" className="single-project-name">
-                          Studio Nova
-                        </Link>
-                      </div>
-                      <div className="single-project-category-wrap">
-                        <div className="single-project-cat-dot"></div>
-                        <div className="single-project-category">UI/UX Design</div>
-                      </div>
-                    </div>
-                    <div className="single-project-hover-bg"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Row 2: Full Width Single Project */}
-            <div className="project-collection-row" style={{ marginTop: '30px', marginBottom: '30px' }}>
-              <div className="single-project-wrap full-width-project">
-                <Link href="/projects/brand-orbit" className="single-project-image-wrap w-inline-block">
-                  <img
-                    src="https://cdn.prod.website-files.com/6916390ccd119327e597f20f/69163d638bec0e84a11ff019_Project-Image-3.jpg"
-                    loading="lazy"
-                    alt="Brand Orbit"
-                    className="project-image single-project"
-                  />
-                  <div className="project-arrow-button single-project">
-                    <img
-                      src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/691a1357349460d0603446de_Project-Button-Arrow.svg"
-                      loading="lazy"
-                      alt="Project Arrow"
-                      className="project-button-arrow single-project"
-                    />
-                  </div>
-                </Link>
-                <div className="single-project-content-wrap">
-                  <div className="single-project-contents-flex">
-                    <div className="project-name-wrap single-project">
-                      <Link href="/projects/brand-orbit" className="single-project-name">
-                        Brand Orbit
-                      </Link>
-                    </div>
-                    <div className="single-project-category-wrap">
-                      <div className="single-project-cat-dot"></div>
-                      <div className="single-project-category">UI/UX Design</div>
-                    </div>
-                  </div>
-                  <div className="single-project-hover-bg"></div>
-                </div>
-              </div>
-            </div>
-
-            {/* Row 3: 2 Columns */}
-            <div className="project-collection-row">
-              <div className="projects-grid-wrap">
-                {/* Project 4: Vision Core */}
-                <div className="single-project-wrap">
-                  <Link href="/projects/vision-core" className="single-project-image-wrap w-inline-block">
-                    <img
-                      src="https://cdn.prod.website-files.com/6916390ccd119327e597f20f/69163d432b3ca5e849c8d6ec_Project-Image-4.jpg"
-                      loading="lazy"
-                      alt="Vision Core"
-                      className="project-image single-project"
-                    />
-                    <div className="project-arrow-button single-project">
-                      <img
-                        src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/691a1357349460d0603446de_Project-Button-Arrow.svg"
-                        loading="lazy"
-                        alt="Project Arrow"
-                        className="project-button-arrow single-project"
-                      />
-                    </div>
-                  </Link>
-                  <div className="single-project-content-wrap">
-                    <div className="single-project-contents-flex">
-                      <div className="project-name-wrap single-project">
-                        <Link href="/projects/vision-core" className="single-project-name">
-                          Vision Core
-                        </Link>
-                      </div>
-                      <div className="single-project-category-wrap">
-                        <div className="single-project-cat-dot"></div>
-                        <div className="single-project-category">UI/UX Design</div>
-                      </div>
-                    </div>
-                    <div className="single-project-hover-bg"></div>
-                  </div>
-                </div>
-
-                {/* Project 5: Design Flow */}
-                <div className="single-project-wrap">
-                  <Link href="/projects/design-flow" className="single-project-image-wrap w-inline-block">
-                    <img
-                      src="https://cdn.prod.website-files.com/6916390ccd119327e597f20f/69163c4a9db173af5aef85ba_Project-Image-5.jpg"
-                      loading="lazy"
-                      alt="Design Flow"
-                      className="project-image single-project"
-                    />
-                    <div className="project-arrow-button single-project">
-                      <img
-                        src="https://cdn.prod.website-files.com/68dbb9a72b91c794d0cdd10c/691a1357349460d0603446de_Project-Button-Arrow.svg"
-                        loading="lazy"
-                        alt="Project Arrow"
-                        className="project-button-arrow single-project"
-                      />
-                    </div>
-                  </Link>
-                  <div className="single-project-content-wrap">
-                    <div className="single-project-contents-flex">
-                      <div className="project-name-wrap single-project">
-                        <Link href="/projects/design-flow" className="single-project-name">
-                          Design Flow
-                        </Link>
-                      </div>
-                      <div className="single-project-category-wrap">
-                        <div className="single-project-cat-dot"></div>
-                        <div className="single-project-category">UI/UX Design</div>
-                      </div>
-                    </div>
-                    <div className="single-project-hover-bg"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          </section>
         </div>
 
-        <div className="section-divider"></div>
-      </section>
+        {/* Projects Grid Section with White Background */}
+        <div className="w-full flex flex-col items-center pb-24 bg-white">
+          <section className="w-[90%] xl:w-[82%] max-w-[1260px] mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16">
+            {projects.map((project, index) => (
+              <motion.div 
+                key={project.id} 
+                className={`flex flex-col gap-6 group ${project.isLarge ? 'md:col-span-2' : ''}`}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: (index % 2) * 0.1 }}
+              >
+                <Link href={`/projects/${project.id}`} className={`relative overflow-hidden rounded-[32px] block bg-[#f4f8ff] ${project.isLarge ? 'aspect-[4/3] md:aspect-[21/9]' : 'aspect-[4/3] md:aspect-[3/2]'}`}>
+                  <img 
+                    src={project.image} 
+                    alt={project.title} 
+                    className="w-full h-full object-cover" 
+                  />
+                  {/* Hover Overlay with Button */}
+                  <div className="absolute inset-0 bg-[#0042c5]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center pointer-events-none">
+                    <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out pointer-events-auto">
+                      <ArrowUpRight className="w-7 h-7 text-brand-default" />
+                    </div>
+                  </div>
+                </Link>
+                <Link href={`/projects/${project.id}`} className="relative overflow-hidden rounded-[32px] px-8 py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-[#f4f8ff]">
+                  {/* Bottom to Top Hover Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-b from-[#0042c5] to-[#256dff] translate-y-[105%] group-hover:translate-y-0 transition-transform duration-500 ease-in-out z-0" />
+                  
+                  <span className="relative z-10 text-[20px] md:text-[24px] leading-tight font-semibold text-cs-ink group-hover:text-white transition-colors duration-500">
+                    {project.title}
+                  </span>
+                  <div className="relative z-10 flex items-center gap-2 text-[var(--color-text-secondary)] group-hover:text-white transition-colors duration-500">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[var(--color-brand-default)] group-hover:bg-white transition-colors duration-500"></div>
+                    <span className="text-sm uppercase tracking-wider">{project.category}</span>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+        </div>
+      </main>
 
       {/* FAQ Section */}
       <FaqSection />
