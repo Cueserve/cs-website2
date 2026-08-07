@@ -10,7 +10,7 @@ const articles = [
     category: "Advice",
     date: "Nov 14, 2025",
     title: "Designing for Emotion: The Secret to Memorable Brands.",
-    image: "/project.png",
+    image: "/assets/images/home/Blog-Image-1.jpg",
     link: "#"
   },
   {
@@ -18,7 +18,7 @@ const articles = [
     category: "Strategy",
     date: "Dec 02, 2025",
     title: "How to Build a Design System that Scales.",
-    image: "/project.png",
+    image: "/assets/images/home/Blog-Image-2.jpg",
     link: "#"
   },
   {
@@ -26,7 +26,7 @@ const articles = [
     category: "Design",
     date: "Jan 18, 2026",
     title: "The Evolution of Digital Interfaces.",
-    image: "/project.png",
+    image: "/assets/images/home/Blog-Image-3.jpg",
     link: "#"
   }
 ];

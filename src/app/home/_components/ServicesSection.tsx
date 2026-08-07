@@ -26,9 +26,9 @@ const services: Service[] = [
       "ART DIRECTION",
       "PACKAGING",
     ],
-    activeImage: "/service-photo-brand.png",
-    inactiveImage: "/service-photo-brand.png",
-    leftIcon: "/service-icon-pen.png", // icon 1
+    activeImage: "/assets/images/home/Service-Image-1.jpg",
+    inactiveImage: "/assets/images/home/Service-Image-1.jpg",
+    leftIcon: "/assets/images/home/Service-Icon-1.svg", // icon 1
   },
   {
     id: "02",
@@ -39,25 +39,25 @@ const services: Service[] = [
       "PROTOTYPING",
       "USABILITY TESTING",
     ],
-    activeImage: "/service-icon-ui.png",
-    inactiveImage: "/service-icon-ui.png",
-    leftIcon: "/service-icon-pen.png", // icon 2
+    activeImage: "/assets/images/home/Service-Image-2.jpg",
+    inactiveImage: "/assets/images/home/Service-Image-2.jpg",
+    leftIcon: "/assets/images/home/Service-Icon-2.svg", // icon 2
   },
   {
     id: "03",
     title: "Digital Marketing",
     pills: ["SEO", "CONTENT STRATEGY", "SOCIAL MEDIA", "PPC CAMPAIGNS"],
-    activeImage: "/service-icon-ui.png",
-    inactiveImage: "/service-icon-ui.png",
-    leftIcon: "/service-icon-pen.png", // icon 3
+    activeImage: "/assets/images/home/Service-Image-3.jpg",
+    inactiveImage: "/assets/images/home/Service-Image-3.jpg",
+    leftIcon: "/assets/images/home/Service-Icon-3.svg", // icon 3
   },
   {
     id: "04",
     title: "Product Design",
     pills: ["3D MODELING", "INDUSTRIAL DESIGN", "CONCEPTING"],
-    activeImage: "/service-icon-ui.png",
-    inactiveImage: "/service-icon-ui.png",
-    leftIcon: "/service-icon-pen.png", // icon 4
+    activeImage: "/assets/images/home/Service-Image-4.jpg",
+    inactiveImage: "/assets/images/home/Service-Image-4.jpg",
+    leftIcon: "/assets/images/home/Service-Icon-4.svg", // icon 4
   },
 ];
 

@@ -12,11 +12,11 @@ if (typeof window !== "undefined") {
 }
 
 const projects = [
-  { id: "01", name: "Project Name 01", category: "UI/UX DESIGN", image: "/project.png", isLarge: false },
-  { id: "02", name: "Project Name 02", category: "UI/UX DESIGN", image: "/project.png", isLarge: false },
-  { id: "03", name: "Project Name 03", category: "UI/UX DESIGN", image: "/project.png", isLarge: true },
-  { id: "04", name: "Project Name 04", category: "UI/UX DESIGN", image: "/project.png", isLarge: false },
-  { id: "05", name: "Project Name 05", category: "UI/UX DESIGN", image: "/project.png", isLarge: false },
+  { id: "01", name: "Project Name 01", category: "UI/UX DESIGN", image: "/assets/images/home/Project-Image-1.jpg", isLarge: false },
+  { id: "02", name: "Project Name 02", category: "UI/UX DESIGN", image: "/assets/images/home/Project-Image-2.jpg", isLarge: false },
+  { id: "03", name: "Project Name 03", category: "UI/UX DESIGN", image: "/assets/images/home/Project-Image-3.jpg", isLarge: true },
+  { id: "04", name: "Project Name 04", category: "UI/UX DESIGN", image: "/assets/images/home/Project-Image-4.jpg", isLarge: false },
+  { id: "05", name: "Project Name 05", category: "UI/UX DESIGN", image: "/assets/images/home/Project-Image-5.jpg", isLarge: false },
 ];
 
 export function ProjectsSection() {
