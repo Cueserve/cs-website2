@@ -1342,22 +1342,23 @@ screen and (max-height: 820px) and (min-width: 992px) {
 /* Typography */
 .mobile-hero-title {
   font-size: clamp(1.5rem, 3.5vw, 2.5rem);
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.2;
-  color: #0a2540 !important;
+  color: #0c385a !important;
   margin: 0;
 }
 
-.mobile-hero-mark {
-  color: #2d8cff !important;
+.mobile-hero-highlight {
+  color: #0050d5 !important;
 }
 
 .mobile-hero-desc {
   font-size: 0.9375rem;
-  color: #3f4756 !important;
-  line-height: 1.65;
+  color: #5c6a7a !important;
+  line-height: 1.5;
+  font-weight: 400;
   margin: 0;
-  max-width: 320px;
+  max-width: 340px;
 }
 
 .mobile-hero-buttons {
@@ -1393,7 +1394,8 @@ screen and (max-height: 820px) and (min-width: 992px) {
   }
 
   .mobile-hero-title {
-    font-size: clamp(1.75rem, 7vw, 2.25rem);
+    font-size: clamp(2.25rem, 8vw, 2.75rem);
+    letter-spacing: -0.03em;
   }
 
   .mobile-hero-desc {

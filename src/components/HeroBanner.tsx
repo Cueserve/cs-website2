@@ -263,18 +263,19 @@ export default function HeroBanner() {
         <div className="mobile-hero-inner">
           <div className="mobile-hero-content-col">
             <h1 className="mobile-hero-title">
-              Crafting Modern <span className="mobile-hero-mark">Vision For the</span> Ambitious Brands
+              Crafting Modern <span className="mobile-hero-highlight">Vision</span><br />
+              <span className="mobile-hero-highlight">For the</span> Ambitious Brands
             </h1>
             <p className="mobile-hero-desc">
               We blend creativity with strategy to build digital experiences that move brands forward. From crafting standout websites.
             </p>
-            <div className="mobile-hero-buttons">
-              <RollingButton variant="blue" href="/contact-us" text="Book a Free Call" />
+            <div className="mobile-hero-buttons" style={{ marginBottom: '4rem' }}>
               <RollingButton variant="white" href="/contact-us" text="Get Started Now" />
             </div>
           </div>
         </div>
-        <div className="after-banner-ticker-wrap" style={{ position: 'relative', marginTop: '4.5rem', paddingBottom: '2rem', transform: 'none' }}>
+        <div style={{ height: '5rem', width: '100%', flexShrink: 0 }}></div>
+        <div className="after-banner-ticker-wrap" style={{ position: 'relative', paddingBottom: '2rem', transform: 'none' }}>
           <div className="after-banner-ticker-flex">
             {renderLogoGroup('group-1')}
             {renderLogoGroup('group-2')}
