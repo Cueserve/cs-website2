@@ -7,21 +7,32 @@ export interface RollingButtonProps extends React.AnchorHTMLAttributes<HTMLAncho
   text: string;
   href?: string;
   className?: string;
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "alice-blue" | "white" | "blue";
   showArrow?: boolean;
 }
 
 export const RollingButton = forwardRef<HTMLAnchorElement, RollingButtonProps>(
   ({ text, href = "#contact", className = "", variant = "secondary", showArrow = true, ...rest }, ref) => {
-    const isPrimary = variant === "primary";
+    const isPrimaryOrBlue = variant === "primary" || variant === "blue";
+    const isWhite = variant === "white";
+    const isAliceBlue = variant === "alice-blue";
 
-    const pillClass = isPrimary
-      ? "bg-brand-default hover:bg-brand-hover text-text-inverse border border-brand-default"
-      : "bg-bg-page hover:bg-bg-subtle text-neutral-900 border border-border-strong";
+    let pillClass = "";
+    let arrowClass = "";
 
-    const arrowClass = isPrimary
-      ? "bg-bg-page text-brand-default group-hover:bg-bg-subtle"
-      : "bg-brand-default text-text-inverse group-hover:bg-brand-hover";
+    if (isPrimaryOrBlue) {
+      pillClass = "bg-brand-default hover:bg-brand-hover text-text-inverse border border-brand-default";
+      arrowClass = "bg-bg-page text-brand-default group-hover:bg-bg-subtle";
+    } else if (isAliceBlue) {
+      pillClass = "bg-[#eff4ff] hover:bg-[#e2ecff] text-neutral-900 border border-[#cce0ff]";
+      arrowClass = "bg-brand-default text-text-inverse group-hover:bg-brand-hover";
+    } else if (isWhite) {
+      pillClass = "bg-white hover:bg-neutral-50 text-neutral-900 border border-border-strong";
+      arrowClass = "bg-brand-default text-text-inverse group-hover:bg-brand-hover";
+    } else {
+      pillClass = "bg-bg-page hover:bg-bg-subtle text-neutral-900 border border-border-strong";
+      arrowClass = "bg-brand-default text-text-inverse group-hover:bg-brand-hover";
+    }
 
     const paddingClass = showArrow
       ? "pl-4 md:pl-6 pr-1 md:pr-1.5 py-1 md:py-1.5"
