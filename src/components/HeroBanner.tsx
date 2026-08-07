@@ -269,12 +269,12 @@ export default function HeroBanner() {
             <p className="mobile-hero-desc">
               We blend creativity with strategy to build digital experiences that move brands forward. From crafting standout websites.
             </p>
-            <div className="mobile-hero-buttons" style={{ marginBottom: '4rem' }}>
+            <div className="mobile-hero-buttons">
               <RollingButton variant="white" href="/contact-us" text="Get Started Now" />
             </div>
           </div>
         </div>
-        <div style={{ height: '5rem', width: '100%', flexShrink: 0 }}></div>
+        <div style={{ height: '3rem', width: '100%', flexShrink: 0 }}></div>
         <div className="after-banner-ticker-wrap" style={{ position: 'relative', paddingBottom: '2rem', transform: 'none' }}>
           <div className="after-banner-ticker-flex">
             {renderLogoGroup('group-1')}
