@@ -47,15 +47,6 @@ export default function ContactPage() {
         {/* Banner Section */}
         <div className="mb-12 text-center flex flex-col items-center">
           <div className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider text-brand-default border border-cs-border bg-white mb-6">
-            <svg
-              className="w-3.5 h-3.5 mr-2 text-brand-default"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              strokeWidth="2.5"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
-            </svg>
             Get In Touch
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-cs-ink leading-tight font-display">
