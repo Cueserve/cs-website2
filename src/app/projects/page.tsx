@@ -64,7 +64,7 @@ export default function ProjectsPage() {
                   <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-label uppercase tracking-wider text-brand-default border border-brand-default/30 bg-[#f4f8ff] w-fit mb-6">
                     <span>Our Works</span>
                   </div>
-                  <h1 className="text-h2 font-medium max-w-2xl mb-4 text-cs-ink">
+                  <h1 className="text-h2 font-normal max-w-2xl mb-4 text-cs-ink">
                     Our Latest{' '}
                     <span className="text-[var(--color-brand-default)]">Projects.</span>
                   </h1>

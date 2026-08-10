@@ -28,7 +28,7 @@ export default function ServicesHeroBanner() {
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-label uppercase tracking-wider text-brand-default border border-brand-default/30 bg-[#f4f8ff] w-fit mb-6">
               <span>Our Services</span>
             </div>
-            <h1 className="text-h2 font-medium max-w-2xl mb-4">
+            <h1 className="text-h2 font-normal max-w-2xl mb-4">
               Our Creative{' '}
               <span className="text-[var(--color-brand-default)]">Solutions.</span>
             </h1>

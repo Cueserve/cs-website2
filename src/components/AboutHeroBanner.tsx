@@ -25,7 +25,7 @@ export default function AboutHeroBanner() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <h1 className="text-h2 font-medium max-w-2xl">
+            <h1 className="text-h2 font-normal max-w-2xl">
               Crafting The Future Of Digital{' '}
               <span className="text-[var(--color-brand-default)]">Brands.</span>
             </h1>

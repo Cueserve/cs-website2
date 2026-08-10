@@ -20,7 +20,7 @@ export default function BlogPage() {
               <span>News & Articles</span>
             </div>
             
-            <h1 className="text-[3rem] sm:text-[4rem] font-medium text-cs-ink mb-6 leading-[1.1]">
+            <h1 className="text-[3rem] sm:text-[4rem] font-normal text-cs-ink mb-6 leading-[1.1]">
               Our Latest <span className="text-[#0051ff]">Articles.</span>
             </h1>
             
