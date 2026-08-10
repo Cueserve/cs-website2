@@ -18,8 +18,8 @@ export default function AboutHeroBanner() {
   return (
     <section className="relative pt-[180px] pb-[80px] overflow-hidden bg-gradient-to-b from-[#e3f0ff] to-white text-[var(--color-text-primary)]">
       <div className="mx-auto w-[90%] xl:w-[82%] max-w-[1260px]">
-        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center lg:items-start justify-between mb-24 text-center lg:text-left">
-          <motion.div 
+        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center justify-between mb-24 text-center lg:text-left">
+          <motion.div
             className="flex-1 lg:flex-[1.5] flex flex-col items-center lg:items-start w-full"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -30,8 +30,8 @@ export default function AboutHeroBanner() {
               <span className="text-[var(--color-brand-default)]">Brands.</span>
             </h1>
           </motion.div>
-          <motion.div 
-            className="flex-1 lg:max-w-md pt-4 flex flex-col items-center lg:items-start w-full"
+          <motion.div
+            className="flex-1 lg:max-w-md flex flex-col items-center lg:items-start w-full"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
@@ -46,7 +46,7 @@ export default function AboutHeroBanner() {
       {/* Infinite Marquee */}
       <div className="relative w-full flex overflow-hidden py-8">
         <motion.div
-          className="flex flex-nowrap whitespace-nowrap items-center gap-12 w-max"
+          className="flex flex-nowrap whitespace-nowrap items-center gap-0 w-max"
           animate={{ x: [0, "-50%"] }}
           transition={{ repeat: Infinity, ease: 'linear', duration: 25 }}
         >
@@ -58,11 +58,10 @@ export default function AboutHeroBanner() {
             return (
               <div
                 key={index}
-                className={`flex-shrink-0 flex items-center justify-center overflow-hidden ${
-                  isImage
-                    ? 'w-[350px] h-[350px] rounded-full bg-gray-200' 
+                className={`flex-shrink-0 flex items-center justify-center overflow-hidden ${isImage
+                    ? 'w-[350px] h-[350px] rounded-full bg-gray-200'
                     : 'w-[175px] h-[350px]'
-                }`}
+                  }`}
               >
                 {/* Image or Shape */}
                 <img
