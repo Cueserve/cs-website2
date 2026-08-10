@@ -38,7 +38,7 @@ export function Footer() {
               We combine strategy, creativity, and technology to help brands grow in the modern digital landscape.
             </p>
 
-            <div className="mt-8 w-full max-w-[340px] bg-white rounded-full flex items-center p-1.5 pl-6 shadow-sm border border-black/5">
+            <div className="mt-8 w-full max-w-[340px] bg-white rounded-full flex items-center p-1.5 pl-6 border border-black/5">
               <input
                 type="email"
                 placeholder="Enter your email..."

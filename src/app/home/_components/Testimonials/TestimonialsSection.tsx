@@ -62,8 +62,8 @@ export function TestimonialsSection() {
                 className={[
                   "group rounded-xl border p-7 text-left transition-all duration-300",
                   isActive
-                    ? "-translate-y-1 border-cs-dark-blue bg-cs-dark-blue shadow-cs-xl"
-                    : "border-cs-border bg-white shadow-cs-sm",
+                    ? "-translate-y-1 border-cs-dark-blue bg-cs-dark-blue"
+                    : "border-cs-border bg-white",
                 ].join(" ")}
               >
                 <QuoteIcon

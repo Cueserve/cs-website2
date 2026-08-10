@@ -22,7 +22,7 @@ export function Header() {
       {/* Top Navbar Pill */}
       <div
         className={[
-          "pointer-events-auto w-[90%] xl:w-[82%] max-w-[1260px] rounded-full border border-[#D1E0FF] transition-all duration-500 pl-2 pr-[10px] py-2 sm:py-2.5 xl:py-[clamp(0.5rem,1.2vh,0.625rem)] flex items-center justify-between shadow-md",
+          "pointer-events-auto w-[90%] xl:w-[82%] max-w-[1260px] rounded-full border border-[#D1E0FF] transition-all duration-500 pl-2 pr-[10px] py-2 sm:py-2.5 xl:py-[clamp(0.5rem,1.2vh,0.625rem)] flex items-center justify-between",
           scrolled ? "bg-white/95 backdrop-blur-md" : "bg-white/92 backdrop-blur-md",
         ].join(" ")}
       >
@@ -89,7 +89,7 @@ export function Header() {
 
       {/* Floating Dropdown Menu */}
       <div 
-        className={`pointer-events-auto w-[90%] max-w-[1260px] mt-2 rounded-[24px] bg-white border-[#D1E0FF] shadow-lg transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] overflow-hidden ${mobileNavOpen ? "max-h-[400px] opacity-100 border" : "max-h-0 opacity-0 border-0"}`}
+        className={`pointer-events-auto w-[90%] max-w-[1260px] mt-2 rounded-[24px] bg-white border-[#D1E0FF] transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] overflow-hidden ${mobileNavOpen ? "max-h-[400px] opacity-100 border" : "max-h-0 opacity-0 border-0"}`}
       >
         <MobileMenu
           mobileNavOpen={mobileNavOpen}

@@ -42,7 +42,7 @@ export const RollingButton = forwardRef<HTMLAnchorElement, RollingButtonProps>(
       <Link
         ref={ref}
         href={href}
-        className={`group relative inline-flex items-center gap-2 md:gap-3 rounded-full text-[13px] md:text-[16px] transition-all duration-300 shadow-md hover:shadow-lg shrink-0 ${pillClass} ${paddingClass} ${className}`}
+        className={`group relative inline-flex items-center gap-2 md:gap-3 rounded-full text-[13px] md:text-[16px] transition-all duration-300 shrink-0 ${pillClass} ${paddingClass} ${className}`}
         {...rest}
       >
         {/* Staggered Letter-by-Letter Rolling Text Animation */}

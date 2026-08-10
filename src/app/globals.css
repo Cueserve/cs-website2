@@ -65,10 +65,15 @@
   --radius-button: 100px;
   --radius-circle: 200px;
 
-  /* ── Tokens.json Shadows ────────────────────────────────── */
-  --shadow-card: 0 2px 8px rgba(17, 24, 39, 0.12);
-  --shadow-control: 0 0 0 1px rgba(0, 0, 0, 0.10), 0 1px 3px rgba(0, 0, 0, 0.10);
-  --shadow-focus: 0 0 0 3px rgba(41, 112, 255, 0.40);
+  /* ── Tokens.json Shadows (Removed for flat design) ──────── */
+  --shadow-card: none;
+  --shadow-control: none;
+  --shadow-focus: 0 0 0 3px rgba(41, 112, 255, 0.40); /* Keep focus ring outline for accessibility */
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+  --shadow-xl: none;
+  --shadow-2xl: none;
 
   /* ── Legacy cs-* Aliases (Mapped directly to official tokens.json variables) ── */
   --color-cs-dark-blue: var(--color-blue-800);

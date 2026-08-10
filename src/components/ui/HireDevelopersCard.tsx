@@ -47,7 +47,7 @@ export function HireDevelopersCard({
   }
 
   return (
-    <div className="rounded-2xl border border-cs-border-accent bg-cs-surface p-4 transition-shadow hover:shadow-cs-md">
+    <div className="rounded-2xl border border-cs-border-accent bg-cs-surface p-4">
       {/* Icon + headline side by side */}
       <div className="mb-3 flex items-start gap-3">
         <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg bg-cs-dark-blue" style={{ marginTop: "2px" }}>

@@ -76,7 +76,7 @@ export default function FaqSection() {
                         text="Explore Services"
                         href="/services"
                         variant="secondary"
-                        className="bg-white !border-none shadow-sm hover:shadow-md"
+                        className="bg-white !border-none"
                       />
                     </div>
                   </div>

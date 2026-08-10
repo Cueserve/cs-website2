@@ -218,8 +218,8 @@ export const tokens = {
   },
 
   shadow: {
-    card: "0 2px 8px rgba(17, 24, 39, 0.12)",
-    control: "0 0 0 1px rgba(0, 0, 0, 0.10), 0 1px 3px rgba(0, 0, 0, 0.10)",
+    card: "none",
+    control: "none",
     focus: "0 0 0 3px rgba(41, 112, 255, 0.40)",
   },
 } as const;

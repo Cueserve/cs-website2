@@ -97,7 +97,7 @@ export function AboutSection() {
                 >
                   <div
                     ref={projectsFloatRef}
-                    className="inline-flex items-center px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-label text-cs-ink bg-[#e2edff] shadow-sm overflow-visible relative animate-cs-float-pill-a [will-change:transform]"
+                    className="inline-flex items-center px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-label text-cs-ink bg-[#e2edff] overflow-visible relative animate-cs-float-pill-a [will-change:transform]"
                   >
                     <span>Projects</span>
                     {/* Bottom-left speech tail pointing down toward 250+ */}
@@ -130,7 +130,7 @@ export function AboutSection() {
                 >
                   <div
                     ref={completedFloatRef}
-                    className="inline-flex items-center px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-label text-cs-ink bg-[#fef5d6] shadow-sm overflow-visible relative animate-cs-float-pill-b [will-change:transform]"
+                    className="inline-flex items-center px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-label text-cs-ink bg-[#fef5d6] overflow-visible relative animate-cs-float-pill-b [will-change:transform]"
                   >
                     <span>Completed</span>
                     {/* Top-right speech tail pointing up toward 250+ */}

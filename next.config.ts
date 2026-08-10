@@ -5,6 +5,7 @@ const allowedDevOrigins = [
   "*.ngrok.io",
   "*.ngrok.app",
   "localhost:3000",
+  "collotypic-jamaal-haughtiest.ngrok-free.dev",
 ];
 
 if (process.env.ALLOWED_DEV_ORIGINS) {
