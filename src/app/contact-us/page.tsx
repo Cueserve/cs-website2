@@ -12,6 +12,9 @@ export default function ContactPage() {
     Marketing: false,
   });
 
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -26,9 +29,38 @@ export default function ContactPage() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError(null);
+
+    const activeServices = Object.keys(selectedServices).filter(
+      (key) => selectedServices[key]
+    );
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...formData,
+          services: activeServices,
+        }),
+      });
+
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(data.error || "Failed to send message. Please try again.");
+      }
+
+      setSubmitted(true);
+    } catch (err: any) {
+      setError(err.message || "Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const servicesList = ['Development', 'UI/UX Design', 'Branding', 'Marketing'];
@@ -72,7 +104,7 @@ export default function ContactPage() {
               
               <div className="rounded-[24px] md:rounded-[32px] overflow-hidden w-full aspect-[4/3] md:aspect-[16/10] lg:aspect-auto lg:h-[400px] relative mt-auto">
                 <img 
-                  src="/assets/images/contact/Contact-Team.jpg" 
+                   src="/assets/images/contact/Contact-Team.jpg" 
                   alt="Our Team" 
                   className="w-full h-full object-cover"
                 />
@@ -156,14 +188,21 @@ export default function ContactPage() {
                     </div>
                   </div>
 
+                  {/* Error Notification */}
+                  {error && (
+                    <div className="text-red-200 text-xs md:text-sm font-medium bg-red-950/40 p-3 rounded-[16px] border border-red-500/20">
+                      {error}
+                    </div>
+                  )}
+
                   {/* Submit */}
                   <div className="pt-4">
                     <button
                       type="submit"
-                      disabled={!isFormValid}
-                      className={"py-3 md:py-4 px-6 md:px-8 rounded-full font-semibold text-sm transition-all duration-300 " + (isFormValid ? 'bg-white text-brand-default hover:bg-gray-100 cursor-pointer shadow-lg' : 'bg-white/50 text-brand-default cursor-not-allowed')}
+                      disabled={!isFormValid || loading}
+                      className={"py-3 md:py-4 px-6 md:px-8 rounded-full font-semibold text-sm transition-all duration-300 " + (isFormValid && !loading ? 'bg-white text-brand-default hover:bg-gray-100 cursor-pointer shadow-lg' : 'bg-white/50 text-brand-default cursor-not-allowed')}
                     >
-                      Get In Touch
+                      {loading ? 'Sending...' : 'Get In Touch'}
                     </button>
                   </div>
                 </form>

@@ -94,9 +94,9 @@ export function TestimonialSection() {
 
         {/* Testimonial Section Content: Stack + Side Arrows Container */}
         <div className="relative w-full flex flex-col items-center justify-center min-h-[460px] md:min-h-[340px] lg:min-h-[440px] px-0 md:px-12 mb-16 md:mb-2">
-          
+
           {/* Left Arrow Button (Desktop Only) */}
-          <button 
+          <button
             onClick={prevTestimonial}
             className="hidden md:flex absolute left-0 md:left-4 z-20 w-11 h-11 rounded-full border border-[#e2edff] bg-white justify-center items-center text-brand-default hover:bg-[#f4f8ff] hover:scale-105 transition-all shadow-sm shrink-0"
             aria-label="Previous testimonial"
@@ -179,7 +179,7 @@ export function TestimonialSection() {
           </div>
 
           {/* Right Arrow Button (Desktop Only) */}
-          <button 
+          <button
             onClick={nextTestimonial}
             className="hidden md:flex absolute right-0 md:right-4 z-20 w-11 h-11 rounded-full border border-[#e2edff] bg-white justify-center items-center text-brand-default hover:bg-[#f4f8ff] hover:scale-105 transition-all shadow-sm shrink-0"
             aria-label="Next testimonial"
