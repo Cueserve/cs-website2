@@ -88,7 +88,7 @@ export default function ValuesSection() {
             <div className="w-[82%] max-w-[1260px] mx-auto py-8">
               {/* Header */}
               <div className="flex flex-row justify-between items-end gap-8 mb-12">
-                <div className="flex flex-col gap-6">
+                <div className="flex flex-col gap-6 items-start">
                   <HeadingPill text="Our Values" className="mb-0" />
                   <h2 className="text-h2 font-display font-normal text-cs-ink">
                     Values Shapes <span className="text-brand-default font-normal">Everything.</span>
