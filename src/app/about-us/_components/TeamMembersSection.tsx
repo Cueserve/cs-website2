@@ -70,7 +70,7 @@ const teamMembers: TeamMember[] = [
 
 export default function TeamMembersSection() {
   return (
-    <section className="relative z-20 bg-white py-16 sm:py-24 xl:py-32">
+    <section className="relative z-20 bg-white py-16 sm:py-16 xl:py-32">
       <div className="w-[90%] xl:w-[82%] max-w-[1260px] mx-auto">
         
         {/* Section Header */}
@@ -82,7 +82,7 @@ export default function TeamMembersSection() {
         </div>
 
         {/* Team Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
           {teamMembers.map((member) => (
             <div key={member.id} className="group flex flex-col p-2 rounded-[28px] bg-[#f4f8ff] border border-transparent transition-all duration-300">
               

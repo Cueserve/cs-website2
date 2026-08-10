@@ -82,7 +82,7 @@ export default function ValuesSection() {
   return (
     <section className="relative bg-white text-cs-ink z-20">
       {/* --- DESKTOP LAYOUT (Sticky, interactive accordion) --- */}
-      <div className="hidden md:block">
+      <div className="hidden lg:block">
         <div ref={vhWrapRef} style={{ height: '220vh' }}>
           <div className="sticky top-0 h-screen flex flex-col justify-center w-full">
             <div className="w-[82%] max-w-[1260px] mx-auto py-8">
@@ -179,12 +179,12 @@ export default function ValuesSection() {
       </div>
 
       {/* --- MOBILE LAYOUT (Stacked, full expanded, no scroll effect) --- */}
-      <div className="block md:hidden w-[90%] mx-auto py-16">
+      <div className="block lg:hidden w-[90%] mx-auto py-16">
         {/* Header */}
         <div className="flex flex-col items-center text-center gap-6 mb-10">
           <HeadingPill text="Our Values" className="mb-0" />
           <h2 className="text-4xl font-display font-normal text-cs-ink">
-            Values Shapes <br /><span className="text-brand-default font-normal">Everything.</span>
+            Values Shapes <br className="sm:hidden" /><span className="text-brand-default font-normal">Everything.</span>
           </h2>
           <RollingButton
             variant="secondary"
@@ -195,7 +195,7 @@ export default function ValuesSection() {
         </div>
 
         {/* Stacked Cards */}
-        <div className="flex flex-col gap-10">
+        <div className="grid grid-cols-2 gap-4 sm:gap-6">
           {cards.map((card) => (
             <div key={card.id} className="flex flex-col">
               <div className="self-start px-6 py-2 rounded-full bg-[#f4f8ff] text-cs-ink font-medium mb-4 text-sm">
