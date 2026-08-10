@@ -112,7 +112,7 @@ export default function ContactPage() {
             </div>
 
             {/* Right Panel (Form) */}
-            <div className="text-white">
+            <div className={"text-white w-full " + (submitted ? "lg:mt-[88px]" : "")}>
               {!submitted ? (
                 <form onSubmit={handleSubmit} className="space-y-8">
                   {/* Services Checklist */}
