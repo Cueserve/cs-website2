@@ -4,6 +4,7 @@ import { HeroSection } from "./_components/HeroSection";
 import { TechScroller } from "@/components/ui/TechScroller";
 import { AboutSection } from "./_components/AboutSection";
 import { AboutMediaSection } from "./_components/AboutMediaSection";
+import { HomeServicesGrid } from "./_components/HomeServicesGrid";
 import { ServicesSection } from "./_components/ServicesSection";
 import { ProjectsSection } from "./_components/ProjectsSection";
 import { TestimonialSection } from "./_components/Testimonials/TestimonialSection";
@@ -21,6 +22,9 @@ export default function HomePage() {
       </FadeInUp>
       <FadeInUp>
         <AboutMediaSection />
+      </FadeInUp>
+      <FadeInUp>
+        <HomeServicesGrid />
       </FadeInUp>
       <FadeInUp>
         <ServicesSection />
