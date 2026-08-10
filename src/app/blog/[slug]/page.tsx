@@ -30,7 +30,7 @@ export default async function BlogDetailPage({
             
             <HeadingPill text={`${post.category} • ${post.date}`} />
             
-            <h1 className="text-[2.5rem] sm:text-[3.5rem] font-medium text-cs-ink mb-12 sm:mb-16 leading-[1.2] max-w-4xl">
+            <h1 className="text-[2.5rem] sm:text-[3.5rem] font-normal text-cs-ink mb-12 sm:mb-16 leading-[1.2] max-w-4xl">
               {post.title}
             </h1>
 
@@ -46,7 +46,7 @@ export default async function BlogDetailPage({
             <div className="w-full">
               
               {post.contentHeading1 && (
-                <h2 className="text-[28px] sm:text-[32px] font-medium text-cs-ink mb-6">
+                <h2 className="text-[28px] sm:text-[32px] font-normal text-cs-ink mb-6">
                   {post.contentHeading1}
                 </h2>
               )}
@@ -58,7 +58,7 @@ export default async function BlogDetailPage({
               )}
 
               {post.quote && (
-                <blockquote className="border-l-4 border-[#0051ff] pl-6 sm:pl-8 py-2 my-12 text-[18px] sm:text-[20px] font-medium text-cs-ink leading-relaxed italic">
+                <blockquote className="border-l-4 border-[#0051ff] pl-6 sm:pl-8 py-2 my-12 text-[18px] sm:text-[20px] font-normal text-cs-ink leading-relaxed italic">
                   &ldquo;{post.quote}&rdquo;
                 </blockquote>
               )}
@@ -81,7 +81,7 @@ export default async function BlogDetailPage({
               )}
 
               {post.contentHeading2 && (
-                <h2 className="text-[28px] sm:text-[32px] font-medium text-cs-ink mb-6">
+                <h2 className="text-[28px] sm:text-[32px] font-normal text-cs-ink mb-6">
                   {post.contentHeading2}
                 </h2>
               )}
@@ -102,7 +102,7 @@ export default async function BlogDetailPage({
       <FadeInUp>
         <section className="pb-24 border-t border-gray-100 pt-16">
           <div className="mx-auto w-[90%] xl:w-[82%] max-w-[1260px] flex justify-center">
-            <Link href="/blog" className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[#f4f8ff] text-brand-default font-medium hover:bg-[#e3f0ff] transition-colors">
+            <Link href="/blog" className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[#f4f8ff] text-brand-default font-normal hover:bg-[#e3f0ff] transition-colors">
               <span>← Back to all articles</span>
             </Link>
           </div>

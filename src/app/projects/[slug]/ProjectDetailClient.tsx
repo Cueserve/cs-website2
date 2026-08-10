@@ -30,7 +30,7 @@ export default function ProjectDetailClient({ project }: { project: ProjectData 
             
             <HeadingPill text="Project Details" />
             
-            <h1 className="text-[3rem] sm:text-[4rem] font-medium text-cs-ink mb-6 leading-[1.1]">
+            <h1 className="text-[3rem] sm:text-[4rem] font-normal text-cs-ink mb-6 leading-[1.1]">
               {project.name}
             </h1>
             
