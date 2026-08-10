@@ -32,7 +32,7 @@ export default function AboutSection() {
               <div className="about-us-title-border"></div>
               <div className="about-us-title-wrap">
                 <h3 className="about-us-title">Our team of designers, developers, and thinkers driven by <span className="about-us-title-mark">one purpose — to craft digital experiences.</span></h3>
-                <p className="about-section-details">We combine strategy, creativity, and technology to help brands grow in the modern digital landscape. Every project we take on is fueled by curiosity, guided by precision.</p>
+                <p className="about-section-details text-text-secondary">We combine strategy, creativity, and technology to help brands grow in the modern digital landscape. Every project we take on is fueled by curiosity, guided by precision.</p>
                 <RollingButton variant="alice-blue" href="/about-us" text="More About Us" className="mt-4 mb-6" />
               </div>
             </div>

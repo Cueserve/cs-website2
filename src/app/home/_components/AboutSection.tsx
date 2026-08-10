@@ -159,7 +159,7 @@ export function AboutSection() {
             </h2>
 
             {/* Paragraph Size using official text-para token with restored text-neutral-900 (#111827), wide 764px fill */}
-            <p className="text-para text-neutral-900 leading-[1.75] mb-8 sm:mb-10 max-w-[764px] w-full">
+            <p className="text-para text-text-secondary leading-[1.75] mb-8 sm:mb-10 max-w-[764px] w-full">
               We combine strategy, creativity and technology to help brands grow in the modern
               digital landscape. Every project we take on is fueled by curiosity guided by precision.
             </p>

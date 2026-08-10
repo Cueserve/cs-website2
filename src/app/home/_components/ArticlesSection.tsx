@@ -30,7 +30,7 @@ export function ArticlesSection() {
             Fresh Perspectives <br className="hidden md:block"/>
             <span className="text-brand-default">On Strategy.</span>
           </h2>
-          <p className="text-neutral-900 font-paragraph font-normal text-base md:text-lg mb-2 leading-relaxed">
+          <p className="text-text-secondary font-paragraph font-normal text-base md:text-lg mb-2 leading-relaxed">
             We combine strategy, creativity, and technology to help brands grow in the modern digital landscape.
           </p>
           <RollingButton
