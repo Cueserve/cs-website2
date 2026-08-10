@@ -3,6 +3,7 @@
 import React from "react";
 import { RollingButton } from "@/components/ui/RollingButton";
 import { CircleArrow } from "@/components/ui/CircleArrow";
+import { HeadingPill } from "@/components/ui/HeadingPill";
 import { blogPosts } from "@/app/blog/data";
 import Link from "next/link";
 
@@ -23,9 +24,7 @@ export function ArticlesSection() {
         
         {/* Left Fixed Container */}
         <div className="w-full md:w-[50%] flex flex-col items-center md:items-start text-center md:text-left gap-6 md:sticky md:top-24 lg:top-32 h-fit mb-4 md:mb-0">
-          <span className="inline-flex items-center px-4 py-1.5 rounded-full text-label uppercase tracking-wider text-brand-default border border-brand-default/30 bg-[#f4f8ff]">
-            News & Articles
-          </span>
+          <HeadingPill text="News & Articles" className="mb-0" />
           <h2 className="text-4xl md:text-[36px] lg:text-[56px] font-paragraph font-normal text-cs-ink leading-[1.1]">
             Fresh Perspectives <br className="hidden md:block"/>
             <span className="text-brand-default">On Strategy.</span>

@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import FaqSection from '@/components/FaqSection';
 import { FadeInUp } from '@/components/FadeInUp';
+import { HeadingPill } from '@/components/ui/HeadingPill';
 
 const projects = [
 
@@ -61,9 +62,7 @@ export default function ProjectsPage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, ease: "easeOut" }}
                 >
-                  <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-label uppercase tracking-wider text-brand-default border border-brand-default/30 bg-[#f4f8ff] w-fit mb-6">
-                    <span>Our Works</span>
-                  </div>
+                  <HeadingPill text="Our Works" />
                   <h1 className="text-h2 font-normal max-w-2xl mb-4 text-cs-ink">
                     Our Latest{' '}
                     <span className="text-[var(--color-brand-default)]">Projects.</span>

@@ -5,6 +5,7 @@ import Image from "next/image";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { CircleArrow } from "@/components/ui/CircleArrow";
+import { HeadingPill } from "@/components/ui/HeadingPill";
 
 type Service = {
   id: string;
@@ -116,11 +117,8 @@ export function ServicesSection() {
   return (
     <section id="services" className="pt-16 pb-24 sm:py-24 bg-white">
       <div className="w-[90%] xl:w-[82%] max-w-[1260px] mx-auto">
-        {/* Pill */}
         <div className="flex justify-center mb-6">
-          <span className="inline-flex items-center px-4 py-1.5 rounded-full text-label uppercase tracking-wider text-brand-default border border-brand-default/30 bg-[#f4f8ff]">
-            Our Services
-          </span>
+          <HeadingPill text="Our Services" className="mb-0" />
         </div>
 
         {/* Title */}

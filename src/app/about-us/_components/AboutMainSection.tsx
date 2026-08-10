@@ -2,6 +2,7 @@
 
 import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
+import { HeadingPill } from "@/components/ui/HeadingPill";
 
 export default function AboutMainSection() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -64,9 +65,7 @@ export default function AboutMainSection() {
     <section id="about" className="relative z-20 bg-white py-16 sm:py-24 xl:py-32 overflow-hidden">
       <div className="w-[90%] xl:w-[82%] max-w-[1260px] mx-auto">
         <div className="mb-8 sm:mb-12">
-          <span className="inline-flex items-center px-4 py-1.5 rounded-full text-label uppercase tracking-wider text-brand-default border border-brand-default/30 bg-[#f4f8ff]">
-            About Us
-          </span>
+          <HeadingPill text="About Us" className="mb-0" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-[40px] w-full">

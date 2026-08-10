@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { HeadingPill } from "@/components/ui/HeadingPill";
 
 const testimonials = [
   {
@@ -79,9 +80,7 @@ export function TestimonialSection() {
 
         {/* Header Section */}
         <div className="flex flex-col items-center gap-6 mb-16">
-          <span className="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-medium tracking-wide text-brand-default border border-brand-default/30 bg-[#f4f8ff]">
-            Our Testimonials
-          </span>
+          <HeadingPill text="Our Testimonials" className="mb-0" />
 
           <h2 className="text-lg sm:text-xl md:text-4xl font-paragraph font-normal text-cs-ink leading-[1.3] w-[95%] sm:w-[90%] md:w-[100%] mx-auto">
             Our success is measured by the satisfaction of our clients.

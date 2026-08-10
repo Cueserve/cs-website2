@@ -3,6 +3,7 @@
 import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { RollingButton } from "@/components/ui/RollingButton";
+import { HeadingPill } from "@/components/ui/HeadingPill";
 
 export function AboutSection() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -69,9 +70,7 @@ export function AboutSection() {
       <div className="w-[90%] xl:w-[82%] max-w-[1260px] mx-auto">
         {/* Top Section Pill Label aligned directly with container & navbar right across all breakpoints */}
         <div className="mb-8 sm:mb-12">
-          <span className="inline-flex items-center px-4 py-1.5 rounded-full text-label uppercase tracking-wider text-brand-default border border-brand-default/30 bg-[#f4f8ff]">
-            About Us
-          </span>
+          <HeadingPill text="About Us" className="mb-0" />
         </div>
 
         {/* Main Two-Column Layout Container matching exact Figma proportions (352px left vs 764px right, 30px gap) */}

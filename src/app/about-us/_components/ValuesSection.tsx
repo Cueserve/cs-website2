@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { RollingButton } from '@/components/ui/RollingButton';
+import { HeadingPill } from '@/components/ui/HeadingPill';
 
 export default function ValuesSection() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -88,9 +89,7 @@ export default function ValuesSection() {
               {/* Header */}
               <div className="flex flex-row justify-between items-end gap-8 mb-12">
                 <div className="flex flex-col gap-6">
-                  <div className="inline-flex items-center px-4 py-1.5 rounded-full text-label uppercase tracking-wider text-brand-default border border-brand-default/30 bg-[#f4f8ff] w-fit">
-                    <span>Our Values</span>
-                  </div>
+                  <HeadingPill text="Our Values" className="mb-0" />
                   <h2 className="text-h2 font-display font-normal text-cs-ink">
                     Values Shapes <span className="text-brand-default font-normal">Everything.</span>
                   </h2>
@@ -185,9 +184,7 @@ export default function ValuesSection() {
       <div className="block md:hidden w-[90%] mx-auto py-16">
         {/* Header */}
         <div className="flex flex-col items-center text-center gap-6 mb-10">
-          <div className="inline-flex items-center px-4 py-1.5 rounded-full text-label uppercase tracking-wider text-brand-default border border-brand-default/30 bg-[#f4f8ff] w-fit">
-            <span>Our Values</span>
-          </div>
+          <HeadingPill text="Our Values" className="mb-0" />
           <h2 className="text-4xl font-display font-normal text-cs-ink">
             Values Shapes <br /><span className="text-brand-default font-normal">Everything.</span>
           </h2>

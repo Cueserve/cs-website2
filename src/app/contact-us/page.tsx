@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { FadeInUp } from '@/components/FadeInUp';
+import { HeadingPill } from '@/components/ui/HeadingPill';
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -80,9 +81,7 @@ export default function ContactPage() {
         {/* Banner Section */}
         <FadeInUp>
           <div className="mb-12 text-center flex flex-col items-center">
-            <div className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider text-brand-default border border-cs-border bg-white mb-6">
-              Get In Touch
-            </div>
+            <HeadingPill text="Get In Touch" />
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-normal tracking-tight text-cs-ink leading-tight font-display">
               Contact <span className="text-brand-default">Us.</span>
             </h1>

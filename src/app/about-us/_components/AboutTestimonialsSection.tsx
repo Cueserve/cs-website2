@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { HeadingPill } from '@/components/ui/HeadingPill';
 
 export default function AboutTestimonialsSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -58,9 +59,7 @@ export default function AboutTestimonialsSection() {
         
         {/* Centered Header */}
         <div className="flex flex-col items-center justify-center text-center mb-16 gap-6 max-w-[900px] mx-auto">
-          <div className="inline-flex items-center px-4 py-1.5 rounded-full text-label uppercase tracking-wider text-brand-default border border-brand-default/30 bg-[#f4f8ff]">
-            <span>Our Testimonials</span>
-          </div>
+          <HeadingPill text="Our Testimonials" className="mb-0" />
           <h2 className="text-4xl md:text-5xl font-display font-normal text-cs-ink leading-tight">
             Our success is measured by the satisfaction of our clients. We{' '}
             <span className="text-brand-default">

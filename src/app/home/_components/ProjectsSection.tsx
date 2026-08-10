@@ -3,6 +3,7 @@
 import React, { useRef } from "react";
 import Image from "next/image";
 import { RollingButton } from "@/components/ui/RollingButton";
+import { HeadingPill } from "@/components/ui/HeadingPill";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -65,9 +66,7 @@ export function ProjectsSection() {
         {/* Header Section */}
         <div className="flex flex-col sm:flex-row justify-between items-center sm:items-end mb-24 gap-8 text-center sm:text-left">
           <div className="flex flex-col items-center sm:items-start gap-6">
-            <span className="inline-flex items-center px-4 py-1.5 rounded-full text-label uppercase tracking-wider text-brand-default border border-brand-default/30 bg-[#f4f8ff]">
-              Our Projects
-            </span>
+            <HeadingPill text="Our Projects" className="mb-0" />
             <h2 className="text-4xl md:text-5xl font-paragraph font-normal text-cs-ink">
               Our Latest <span className="text-cs-dark-blue">Projects.</span>
             </h2>

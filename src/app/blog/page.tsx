@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { blogPosts } from './data';
 import { FadeInUp } from '@/components/FadeInUp';
+import { HeadingPill } from '@/components/ui/HeadingPill';
 
 export const metadata = {
   title: 'Blog | Cueserve',
@@ -16,9 +17,7 @@ export default function BlogPage() {
         <section className="relative pt-[160px] pb-16 sm:pb-24 bg-gradient-to-b from-[#e3f0ff] to-white overflow-hidden">
           <div className="mx-auto w-[90%] xl:w-[82%] max-w-[1260px] flex flex-col items-center text-center">
             
-            <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full text-[13px] uppercase tracking-wider text-brand-default border border-brand-default/30 bg-[#f4f8ff] w-fit mb-6 font-medium">
-              <span>News & Articles</span>
-            </div>
+            <HeadingPill text="News & Articles" />
             
             <h1 className="text-[3rem] sm:text-[4rem] font-normal text-cs-ink mb-6 leading-[1.1]">
               Our Latest <span className="text-[#0051ff]">Articles.</span>

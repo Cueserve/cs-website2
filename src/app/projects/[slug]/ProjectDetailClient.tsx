@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { FadeInUp } from '@/components/FadeInUp';
+import { HeadingPill } from '@/components/ui/HeadingPill';
 
 export interface ProjectData {
   slug: string;
@@ -27,9 +28,7 @@ export default function ProjectDetailClient({ project }: { project: ProjectData 
         <section className="relative pt-[160px] pb-16 sm:pb-24 bg-gradient-to-b from-[#e3f0ff] to-white overflow-hidden">
           <div className="mx-auto w-[90%] xl:w-[82%] max-w-[1260px] flex flex-col items-center text-center">
             
-            <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full text-[13px] uppercase tracking-wider text-brand-default border border-brand-default/30 bg-[#f4f8ff] w-fit mb-6 font-medium">
-              <span>Project Details</span>
-            </div>
+            <HeadingPill text="Project Details" />
             
             <h1 className="text-[3rem] sm:text-[4rem] font-medium text-cs-ink mb-6 leading-[1.1]">
               {project.name}

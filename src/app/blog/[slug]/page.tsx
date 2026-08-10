@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { blogPosts } from '../data';
 import Link from 'next/link';
 import { FadeInUp } from '@/components/FadeInUp';
+import { HeadingPill } from '@/components/ui/HeadingPill';
 
 export function generateStaticParams() {
   return blogPosts.map((post) => ({ slug: post.slug }));
@@ -27,11 +28,7 @@ export default async function BlogDetailPage({
         <section className="relative pt-[160px] pb-16 sm:pb-24 bg-gradient-to-b from-[#e3f0ff] to-white overflow-hidden">
           <div className="mx-auto w-[90%] xl:w-[82%] max-w-[1260px]">
             
-            <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full text-[13px] uppercase tracking-wider text-brand-default border border-brand-default/30 bg-[#f4f8ff] w-fit mb-6 font-medium">
-              <span>{post.category}</span>
-              <div className="w-1 h-1 rounded-full bg-brand-default mx-1"></div>
-              <span>{post.date}</span>
-            </div>
+            <HeadingPill text={`${post.category} • ${post.date}`} />
             
             <h1 className="text-[2.5rem] sm:text-[3.5rem] font-medium text-cs-ink mb-12 sm:mb-16 leading-[1.2] max-w-4xl">
               {post.title}

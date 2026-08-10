@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { HeadingPill } from "./ui/HeadingPill";
 import { RollingButton } from "@/components/ui/RollingButton";
 
 const faqs = [
@@ -28,9 +29,7 @@ export default function FaqSection() {
   return (
     <section className="relative w-full bg-white flex flex-col items-center pt-12 md:pt-12 lg:pt-24 pb-12 md:pb-24">
       {/* Header */}
-      <span className="inline-flex items-center px-4 py-1.5 rounded-full text-label uppercase tracking-wider text-brand-default border border-brand-default/30 bg-[#f4f8ff] mb-6">
-        FAQ
-      </span>
+      <HeadingPill text="FAQ" />
       <h2 className="text-4xl md:text-5xl lg:text-[56px] font-paragraph font-normal text-cs-ink leading-[1.1] text-center mb-16">
         Frequently Asked <span className="text-brand-default">Questions.</span>
       </h2>

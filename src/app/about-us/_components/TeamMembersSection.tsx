@@ -1,4 +1,5 @@
 import React from 'react';
+import { HeadingPill } from '@/components/ui/HeadingPill';
 
 interface TeamMember {
   id: string;
@@ -74,9 +75,7 @@ export default function TeamMembersSection() {
         
         {/* Section Header */}
         <div className="flex flex-col items-center justify-center text-center mb-16 gap-6">
-          <div className="inline-flex items-center px-4 py-1.5 rounded-full text-label uppercase tracking-wider text-brand-default border border-brand-default/30 bg-[#f4f8ff]">
-            <span>Team Members</span>
-          </div>
+          <HeadingPill text="Team Members" className="mb-0" />
           <h2 className="text-h2 font-display font-normal text-cs-ink">
             Our Talented Team <span className="text-brand-default font-normal">Members.</span>
           </h2>
