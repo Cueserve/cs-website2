@@ -281,12 +281,12 @@ export function AboutMediaSection() {
         <div className="w-[90%] xl:w-[82%] max-w-[1260px] mx-auto">
           <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-3 sm:gap-6 px-1 sm:px-0">
             {[
+              {title: "Website", subtitle: "DEVELOPMENT", image: "/assets/images/services/Service-Icon-1.svg" },
+              { title: "Mobile App", subtitle: "DEVELOPMENT", image: "/assets/images/services/Service-Icon-2.svg" },
+              { title: "Software", subtitle: "DEVELOPMENT", image: "/assets/images/services/Service-Icon-3.svg" },
+              { title: "UI/UX", subtitle: "DESIGN", image: "/assets/images/services/Service-Icon-4.svg" },
               { title: "Kiosk", subtitle: "DEVELOPMENT", image: "/tech_logo.png" },
-              { title: "Backend", subtitle: "DEVELOPMENT", image: "/tech_logo.png" },
-              { title: "Frontend", subtitle: "DEVELOPMENT", image: "/tech_logo.png" },
-              { title: "Kiosk", subtitle: "DEVELOPMENT", image: "/tech_logo.png" },
-              { title: "Backend", subtitle: "DEVELOPMENT", image: "/tech_logo.png" },
-              { title: "Frontend", subtitle: "DEVELOPMENT", image: "/tech_logo.png" },
+              { title: "Graphics", subtitle: "DESIGN", image: "/service-icon-pen.png" },
             ].map((service, index) => (
               <div key={index} className="service-card-wrapper">
                 <div
