@@ -20,7 +20,7 @@ export default function BlogPage() {
             <HeadingPill text="News & Articles" />
             
             <h1 className="text-[3rem] sm:text-[4rem] font-normal text-cs-ink mb-6 leading-[1.1]">
-              Our Latest <span className="text-[#0051ff]">Articles.</span>
+              Our Latest <span className="text-brand-default">Articles.</span>
             </h1>
             
             <p className="text-[17px] sm:text-[19px] text-[var(--color-text-secondary)] max-w-2xl leading-relaxed">
@@ -48,9 +48,9 @@ export default function BlogPage() {
                     />
                     
                     {/* Category & Date Pill */}
-                    <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 flex items-center gap-2 text-[12px] font-medium text-[#0051ff] shadow-sm">
+                    <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 flex items-center gap-2 text-[12px] font-medium text-brand-default shadow-sm">
                       <span>{post.category}</span>
-                      <div className="w-1 h-1 rounded-full bg-[#0051ff]"></div>
+                      <div className="w-1 h-1 rounded-full bg-brand-default"></div>
                       <span>{post.date}</span>
                     </div>
                   </div>
@@ -63,7 +63,7 @@ export default function BlogPage() {
                     
                     <Link href={`/blog/${post.slug}`} className="flex items-center gap-3 mt-auto group w-fit">
                       <span className="text-[14px] font-medium text-cs-ink">Read More</span>
-                      <div className="w-7 h-7 rounded-full bg-[#0051ff] flex items-center justify-center text-white transition-transform duration-300 group-hover:scale-110">
+                      <div className="w-7 h-7 rounded-full bg-brand-default flex items-center justify-center text-white transition-transform duration-300 group-hover:scale-110">
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                           <line x1="7" y1="17" x2="17" y2="7"></line>
                           <polyline points="7 7 17 7 17 17"></polyline>

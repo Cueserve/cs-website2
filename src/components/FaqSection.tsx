@@ -30,7 +30,7 @@ export default function FaqSection() {
     <section className="relative w-full bg-white flex flex-col items-center pt-12 md:pt-12 lg:pt-24 pb-12 md:pb-24">
       {/* Header */}
       <HeadingPill text="FAQ" />
-      <h2 className="text-4xl md:text-5xl lg:text-[56px] font-paragraph font-normal text-cs-ink leading-[1.1] text-center mb-16">
+      <h2 className="text-4xl md:text-5xl lg:text-[56px] font-display font-normal text-cs-ink leading-[1.1] text-center mb-16">
         Frequently Asked <span className="text-brand-default">Questions.</span>
       </h2>
 
@@ -64,7 +64,7 @@ export default function FaqSection() {
                 {/* Content */}
                 {isActive ? (
                   <div className="flex flex-col flex-1 h-full animate-in fade-in duration-500 text-white">
-                    <h3 className="text-xl font-paragraph font-normal mb-6 leading-snug">{faq.question}</h3>
+                    <h3 className="text-xl font-display font-normal mb-6 leading-snug">{faq.question}</h3>
                     <div className="text-2xl font-paragraph font-normal mb-4">Answer:</div>
                     <div className="w-full h-[1px] bg-white/20 mb-6"></div>
                     <p className="text-lg font-paragraph font-normal leading-relaxed mb-8 pr-4 md:flex-1">

@@ -2,8 +2,8 @@
 
 @theme {
   /* ── Fonts ──────────────────────────────────────────────── */
-  --font-display: var(--font-space-grotesk);
-  --font-primary: var(--font-dm-sans);
+  --font-display: var(--font-instrument-sans), sans-serif;
+  --font-primary: var(--font-poppins), sans-serif;
   --font-mono: var(--font-jetbrains-mono);
   --font-title: var(--font-instrument-sans), sans-serif;
   --font-paragraph: var(--font-poppins), sans-serif;
@@ -238,6 +238,10 @@ body {
   background-color: var(--color-cs-surface);
   color: var(--color-cs-ink);
   -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display), sans-serif;
 }
 
 ::-webkit-scrollbar {

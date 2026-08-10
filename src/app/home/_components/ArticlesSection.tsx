@@ -25,7 +25,7 @@ export function ArticlesSection() {
         {/* Left Fixed Container */}
         <div className="w-full md:w-[50%] flex flex-col items-center md:items-start text-center md:text-left gap-6 md:sticky md:top-24 lg:top-32 h-fit mb-4 md:mb-0">
           <HeadingPill text="News & Articles" className="mb-0" />
-          <h2 className="text-4xl md:text-[36px] lg:text-[56px] font-paragraph font-normal text-cs-ink leading-[1.1]">
+          <h2 className="text-4xl md:text-[36px] lg:text-[56px] font-display font-normal text-cs-ink leading-[1.1]">
             Fresh Perspectives <br className="hidden md:block"/>
             <span className="text-brand-default">On Strategy.</span>
           </h2>
@@ -52,7 +52,7 @@ export function ArticlesSection() {
                 <span className="text-brand-default">•</span>
                 <span className="text-neutral-900">{article.date}</span>
               </span>
-              <h3 className="text-xl md:text-[18px] lg:text-2xl font-paragraph font-normal text-neutral-900 leading-[1.4] mb-4 lg:mb-8 w-[90%] md:w-full mx-auto md:mx-0">
+              <h3 className="text-xl md:text-[18px] lg:text-2xl font-display font-normal text-neutral-900 leading-[1.4] mb-4 lg:mb-8 w-[90%] md:w-full mx-auto md:mx-0">
                 {article.title}
               </h3>
               <Link href={`/blog/${article.slug}`} className="flex items-center justify-center md:justify-start gap-4 cursor-pointer group">

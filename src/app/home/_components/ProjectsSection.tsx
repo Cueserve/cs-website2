@@ -25,7 +25,7 @@ export function ProjectsSection() {
   const containerRef = useRef<HTMLElement>(null);
   const arrowRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>, idx: number) => {
+  const handleMouseMove = (e: React.MouseEvent<HTMLElement>, idx: number) => {
     const arrow = arrowRefs.current[idx];
     if (!arrow) return;
 
@@ -104,7 +104,7 @@ export function ProjectsSection() {
         <div className="flex flex-col sm:flex-row justify-between items-center sm:items-end mb-24 gap-8 text-center sm:text-left">
           <div className="flex flex-col items-center sm:items-start gap-6">
             <HeadingPill text="Our Projects" className="mb-0" />
-            <h2 className="text-4xl md:text-5xl font-paragraph font-normal text-cs-ink">
+            <h2 className="text-4xl md:text-5xl font-display font-normal text-cs-ink">
               Our Latest <span className="text-cs-dark-blue">Projects.</span>
             </h2>
           </div>
@@ -128,7 +128,7 @@ export function ProjectsSection() {
               <div className="grid grid-cols-[auto_1fr]">
 
                 {/* Number: Row 1, Col 1 */}
-                <div className="relative z-20 text-7xl md:text-[80px] lg:text-[120px] font-paragraph font-normal text-cs-ink leading-[0.75] col-start-1 col-end-2 row-start-1 row-end-2">
+                <div className="relative z-20 text-7xl md:text-[80px] lg:text-[120px] font-display font-normal text-cs-ink leading-[0.75] col-start-1 col-end-2 row-start-1 row-end-2">
                   {project.num}
                 </div>
 
@@ -164,7 +164,7 @@ export function ProjectsSection() {
                     </div>
                   </Link>
                   <div className="flex flex-col items-start gap-3 mt-2">
-                    <h3 className="text-xl md:text-2xl font-paragraph font-normal text-cs-ink">
+                    <h3 className="text-xl md:text-2xl font-display font-normal text-cs-ink">
                       {project.name}
                     </h3>
                     <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-paragraph font-medium leading-none uppercase tracking-[0.1em] text-neutral-900 bg-brand-muted">

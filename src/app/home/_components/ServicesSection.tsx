@@ -127,7 +127,7 @@ export function ServicesSection() {
         </div>
 
         {/* Title */}
-        <h2 className="text-4xl md:text-5xl font-paragraph font-normal text-center mb-16 text-cs-ink">
+        <h2 className="text-4xl md:text-5xl font-display font-normal text-center mb-16 text-cs-ink">
           Creativity Meets <span className="text-cs-dark-blue">Functionality.</span>
         </h2>
 

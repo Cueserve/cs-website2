@@ -124,7 +124,7 @@ export function TestimonialSection() {
                     <div className="flex justify-between items-start md:items-center mb-4">
                       <div className="flex flex-col items-start">
                         <img src={next.logo} alt={next.company} className="h-6 md:h-8 lg:h-12 w-auto object-contain mb-1" />
-                        <h4 className="font-paragraph font-normal text-sm md:text-base lg:text-xl italic text-cs-ink">{next.name}</h4>
+                        <h4 className="font-display font-normal text-sm md:text-base lg:text-xl italic text-cs-ink">{next.name}</h4>
                       </div>
                     </div>
                     <hr className="border-t border-[#e2edff] mb-4 w-full" />
@@ -156,7 +156,7 @@ export function TestimonialSection() {
                     <div className="flex justify-between items-start md:items-center mb-4 md:mb-5 lg:mb-6">
                       <div className="flex flex-col items-start">
                         <img src={current.logo} alt={current.company} className="h-6 md:h-8 lg:h-12 w-auto object-contain mb-1 md:mb-2 lg:mb-4" />
-                        <h4 className="font-paragraph font-normal text-sm md:text-base lg:text-xl italic text-cs-ink">{current.name}</h4>
+                        <h4 className="font-display font-normal text-sm md:text-base lg:text-xl italic text-cs-ink">{current.name}</h4>
                       </div>
                       {/* Quote Icon */}
                       <div className="shrink-0 ml-4">
@@ -194,7 +194,7 @@ export function TestimonialSection() {
 
             {/* Stat 1 */}
             <div className="flex flex-col items-center text-center">
-              <h3 className="text-4xl md:text-[56px] font-paragraph font-normal text-cs-ink leading-none mb-3">95%</h3>
+              <h3 className="text-4xl md:text-[56px] font-display font-normal text-cs-ink leading-none mb-3">95%</h3>
               <p className="text-[10px] md:text-xs font-paragraph font-medium uppercase tracking-widest text-neutral-500 max-w-[130px] leading-relaxed">
                 Client Satisfaction Rate
               </p>
@@ -205,7 +205,7 @@ export function TestimonialSection() {
               {/* Left Desktop Divider */}
               <div className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-28 bg-border-default"></div>
 
-              <h3 className="text-4xl md:text-[56px] font-paragraph font-normal text-cs-ink leading-none mb-3">120+</h3>
+              <h3 className="text-4xl md:text-[56px] font-display font-normal text-cs-ink leading-none mb-3">120+</h3>
               <p className="text-[10px] md:text-xs font-paragraph font-medium uppercase tracking-widest text-neutral-500 max-w-[140px] leading-relaxed">
                 Global Brands Served Worldwide
               </p>
@@ -216,7 +216,7 @@ export function TestimonialSection() {
 
             {/* Stat 3 (Centered on Mobile) */}
             <div className="flex flex-col items-center text-center col-span-2 md:col-span-1">
-              <h3 className="text-4xl md:text-[56px] font-paragraph font-normal text-cs-ink leading-none mb-3">5X</h3>
+              <h3 className="text-4xl md:text-[56px] font-display font-normal text-cs-ink leading-none mb-3">5X</h3>
               <p className="text-[10px] md:text-xs font-paragraph font-medium uppercase tracking-widest text-neutral-500 max-w-[130px] leading-relaxed">
                 Average Growth Achieved
               </p>

@@ -57,7 +57,7 @@ export function Footer() {
 
             {/* Main Pages */}
             <div className="flex flex-col gap-4 order-1">
-              <h4 className="text-[17px] md:text-xl text-cs-ink font-paragraph font-normal mb-2 md:mb-1">Main Pages</h4>
+              <h4 className="text-[17px] md:text-xl text-cs-ink font-display font-normal mb-2 md:mb-1">Main Pages</h4>
 
               {/* Desktop View */}
               <div className="hidden md:flex flex-col gap-3.5">
@@ -93,7 +93,7 @@ export function Footer() {
 
             {/* Services */}
             <div className="flex flex-col gap-4 order-2 md:order-3">
-              <h4 className="text-[17px] md:text-xl text-cs-ink font-paragraph font-normal mb-2 md:mb-1">Services</h4>
+              <h4 className="text-[17px] md:text-xl text-cs-ink font-display font-normal mb-2 md:mb-1">Services</h4>
 
               {/* Desktop View */}
               <div className="hidden md:flex flex-col gap-3.5">
@@ -126,7 +126,7 @@ export function Footer() {
 
             {/* Location */}
             <div className="flex flex-col gap-4 order-3 md:order-2">
-              <h4 className="text-[17px] md:text-xl text-cs-ink font-paragraph font-normal mb-2 md:mb-1">Location</h4>
+              <h4 className="text-[17px] md:text-xl text-cs-ink font-display font-normal mb-2 md:mb-1">Location</h4>
               <p className="text-[15px] md:text-base text-cs-ink/70 md:text-cs-ink leading-relaxed font-paragraph font-normal md:font-light max-w-[200px] md:max-w-none">
                 5, Punit Colony, Sindhwaimata Road, Opp. Spandan Hospital, Pratapnagar, Vadodara
               </p>
@@ -134,7 +134,7 @@ export function Footer() {
 
             {/* Contact */}
             <div className="flex flex-col gap-4 order-4">
-              <h4 className="text-[17px] md:text-xl text-cs-ink font-paragraph font-normal mb-2 md:mb-1">Contact</h4>
+              <h4 className="text-[17px] md:text-xl text-cs-ink font-display font-normal mb-2 md:mb-1">Contact</h4>
               <div className="flex flex-col gap-3 md:gap-3.5 text-[15px] md:text-base text-cs-ink/70 md:text-cs-ink font-paragraph font-normal md:font-light">
                 <a href="mailto:sales@cueserve.com" className="md:underline md:decoration-solid hover:text-brand-default transition-colors">sales@cueserve.com</a>
                 <a href="tel:+918000299993" className="hover:text-brand-default transition-colors">+91-80002-99993</a>

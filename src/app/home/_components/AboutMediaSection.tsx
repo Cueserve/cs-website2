@@ -235,7 +235,7 @@ export function AboutMediaSection() {
                   className="bg-blue-50 rounded-[16px] sm:rounded-xxl p-3.5 sm:p-6 md:p-4 lg:p-6 flex flex-col justify-between h-[150px] sm:h-[300px] md:h-[180px] lg:h-[300px] hover:scale-[1.02] transition-transform duration-300 w-full"
                 >
                   <div className="flex flex-col">
-                    <h3 className="font-paragraph text-[15px] sm:text-[32px] md:text-[20px] lg:text-[32px] font-medium sm:font-normal leading-tight sm:leading-none text-neutral-1000">
+                    <h3 className="font-title text-[15px] sm:text-[32px] md:text-[20px] lg:text-[32px] font-medium sm:font-normal leading-tight sm:leading-none text-neutral-1000">
                       {service.title}
                     </h3>
                     <p className="font-paragraph text-[9px] sm:text-[14px] md:text-[11px] lg:text-[14px] font-medium sm:font-normal leading-tight sm:leading-none sm:tracking-[0.1em] uppercase text-neutral-1000 mt-1 sm:mt-[14px] md:mt-2 lg:mt-[14px]">

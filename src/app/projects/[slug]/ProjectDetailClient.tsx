@@ -46,7 +46,7 @@ export default function ProjectDetailClient({ project }: { project: ProjectData 
               />
             </div>
 
-            <div className="w-full bg-[#0051ff] rounded-[32px] md:rounded-full py-8 sm:py-10 px-8">
+            <div className="w-full bg-brand-default rounded-[32px] md:rounded-full py-8 sm:py-10 px-8">
               <div className="flex flex-col sm:flex-row items-center justify-center gap-12 sm:gap-24 md:gap-40 text-white">
                 <div className="flex flex-col items-center gap-2">
                   <span className="text-[13px] font-medium tracking-wider uppercase opacity-90">CLIENT:</span>
