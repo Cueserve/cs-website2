@@ -78,8 +78,8 @@ export const VisionTypographyGridLines = forwardRef<HTMLDivElement, { className?
             {/* Transparent placeholder of exact same height so box height stays 100% identical */}
             <div className="flex items-center justify-center w-full px-2 sm:px-6 relative z-20 pointer-events-none opacity-0">
               <span
-                className="font-display font-extrabold tracking-tighter leading-none select-none"
-                style={{ fontSize: "clamp(5rem, min(19vw, 35vh), 19.5rem)" }}
+                className="font-display font-extrabold tracking-tighter leading-none select-none whitespace-nowrap"
+                style={{ fontSize: "clamp(5rem, min(17.5vw, 33vh), 18rem)" }}
               >
                 V
               </span>
@@ -130,9 +130,9 @@ export const VisionTypographyIntro = forwardRef<HTMLDivElement, VisionTypography
               <span
                 data-intro-fade
                 data-text-left
-                className="text-cs-dark-blue font-display font-extrabold tracking-tighter leading-none will-change-transform select-none"
+                className="text-cs-dark-blue font-display font-extrabold tracking-tighter leading-none will-change-transform select-none whitespace-nowrap"
                 style={{
-                  fontSize: "clamp(5rem, min(19vw, 35vh), 19.5rem)",
+                  fontSize: "clamp(5rem, min(17.5vw, 33vh), 18rem)",
                   letterSpacing: "-0.035em",
                 }}
               >
@@ -156,9 +156,9 @@ export const VisionTypographyIntro = forwardRef<HTMLDivElement, VisionTypography
               <span
                 data-intro-fade
                 data-text-right
-                className="text-cs-dark-blue font-display font-extrabold tracking-tighter leading-none will-change-transform select-none"
+                className="text-cs-dark-blue font-display font-extrabold tracking-tighter leading-none will-change-transform select-none whitespace-nowrap"
                 style={{
-                  fontSize: "clamp(5.88rem, min(21.5vw, 39.5vh), 22.06rem)",
+                  fontSize: "clamp(5.88rem, min(19.5vw, 37vh), 20.26rem)",
                   letterSpacing: "-0.035em",
                 }}
               >
