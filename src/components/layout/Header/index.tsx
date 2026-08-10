@@ -59,11 +59,10 @@ export function Header() {
             aria-label={mobileNavOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileNavOpen}
             onClick={toggleMobileNav}
-            className="ml-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#f4f8ff] text-brand-default transition-all hover:bg-[#e4efff] xl:hidden"
+            className="ml-3 inline-flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-[#f4f8ff] text-brand-default transition-all hover:bg-[#e4efff] xl:hidden"
           >
             <svg
-              width="22"
-              height="22"
+              className="w-[22px] h-[22px] sm:w-[26px] sm:h-[26px]"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"

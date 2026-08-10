@@ -59,7 +59,6 @@ export const MEGA_MENU_ORDER: MenuKey[] = [
   "services",
   "ourWork",
   "blog",
-  "contact",
 ];
 
 export const NAV_LABELS: Record<MenuKey, string> = {
