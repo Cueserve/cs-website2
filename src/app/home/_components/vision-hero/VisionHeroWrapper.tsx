@@ -499,6 +499,14 @@ export const VisionHeroWrapper: React.FC<VisionHeroWrapperProps> = ({
           />
         </div>
 
+        {/* Bottom Fade Gradient for Mobile/Tablet */}
+        <div
+          className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none z-10"
+          style={{
+            background: "linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.45) 40%, rgba(255, 255, 255, 0.88) 75%, #ffffff 100%)",
+          }}
+        />
+
         {/* Direct Hero Content: right-aligned starting from md breakpoint, removed extra bottom padding */}
         <VisionHeroContent className="relative !inset-auto !opacity-100 !pointer-events-auto z-20 w-full flex flex-col justify-start pb-0" />
       </section>
@@ -572,6 +580,14 @@ export const VisionHeroWrapper: React.FC<VisionHeroWrapperProps> = ({
 
               {/* Layer 3: Right-Aligned Hero Content – initially hidden, revealed by timeline right when portal reaches fullscreen */}
               <VisionHeroContent />
+
+              {/* Bottom Fade Gradient for Desktop/Laptop */}
+              <div
+                className="absolute bottom-0 left-0 right-0 h-40 pointer-events-none z-20"
+                style={{
+                  background: "linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.45) 40%, rgba(255, 255, 255, 0.88) 75%, #ffffff 100%)",
+                }}
+              />
             </div>
 
             {/* Layer 3 (z-20): VISION Intro Typography (with letters, mediaSlot, and footer) sitting in front of clipRef */}

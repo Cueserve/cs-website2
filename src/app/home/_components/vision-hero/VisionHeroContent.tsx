@@ -47,56 +47,7 @@ export const VisionHeroContent = forwardRef<HTMLDivElement, VisionHeroContentPro
           </div>
         </div>
 
-        {/* Continuous Infinite Motion Tech Stack Logo Slider (matching Figma design) */}
-        <div
-          data-hero-ticker
-          className="relative mt-8 sm:mt-12 xl:mt-0 xl:absolute xl:bottom-0 left-0 right-0 w-full pt-6 sm:pt-8 xl:pt-14 pb-6 sm:pb-8 overflow-hidden z-40 pointer-events-auto shrink-0"
-          style={{
-            background: "linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.45) 40%, rgba(255, 255, 255, 0.88) 75%, #ffffff 100%)",
-          }}
-        >
-          <style dangerouslySetInnerHTML={{
-            __html: `
-            @keyframes heroLogoScroll {
-              0% { transform: translate3d(0, 0, 0); }
-              100% { transform: translate3d(-50%, 0, 0); }
-            }
-          `
-          }} />
-          <div
-            className="flex w-max items-center whitespace-nowrap select-none"
-            style={{
-              animation: "heroLogoScroll 55s linear infinite",
-            }}
-          >
-            {/* Render two identical tracks side-by-side for seamless infinite looping */}
-            {[0, 1].map((loopIdx) => (
-              <div key={loopIdx} className="flex items-center gap-[48px] sm:gap-[64px] xl:gap-[80px] 2xl:gap-[96px] pr-[48px] sm:pr-[64px] xl:pr-[80px] 2xl:pr-[96px] shrink-0">
-                {[
-                  { name: "Microsoft .NET", src: "/Sliding_logos/dotnet.png" },
-                  { name: "Angular", src: "/Sliding_logos/angular.png" },
-                  { name: "React", src: "/Sliding_logos/react.png" },
-                  { name: "Next.js", src: "/Sliding_logos/nextjs.png" },
-                  { name: "HTML5", src: "/Sliding_logos/html.png" },
-                  { name: "CSS3", src: "/Sliding_logos/css.png" },
-                  { name: "JavaScript", src: "/Sliding_logos/javascript.png" },
-                  { name: "Android Studio", src: "/Sliding_logos/android-studio.png" },
-                ].map((logo, idx) => (
-                  <div
-                    key={`${loopIdx}-${idx}`}
-                    className="flex items-center justify-center shrink-0 transition-opacity duration-300 hover:opacity-100"
-                  >
-                    <img
-                      src={logo.src}
-                      alt={logo.name}
-                      className="h-[36px] sm:h-[44px] xl:h-[54px] 2xl:h-[64px] w-auto object-contain select-none pointer-events-none"
-                    />
-                  </div>
-                ))}
-              </div>
-            ))}
-          </div>
-        </div>
+
       </div>
     );
   }

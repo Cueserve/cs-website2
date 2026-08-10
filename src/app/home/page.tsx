@@ -1,6 +1,7 @@
 export { metadata } from "./metadata";
 
 import { HeroSection } from "./_components/HeroSection";
+import { TechScroller } from "@/components/ui/TechScroller";
 import { AboutSection } from "./_components/AboutSection";
 import { AboutMediaSection } from "./_components/AboutMediaSection";
 import { ServicesSection } from "./_components/ServicesSection";
@@ -14,6 +15,7 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
+      <TechScroller />
       <FadeInUp>
         <AboutSection />
       </FadeInUp>
