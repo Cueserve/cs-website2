@@ -48,7 +48,7 @@ export default function BlogPage() {
                     />
                     
                     {/* Category & Date Pill */}
-                    <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 flex items-center gap-2 text-[12px] font-medium text-brand-default shadow-sm">
+                    <div className="absolute top-4 right-4 bg-white rounded-full px-4 py-2 flex items-center gap-2 text-[12px] font-medium text-brand-default shadow-sm">
                       <span>{post.category}</span>
                       <div className="w-1 h-1 rounded-full bg-brand-default"></div>
                       <span>{post.date}</span>

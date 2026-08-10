@@ -150,7 +150,7 @@ export function AboutMediaSection() {
                 type="button"
                 onClick={togglePlay}
                 aria-label={isPlaying ? "Pause video" : "Play video"}
-                className="absolute bottom-5 left-5 sm:bottom-6 sm:left-6 z-10 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white/25 backdrop-blur-md border border-white/40 flex items-center justify-center text-white hover:bg-white/40 hover:scale-110 transition-all"
+                className="absolute bottom-5 left-5 sm:bottom-6 sm:left-6 z-10 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white/40 border border-white/60 flex items-center justify-center text-white hover:bg-white/50 hover:scale-110 transition-all"
               >
                 {isPlaying ? (
                   /* Pause Icon (||) */
