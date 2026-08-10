@@ -98,18 +98,18 @@ export default function TeamMembersSection() {
               {/* Member Details Area */}
               <div className="bg-white rounded-[20px] p-4 mt-2 flex flex-col items-center justify-center text-center shadow-sm">
                 <h3 className="text-base font-medium text-cs-ink mb-0.5">{member.name}</h3>
-                <p className="text-[13px] text-neutral-500 mb-3">{member.role}</p>
+                <p className="text-[13px] text-neutral-500 mb-5">{member.role}</p>
                 
                 {/* Social Icons */}
                 <div className="flex items-center gap-3">
-                  <a href="#" className="w-8 h-8 rounded-full bg-[#f4f8ff] text-neutral-600 flex items-center justify-center hover:bg-brand-default hover:text-white transition-colors">
-                    <span className="text-xs font-bold font-sans">X</span>
+                  <a href="#" className="w-9 h-9 rounded-full bg-[#f4f8ff] text-neutral-600 flex items-center justify-center hover:bg-brand-default hover:text-white transition-colors">
+                    <span className="text-lg font-bold font-sans">X</span>
                   </a>
-                  <a href="#" className="w-8 h-8 rounded-full bg-[#f4f8ff] text-neutral-600 flex items-center justify-center hover:bg-brand-default hover:text-white transition-colors">
-                    <span className="text-xs font-bold font-sans">f</span>
+                  <a href="#" className="w-9 h-9 rounded-full bg-[#f4f8ff] text-neutral-600 flex items-center justify-center hover:bg-brand-default hover:text-white transition-colors">
+                    <span className="text-lg font-bold font-sans">f</span>
                   </a>
-                  <a href="#" className="w-8 h-8 rounded-full bg-[#f4f8ff] text-neutral-600 flex items-center justify-center hover:bg-brand-default hover:text-white transition-colors">
-                    <span className="text-xs font-bold font-sans">in</span>
+                  <a href="#" className="w-9 h-9 rounded-full bg-[#f4f8ff] text-neutral-600 flex items-center justify-center hover:bg-brand-default hover:text-white transition-colors">
+                    <span className="text-lg font-bold font-sans">in</span>
                   </a>
                 </div>
               </div>
