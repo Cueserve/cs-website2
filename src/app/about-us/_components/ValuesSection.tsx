@@ -104,76 +104,74 @@ export default function ValuesSection() {
                 </div>
               </div>
 
-              {/* Timeline Bar */}
-              <div className="relative mb-12 flex justify-between items-center w-full">
-                {/* Horizontal Line behind pills */}
-                <div className="absolute top-1/2 left-0 w-full h-[1px] bg-[#e2e8f0] -z-10" />
-                
-                {cards.map((card, idx) => {
-                  const isActive = activeIndex === idx;
-                  return (
-                    <div
-                      key={card.name}
-                      className={`px-8 py-2.5 rounded-full text-base transition-colors duration-300 font-medium ${
-                        isActive
-                          ? 'bg-gradient-to-b from-[#1c49c4] to-[#4a84fd] text-white shadow-md'
-                          : 'bg-[#f4f8ff] text-cs-ink hover:bg-[#e6efff]'
-                      }`}
-                    >
-                      {card.name}
-                    </div>
-                  );
-                })}
-              </div>
+              {/* Horizontal Line behind pills */}
+              <div className="relative w-full">
+                <div className="absolute top-[22px] left-0 w-full h-[1px] bg-[#e2e8f0]" />
 
-              {/* Interactive Accordion Cards */}
-              <div className="flex flex-row items-stretch gap-6 w-full h-[300px] lg:h-[320px]">
-                {cards.map((card, idx) => {
-                  const isActive = activeIndex === idx;
-                  
-                  return (
-                    <div
-                      key={card.id}
-                      className="relative flex flex-col justify-between rounded-[32px] overflow-hidden cursor-default bg-[#f4f8ff] p-8 transition-[flex] duration-700 ease-out"
-                      style={{
-                        flex: isActive ? '1.8' : '1',
-                      }}
-                    >
-                      {/* Top Icon */}
-                      <div className="w-16 h-16 rounded-full bg-[#7ca9ff] flex items-center justify-center shadow-sm">
-                        {card.icon}
-                      </div>
+                {/* Interactive Accordion Columns */}
+                <div className="relative z-10 flex flex-row items-stretch gap-6 w-full">
+                  {cards.map((card, idx) => {
+                    const isActive = activeIndex === idx;
 
-                      {/* Card Content & Image */}
-                      <div className="flex items-end justify-between gap-6 mt-auto">
-                        <div className="flex flex-col gap-3 max-w-[280px]">
-                          <h3 className="text-2xl font-display font-medium text-cs-ink">{card.title}</h3>
-                          <p className="text-sm text-neutral-500 leading-relaxed font-paragraph">
-                            {card.details}
-                          </p>
+                    return (
+                      <div
+                        key={card.id}
+                        className="flex flex-col gap-6 transition-[flex] duration-700 ease-out"
+                        style={{
+                          flex: isActive ? '1.8' : '1',
+                        }}
+                      >
+                        {/* Pill aligned to start of column (left edge of card) */}
+                        <div className="self-start z-10 bg-white pr-2">
+                          <div
+                            className={`px-8 py-2.5 rounded-full text-base transition-colors duration-300 font-medium whitespace-nowrap cursor-pointer ${isActive
+                                ? 'bg-gradient-to-b from-[#1c49c4] to-[#4a84fd] text-white shadow-md'
+                                : 'bg-[#f4f8ff] text-cs-ink hover:bg-[#e6efff]'
+                              }`}
+                          >
+                            {card.name}
+                          </div>
                         </div>
-                        
-                        <AnimatePresence>
-                          {isActive && (
-                            <motion.div
-                              initial={{ opacity: 0, width: 0 }}
-                              animate={{ opacity: 1, width: 140 }}
-                              exit={{ opacity: 0, width: 0 }}
-                              transition={{ duration: 0.4 }}
-                              className="shrink-0 h-[100px] rounded-[16px] overflow-hidden bg-gray-300 shadow-md"
-                            >
-                              <img
-                                src={card.image}
-                                alt={card.title}
-                                className="w-full h-full object-cover"
-                              />
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
+
+                        {/* Card Container */}
+                        <div className="flex flex-col justify-between rounded-[32px] overflow-hidden cursor-default bg-[#f4f8ff] p-8 h-[300px] lg:h-[320px] w-full">
+                          {/* Top Icon */}
+                          <div className="w-16 h-16 rounded-full bg-[#7ca9ff] flex items-center justify-center shadow-sm">
+                            {card.icon}
+                          </div>
+
+                          {/* Card Content & Image */}
+                          <div className="flex items-end justify-between gap-6 mt-auto">
+                            <div className="flex flex-col gap-3 max-w-[280px]">
+                              <h3 className="text-2xl font-display font-normal text-cs-ink">{card.title}</h3>
+                              <p className="text-sm text-neutral-500 leading-relaxed font-paragraph">
+                                {card.details}
+                              </p>
+                            </div>
+
+                            <AnimatePresence>
+                              {isActive && (
+                                <motion.div
+                                  initial={{ opacity: 0, width: 0 }}
+                                  animate={{ opacity: 1, width: 140 }}
+                                  exit={{ opacity: 0, width: 0 }}
+                                  transition={{ duration: 0.4 }}
+                                  className="shrink-0 h-[100px] rounded-[16px] overflow-hidden bg-gray-300 shadow-md"
+                                >
+                                  <img
+                                    src={card.image}
+                                    alt={card.title}
+                                    className="w-full h-full object-cover"
+                                  />
+                                </motion.div>
+                              )}
+                            </AnimatePresence>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  );
-                })}
+                    );
+                  })}
+                </div>
               </div>
             </div>
           </div>
