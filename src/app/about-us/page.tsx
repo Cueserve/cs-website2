@@ -4,6 +4,7 @@ import TeamMembersSection from '@/components/TeamMembersSection';
 import ValuesSection from '@/components/ValuesSection';
 import AboutTestimonialsSection from '@/components/AboutTestimonialsSection';
 import FaqSection from '@/components/FaqSection';
+import { FadeInUp } from '@/components/FadeInUp';
 
 export const metadata = {
   title: 'About Us - Cueserve',
@@ -13,12 +14,25 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <>
-      <AboutHeroBanner />
-      <AboutMainSection />
-      <TeamMembersSection />
-      <ValuesSection />
-      <AboutTestimonialsSection />
-      <FaqSection />
+      <FadeInUp>
+        <AboutHeroBanner />
+      </FadeInUp>
+      <FadeInUp>
+        <AboutMainSection />
+      </FadeInUp>
+      <FadeInUp>
+        <TeamMembersSection />
+      </FadeInUp>
+      <FadeInUp>
+        <ValuesSection />
+      </FadeInUp>
+      <FadeInUp>
+        <AboutTestimonialsSection />
+      </FadeInUp>
+      <FadeInUp>
+        <FaqSection />
+      </FadeInUp>
     </>
   );
 }
+
