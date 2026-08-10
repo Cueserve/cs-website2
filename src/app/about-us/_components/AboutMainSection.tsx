@@ -68,15 +68,15 @@ export default function AboutMainSection() {
           <HeadingPill text="About Us" className="mb-0" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-[40px] w-full">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-[40px] w-full">
           {/* Left Column */}
-          <div className="flex flex-col gap-12 sm:gap-20">
+          <div className="md:col-span-4 flex flex-col justify-between h-full">
             {/* 40+ Block */}
             <div
               ref={containerRef}
               onMouseMove={handleMouseMove}
               onMouseLeave={handleMouseLeave}
-              className="relative w-full aspect-[4/3] sm:aspect-[16/10] max-w-[420px] flex items-center justify-center rounded-3xl bg-transparent cursor-pointer [perspective:1000px] mb-8"
+              className="relative w-full aspect-[4/3] sm:aspect-[16/10] max-w-[420px] flex items-center justify-center rounded-3xl bg-transparent cursor-pointer [perspective:1000px] mb-0"
             >
               <div className="relative flex flex-col items-center justify-center select-none w-full h-full py-6 sm:py-8">
                 
@@ -111,7 +111,7 @@ export default function AboutMainSection() {
             </div>
 
             {/* Mission and Vision Blocks */}
-            <div className="flex flex-col gap-10 w-full max-w-[500px] mt-4">
+            <div className="flex flex-col gap-10 w-full max-w-[500px] mt-4 mb-4">
               <div>
                 <h4 className="text-[28px] font-display font-normal mb-4 text-cs-ink">Our Mission</h4>
                 <p className="text-base text-neutral-500 leading-relaxed font-paragraph">
@@ -128,7 +128,7 @@ export default function AboutMainSection() {
           </div>
 
           {/* Right Column */}
-          <div className="md:border-l md:border-cs-border md:pl-8 xl:pl-10 py-2 flex flex-col justify-start w-full">
+          <div className="md:col-span-8 md:border-l md:border-cs-border md:pl-8 xl:pl-10 py-2 flex flex-col justify-start w-full">
             <h2 className="text-h3 font-display font-normal text-cs-ink mb-6 sm:mb-8">
               Our team of designers, developers, and thinkers driven by{" "}
               <span className="text-brand-default font-normal">
