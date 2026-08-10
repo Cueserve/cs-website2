@@ -168,7 +168,7 @@ export function AboutSection() {
               <RollingButton
                 text="More About Us"
                 href="/about-us"
-                className="!bg-[#eef5ff] hover:!bg-[#e2edff] !text-brand-default !border-brand-default/20"
+                className="!bg-[#eef5ff] hover:!bg-[#e2edff] !text-brand-default !border-none"
               />
             </div>
           </div>
