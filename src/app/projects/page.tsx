@@ -114,7 +114,7 @@ export default function ProjectsPage() {
                     {/* Bottom to Top Hover Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-b from-[#0042c5] to-[#256dff] translate-y-[105%] group-hover:translate-y-0 transition-transform duration-500 ease-in-out z-0" />
                     
-                    <span className="relative z-10 text-[20px] md:text-[24px] leading-tight font-semibold text-cs-ink group-hover:text-white transition-colors duration-500">
+                    <span className="relative z-10 text-[20px] md:text-[24px] leading-tight font-normal text-cs-ink group-hover:text-white transition-colors duration-500">
                       {project.title}
                     </span>
                     <div className="relative z-10 flex items-center gap-2 text-[var(--color-text-secondary)] group-hover:text-white transition-colors duration-500">
