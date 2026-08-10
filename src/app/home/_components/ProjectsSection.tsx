@@ -33,15 +33,15 @@ export function ProjectsSection() {
         gsap.set(content, { transformPerspective: 1500, transformOrigin: "bottom center" });
         
         gsap.from(content, {
-          y: 200,
+          y: 80,
           rotation: index % 2 === 0 ? -4 : 4, // Opposite tilt angle
           rotationX: 45, // Tilted backward
           opacity: 0,
           ease: "power2.out", // Smoother easing
           scrollTrigger: {
             trigger: content,
-            start: "top 90%", // Starts when top of photo enters
-            end: "bottom 90%", // Finishes exactly when bottom of photo enters
+            start: "top 95%", // Starts earlier, right when the top enters the screen
+            end: "top 75%", // Finishes unfolding much sooner
             scrub: 1, // Ties the animation to the scrollbar
           }
         });

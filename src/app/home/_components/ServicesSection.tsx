@@ -167,14 +167,14 @@ export function ServicesSection() {
                 <div key={service.id} className="flex flex-col">
                   <div
                     onClick={() => handleSelect(idx)}
-                    className={`relative overflow-hidden cursor-pointer transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] flex items-center gap-4 sm:gap-10 p-6 sm:p-8`}
+                    className={`relative overflow-hidden cursor-pointer transition-all duration-300 ease-[cubic-bezier(0.25,1,0.5,1)] flex items-center gap-4 sm:gap-10 p-6 sm:p-8`}
                   >
                     {/* Left content (Title and Pills) */}
                     <div className="flex-1 flex flex-col justify-center relative z-10">
                       <div className="flex items-center">
                         {/* Active Blue Dot indicator */}
                         <div
-                          className={`h-2 rounded-full bg-cs-light-blue transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] ${isActive ? "w-2 mr-3 opacity-100" : "w-0 mr-0 opacity-0"
+                          className={`h-2 rounded-full bg-cs-light-blue transition-all duration-300 ease-[cubic-bezier(0.25,1,0.5,1)] ${isActive ? "w-2 mr-3 opacity-100" : "w-0 mr-0 opacity-0"
                             }`}
                         />
                         <h3
@@ -187,7 +187,7 @@ export function ServicesSection() {
 
                       {/* Pills (Smooth height and opacity transition) */}
                       <div
-                        className={`grid transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] ${isActive
+                        className={`grid transition-all duration-300 ease-[cubic-bezier(0.25,1,0.5,1)] ${isActive
                           ? "grid-rows-[1fr] mt-4 opacity-100 pl-5"
                           : "grid-rows-[0fr] mt-0 opacity-0 pl-0"
                           }`}
@@ -206,13 +206,13 @@ export function ServicesSection() {
                     </div>
 
                     <div
-                      className={`relative flex items-center justify-end transition-all duration-500 shrink-0 ${isActive ? "w-[120px] h-[160px] sm:w-[240px] sm:h-[180px] md:w-[140px] md:h-[120px] lg:w-[240px] lg:h-[180px]" : "w-[100px] h-[64px] sm:w-[120px] sm:h-[70px] md:w-[90px] md:h-[60px] lg:w-[120px] lg:h-[70px]"
+                      className={`relative flex items-center justify-end transition-all duration-300 shrink-0 ${isActive ? "w-[120px] h-[160px] sm:w-[240px] sm:h-[180px] md:w-[140px] md:h-[120px] lg:w-[240px] lg:h-[180px]" : "w-[100px] h-[64px] sm:w-[120px] sm:h-[70px] md:w-[90px] md:h-[60px] lg:w-[120px] lg:h-[70px]"
                         }`}
                     >
                       <img
                         src={isActive ? service.activeImage : service.inactiveImage}
                         alt={service.title}
-                        className={`object-cover w-full h-full rounded-[12px] sm:rounded-[16px] transition-all duration-500 ${isActive ? "opacity-100" : "opacity-90"
+                        className={`object-cover w-full h-full rounded-[12px] sm:rounded-[16px] transition-all duration-300 ${isActive ? "opacity-100" : "opacity-90"
                           }`}
                       />
                     </div>
