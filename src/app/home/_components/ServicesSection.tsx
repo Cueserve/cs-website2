@@ -9,6 +9,7 @@ import { HeadingPill } from "@/components/ui/HeadingPill";
 
 type Service = {
   id: string;
+  slug: string;
   title: string;
   pills: string[];
   activeImage: string;
@@ -19,6 +20,7 @@ type Service = {
 const services: Service[] = [
   {
     id: "01",
+    slug: "brand-identity",
     title: "Brand Identity",
     pills: [
       "LOGO DESIGN",
@@ -33,6 +35,7 @@ const services: Service[] = [
   },
   {
     id: "02",
+    slug: "ui-ux-strategy",
     title: "UI/UX Strategy",
     pills: [
       "USER RESEARCH",
@@ -46,6 +49,7 @@ const services: Service[] = [
   },
   {
     id: "03",
+    slug: "digital-marketing",
     title: "Digital Marketing",
     pills: ["SEO", "CONTENT STRATEGY", "SOCIAL MEDIA", "PPC CAMPAIGNS"],
     activeImage: "/assets/images/home/Service-Image-3.jpg",
@@ -54,6 +58,7 @@ const services: Service[] = [
   },
   {
     id: "04",
+    slug: "product-design",
     title: "Product Design",
     pills: ["3D MODELING", "INDUSTRIAL DESIGN", "CONCEPTING"],
     activeImage: "/assets/images/home/Service-Image-4.jpg",
@@ -147,7 +152,7 @@ export function ServicesSection() {
                 View Details
               </span>
               <CircleArrow
-                href="#"
+                href={`/services/${services[displayIndex].slug}`}
                 className="w-8 h-8 bg-cs-dark-blue text-white"
               />
             </div>

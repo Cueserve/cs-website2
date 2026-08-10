@@ -12,7 +12,7 @@ export interface RollingButtonProps extends React.AnchorHTMLAttributes<HTMLAncho
 }
 
 export const RollingButton = forwardRef<HTMLAnchorElement, RollingButtonProps>(
-  ({ text, href = "#contact", className = "", variant = "secondary", showArrow = true, ...rest }, ref) => {
+  ({ text, href = "/contact-us", className = "", variant = "secondary", showArrow = true, ...rest }, ref) => {
     const isPrimaryOrBlue = variant === "primary" || variant === "blue";
     const isWhite = variant === "white";
     const isAliceBlue = variant === "alice-blue";

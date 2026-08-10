@@ -167,7 +167,7 @@ export function AboutSection() {
             <div className="flex items-center justify-start">
               <RollingButton
                 text="More About Us"
-                href="/about"
+                href="/about-us"
                 className="!bg-[#eef5ff] hover:!bg-[#e2edff] !text-brand-default !border-brand-default/20"
               />
             </div>

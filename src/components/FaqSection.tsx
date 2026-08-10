@@ -74,7 +74,7 @@ export default function FaqSection() {
                     <div className="md:mt-auto">
                       <RollingButton
                         text="More About us"
-                        href="#"
+                        href="/about-us"
                         variant="secondary"
                         className="bg-white !border-none shadow-sm hover:shadow-md"
                       />

@@ -74,7 +74,7 @@ export function ProjectsSection() {
 
           <RollingButton
             text="View Projects"
-            href="#"
+            href="/projects"
             variant="secondary"
             className="border-none bg-brand-subtle !shadow-none hover:bg-brand-muted sm:mb-2"
           />
