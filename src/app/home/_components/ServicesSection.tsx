@@ -188,8 +188,8 @@ export function ServicesSection() {
                       {/* Pills (Smooth height and opacity transition) */}
                       <div
                         className={`grid transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] ${isActive
-                          ? "grid-rows-[1fr] mt-4 opacity-100"
-                          : "grid-rows-[0fr] mt-0 opacity-0"
+                          ? "grid-rows-[1fr] mt-4 opacity-100 pl-5"
+                          : "grid-rows-[0fr] mt-0 opacity-0 pl-0"
                           }`}
                       >
                         <div className="overflow-hidden flex flex-wrap gap-2 sm:gap-3 max-w-[200px] sm:max-w-sm lg:max-w-md xl:max-w-lg">
