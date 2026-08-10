@@ -64,14 +64,14 @@ export default function ServicesHeroBanner() {
               >
                 {/* Image or Shape */}
                 {item.src ? (
-                  <img
-                    src={item.src}
-                    alt={isImage ? "Work" : "Shape"}
-                    className={`${isImage ? 'w-[350px] h-[350px] rounded-[100px] object-cover' : 'h-[350px] w-auto object-contain'}`}
-                  />
-                ) : (
-                  <div className="w-[350px] h-[350px] bg-gray-200 rounded-[100px]" />
-                )}
+                   <img
+                     src={item.src}
+                     alt={isImage ? "Work" : "Shape"}
+                     className={`${isImage ? 'w-[220px] h-[220px] md:w-[350px] md:h-[350px] rounded-[60px] md:rounded-[100px] object-cover' : 'h-[220px] md:h-[350px] w-auto object-contain'}`}
+                   />
+                 ) : (
+                   <div className="w-[220px] h-[220px] md:w-[350px] md:h-[350px] bg-gray-200 rounded-[60px] md:rounded-[100px]" />
+                 )}
               </div>
             );
           })}

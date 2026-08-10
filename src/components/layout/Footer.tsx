@@ -62,9 +62,9 @@ export function Footer() {
               {/* Desktop View */}
               <div className="hidden md:flex flex-col gap-3.5">
                 {[
-                  ["Home", "About Us", "/", "/about"],
-                  ["Services", "Projects", "/services", "/projects"],
-                  ["Blogs", "Careers", "/blog", "/careers"]
+                  ["Home", "About Us", "/", "/about-us"],
+                  ["Services", "Our Work", "/services", "/projects"],
+                  ["Blog", "Contact", "/blog", "/contact"]
                 ].map((row, idx) => (
                   <div key={idx} className="flex items-center gap-2.5 text-base text-cs-ink font-paragraph font-light">
                     <Link href={row[2]} className="hover:text-brand-default transition-colors">{row[0]}</Link>
@@ -78,11 +78,11 @@ export function Footer() {
               <div className="flex md:hidden flex-col gap-3">
                 {[
                   { name: "Home", href: "/" },
-                  { name: "About Us", href: "/about" },
+                  { name: "About Us", href: "/about-us" },
                   { name: "Services", href: "/services" },
-                  { name: "Projects", href: "/projects" },
-                  { name: "Blogs", href: "/blog" },
-                  { name: "Careers", href: "/careers" }
+                  { name: "Our Work", href: "/projects" },
+                  { name: "Blog", href: "/blog" },
+                  { name: "Contact", href: "/contact" }
                 ].map((link, idx) => (
                   <Link key={idx} href={link.href} className="text-[15px] text-cs-ink/70 font-paragraph font-normal hover:text-brand-default transition-colors">
                     {link.name}
@@ -98,9 +98,8 @@ export function Footer() {
               {/* Desktop View */}
               <div className="hidden md:flex flex-col gap-3.5">
                 {[
-                  ["Website", "Kiosk", "/services", "/services"],
-                  ["Software", "UI/UX Design", "/services", "/services"],
-                  ["Mobile App", "Graphics Design", "/services", "/services"]
+                  ["Brand Identity", "UI/UX Strategy", "/services/brand-identity", "/services/ui-ux-strategy"],
+                  ["Digital Marketing", "Product Design", "/services/digital-marketing", "/services/product-design"]
                 ].map((row, idx) => (
                   <div key={idx} className="flex items-center gap-2.5 text-base text-cs-ink font-paragraph font-light">
                     <Link href={row[2]} className="hover:text-brand-default transition-colors">{row[0]}</Link>
@@ -113,12 +112,10 @@ export function Footer() {
               {/* Mobile View */}
               <div className="flex md:hidden flex-col gap-3">
                 {[
-                  { name: "Website", href: "/services" },
-                  { name: "Kiosk", href: "/services" },
-                  { name: "Software", href: "/services" },
-                  { name: "UI/UX Design", href: "/services" },
-                  { name: "Mobile App", href: "/services" },
-                  { name: "Graphics Design", href: "/services" }
+                  { name: "Brand Identity", href: "/services/brand-identity" },
+                  { name: "UI/UX Strategy", href: "/services/ui-ux-strategy" },
+                  { name: "Digital Marketing", href: "/services/digital-marketing" },
+                  { name: "Product Design", href: "/services/product-design" }
                 ].map((link, idx) => (
                   <Link key={idx} href={link.href} className="text-[15px] text-cs-ink/70 font-paragraph font-normal hover:text-brand-default transition-colors">
                     {link.name}

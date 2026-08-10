@@ -59,8 +59,8 @@ export default function AboutHeroBanner() {
               <div
                 key={index}
                 className={`flex-shrink-0 flex items-center justify-center overflow-hidden ${isImage
-                    ? 'w-[350px] h-[350px] rounded-full bg-gray-200'
-                    : 'w-[175px] h-[350px]'
+                    ? 'w-[220px] h-[220px] md:w-[350px] md:h-[350px] rounded-full bg-gray-200'
+                    : 'w-[110px] h-[220px] md:w-[175px] md:h-[350px]'
                   }`}
               >
                 {/* Image or Shape */}
