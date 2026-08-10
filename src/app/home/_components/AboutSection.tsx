@@ -66,7 +66,7 @@ export function AboutSection() {
   };
 
   return (
-    <section id="about" className="relative z-20 bg-white py-16 sm:py-24 xl:py-32 overflow-hidden border-b border-cs-border">
+    <section id="about" className="relative z-20 bg-white pt-10 sm:pt-14 xl:pt-32 pb-16 sm:pb-24 xl:pb-32 overflow-hidden border-b border-cs-border">
       <div className="w-[90%] xl:w-[82%] max-w-[1260px] mx-auto">
         {/* Top Section Pill Label aligned directly with container & navbar right across all breakpoints */}
         <div className="mb-8 sm:mb-12">

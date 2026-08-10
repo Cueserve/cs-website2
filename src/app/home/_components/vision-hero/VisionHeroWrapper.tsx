@@ -470,7 +470,7 @@ export const VisionHeroWrapper: React.FC<VisionHeroWrapperProps> = ({
   return (
     <>
       {/* Mobile & Tablet (< 1280px): Directly load the main hero theme right away without the VISION scrolling intro overlay */}
-      <section className="relative w-full h-auto xl:hidden overflow-hidden flex flex-col justify-start bg-white pt-24 sm:pt-28 pb-0">
+      <section className="relative w-full h-auto xl:hidden overflow-hidden flex flex-col justify-start bg-white pt-24 sm:pt-28 pb-10 sm:pb-12">
         
         {/* --- Mobile Background (< 768px) --- */}
         <div
