@@ -189,7 +189,7 @@ export function TestimonialSection() {
         </div>
 
         {/* Stats Strip */}
-        <div className="w-full max-w-[1150px] mx-auto mt-6 md:mt-10">
+        <div className="w-full max-w-[1150px] mx-auto mt-24 md:mt-10">
           <div className="grid grid-cols-2 md:grid-cols-3 gap-y-12 gap-x-4 md:gap-x-0 items-start justify-center">
 
             {/* Stat 1 */}
