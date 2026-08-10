@@ -17,7 +17,7 @@ export default function ServicesHeroBanner() {
   ];
 
   return (
-    <section className="relative pt-[180px] pb-[80px] overflow-hidden bg-gradient-to-b from-[#e3f0ff] to-white text-[var(--color-text-primary)] w-full flex flex-col items-center">
+    <section className="relative pt-[180px] pb-10 md:pb-[80px] overflow-hidden bg-gradient-to-b from-[#e3f0ff] to-white text-[var(--color-text-primary)] w-full flex flex-col items-center">
       <div className="w-[90%] xl:w-[82%] max-w-[1260px] mx-auto">
         <div className="flex flex-col items-center justify-center mb-24 text-center">
           <motion.div 

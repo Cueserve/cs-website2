@@ -40,7 +40,7 @@ export default function ServicesGridSection() {
   ];
 
   return (
-    <section className="relative py-24 bg-white text-cs-ink z-10 w-full flex flex-col items-center">
+    <section className="relative pt-12 pb-16 md:py-24 bg-white text-cs-ink z-10 w-full flex flex-col items-center">
       <div className="w-[90%] xl:w-[82%] max-w-[1260px] mx-auto">
         {/* Quote / Header */}
         <div className="max-w-4xl mx-auto mb-20 text-center md:text-left">

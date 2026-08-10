@@ -34,7 +34,7 @@ export default async function BlogDetailPage({
               {post.title}
             </h1>
 
-            <div className="w-full relative h-[400px] sm:h-[600px] md:h-[700px] rounded-[32px] sm:rounded-[40px] overflow-hidden mb-16 sm:mb-24">
+            <div className="w-full relative h-[400px] sm:h-[600px] md:h-[700px] rounded-[32px] sm:rounded-[40px] overflow-hidden mb-8 sm:mb-24">
               <img 
                 src={post.image} 
                 alt={post.title} 
