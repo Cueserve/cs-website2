@@ -91,7 +91,7 @@ export default async function ServiceDetailPage({
               {service.description}
             </p>
 
-            <div className="w-full relative h-[300px] sm:h-[500px] md:h-[700px] rounded-t-[32px] sm:rounded-t-[64px] overflow-hidden">
+            <div className="w-full relative h-[300px] sm:h-[500px] md:h-[700px] rounded-[32px] sm:rounded-[64px] overflow-hidden">
               <img 
                 src={service.image} 
                 alt={service.name} 
