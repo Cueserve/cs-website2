@@ -1,5 +1,6 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
+import { FadeInUp } from '@/components/FadeInUp';
 
 export const servicesData: Record<
   string,
@@ -75,71 +76,75 @@ export default async function ServiceDetailPage({
   return (
     <div className="w-full bg-white text-[var(--color-text-primary)]">
       {/* Hero Section (gradient) */}
-      <section className="relative pt-[160px] pb-0 bg-gradient-to-b from-[#e3f0ff] to-white overflow-hidden">
-        <div className="mx-auto w-[90%] xl:w-[82%] max-w-[1260px] flex flex-col items-center text-center">
-          
-          <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full text-[13px] uppercase tracking-wider text-brand-default border border-brand-default/30 bg-[#f4f8ff] w-fit mb-6 font-medium">
-            <span>{service.tag}</span>
-          </div>
-          
-          <h1 className="text-[3rem] sm:text-[4rem] font-medium text-cs-ink mb-6 leading-[1.1]">
-            {service.name}
-          </h1>
-          
-          <p className="text-[17px] sm:text-[19px] text-[var(--color-text-secondary)] max-w-2xl mb-20 sm:mb-24 leading-relaxed">
-            {service.description}
-          </p>
-
-          <div className="w-full relative h-[300px] sm:h-[500px] md:h-[700px] rounded-t-[32px] sm:rounded-t-[64px] overflow-hidden">
-            <img 
-              src={service.image} 
-              alt={service.name} 
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Content Section */}
-      <section className="py-16 sm:py-24">
-        <div className="mx-auto w-[90%] xl:w-[82%] max-w-[1260px]">
-          <div className="max-w-[900px]">
-            {/* About The Service */}
-          <div className="mb-16">
-            <h2 className="text-[2rem] font-medium mb-6 text-cs-ink tracking-tight">About The Service.</h2>
-            <p className="text-[17px] sm:text-[19px] text-[var(--color-text-secondary)] leading-[1.6]">
-              {service.about}
+      <FadeInUp>
+        <section className="relative pt-[160px] pb-0 bg-gradient-to-b from-[#e3f0ff] to-white overflow-hidden">
+          <div className="mx-auto w-[90%] xl:w-[82%] max-w-[1260px] flex flex-col items-center text-center">
+            
+            <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full text-[13px] uppercase tracking-wider text-brand-default border border-brand-default/30 bg-[#f4f8ff] w-fit mb-6 font-medium">
+              <span>{service.tag}</span>
+            </div>
+            
+            <h1 className="text-[3rem] sm:text-[4rem] font-medium text-cs-ink mb-6 leading-[1.1]">
+              {service.name}
+            </h1>
+            
+            <p className="text-[17px] sm:text-[19px] text-[var(--color-text-secondary)] max-w-2xl mb-20 sm:mb-24 leading-relaxed">
+              {service.description}
             </p>
-          </div>
 
-          {/* What is part of this service */}
-          <div className="mb-16">
-            <h2 className="text-[2rem] font-medium mb-8 text-cs-ink tracking-tight">What is the part of this services?</h2>
-            <div className="flex flex-col gap-6">
-              {service.features.map((feat, idx) => (
-                <div key={idx} className="flex flex-col sm:flex-row gap-2 items-start">
-                  <span className="text-[17px] sm:text-[19px] font-medium text-cs-ink whitespace-nowrap pt-1">
-                    {idx + 1}. {feat.title}:
-                  </span>
-                  <p className="text-[17px] sm:text-[19px] text-[var(--color-text-secondary)] leading-[1.6] pt-1">
-                    {feat.desc}
-                  </p>
-                </div>
-              ))}
+            <div className="w-full relative h-[300px] sm:h-[500px] md:h-[700px] rounded-t-[32px] sm:rounded-t-[64px] overflow-hidden">
+              <img 
+                src={service.image} 
+                alt={service.name} 
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
+        </section>
+      </FadeInUp>
 
-          {/* Why you should take the service from us */}
-          <div>
-            <h2 className="text-[2rem] font-medium mb-6 text-cs-ink tracking-tight">Why you should take the service from us?</h2>
-            <p className="text-[17px] sm:text-[19px] text-[var(--color-text-secondary)] leading-[1.6]">
-              {service.why}
-            </p>
-          </div>
+      {/* Content Section */}
+      <FadeInUp>
+        <section className="py-16 sm:py-24">
+          <div className="mx-auto w-[90%] xl:w-[82%] max-w-[1260px]">
+            <div className="max-w-[900px]">
+              {/* About The Service */}
+            <div className="mb-16">
+              <h2 className="text-[2rem] font-medium mb-6 text-cs-ink tracking-tight">About The Service.</h2>
+              <p className="text-[17px] sm:text-[19px] text-[var(--color-text-secondary)] leading-[1.6]">
+                {service.about}
+              </p>
+            </div>
 
+            {/* What is part of this service */}
+            <div className="mb-16">
+              <h2 className="text-[2rem] font-medium mb-8 text-cs-ink tracking-tight">What is the part of this services?</h2>
+              <div className="flex flex-col gap-6">
+                {service.features.map((feat, idx) => (
+                  <div key={idx} className="flex flex-col sm:flex-row gap-2 items-start">
+                    <span className="text-[17px] sm:text-[19px] font-medium text-cs-ink whitespace-nowrap pt-1">
+                      {idx + 1}. {feat.title}:
+                    </span>
+                    <p className="text-[17px] sm:text-[19px] text-[var(--color-text-secondary)] leading-[1.6] pt-1">
+                      {feat.desc}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Why you should take the service from us */}
+            <div>
+              <h2 className="text-[2rem] font-medium mb-6 text-cs-ink tracking-tight">Why you should take the service from us?</h2>
+              <p className="text-[17px] sm:text-[19px] text-[var(--color-text-secondary)] leading-[1.6]">
+                {service.why}
+              </p>
+            </div>
+
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </FadeInUp>
     </div>
   );
 }

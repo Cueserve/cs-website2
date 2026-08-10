@@ -1,8 +1,8 @@
-import AboutHeroBanner from '@/components/AboutHeroBanner';
-import AboutMainSection from '@/components/AboutMainSection';
-import TeamMembersSection from '@/components/TeamMembersSection';
-import ValuesSection from '@/components/ValuesSection';
-import AboutTestimonialsSection from '@/components/AboutTestimonialsSection';
+import AboutHeroBanner from './_components/AboutHeroBanner';
+import AboutMainSection from './_components/AboutMainSection';
+import TeamMembersSection from './_components/TeamMembersSection';
+import ValuesSection from './_components/ValuesSection';
+import AboutTestimonialsSection from './_components/AboutTestimonialsSection';
 import FaqSection from '@/components/FaqSection';
 import { FadeInUp } from '@/components/FadeInUp';
 

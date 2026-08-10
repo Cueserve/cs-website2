@@ -1,6 +1,6 @@
 import React from 'react';
-import ServicesHeroBanner from '@/components/ServicesHeroBanner';
-import ServicesGridSection from '@/components/ServicesGridSection';
+import ServicesHeroBanner from './_components/ServicesHeroBanner';
+import ServicesGridSection from './_components/ServicesGridSection';
 import FaqSection from '@/components/FaqSection';
 import { FadeInUp } from '@/components/FadeInUp';
 
