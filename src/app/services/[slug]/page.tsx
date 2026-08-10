@@ -106,7 +106,7 @@ export default async function ServiceDetailPage({
       <FadeInUp>
         <section className="py-16 sm:py-24">
           <div className="mx-auto w-[90%] xl:w-[82%] max-w-[1260px]">
-            <div className="max-w-[900px]">
+            <div className="w-full">
               {/* About The Service */}
             <div className="mb-16">
               <h2 className="text-[2rem] font-medium mb-6 text-cs-ink tracking-tight">About The Service.</h2>
