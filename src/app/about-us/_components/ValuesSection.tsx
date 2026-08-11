@@ -14,16 +14,17 @@ export default function ValuesSection() {
       if (!vhWrapRef.current) return;
       const rect = vhWrapRef.current.getBoundingClientRect();
       const windowHeight = window.innerHeight;
-      const totalScrollable = rect.height - windowHeight;
-
-      if (totalScrollable <= 0) return;
 
       const scrolled = -rect.top;
-      const progress = Math.max(0, Math.min(1, scrolled / totalScrollable));
+      // Start transitions when scrolled past 20vh (when it pins) and end at 150vh to allow 2-3 scrolls to finish
+      const startScroll = windowHeight * 0.20;
+      const endScroll = windowHeight * 1.50;
+      const range = endScroll - startScroll;
+      const progress = range > 0 ? Math.max(0, Math.min(1, (scrolled - startScroll) / range)) : 0;
 
-      if (progress < 0.35) {
+      if (progress < 0.28) {
         setActiveIndex(0);
-      } else if (progress < 0.7) {
+      } else if (progress < 0.72) {
         setActiveIndex(1);
       } else {
         setActiveIndex(2);
@@ -83,9 +84,9 @@ export default function ValuesSection() {
     <section className="relative bg-white text-cs-ink z-20">
       {/* --- DESKTOP LAYOUT (Sticky, interactive accordion) --- */}
       <div className="hidden lg:block">
-        <div ref={vhWrapRef} style={{ height: '220vh' }}>
-          <div className="sticky top-0 h-screen flex flex-col justify-center w-full">
-            <div className="w-[82%] max-w-[1260px] mx-auto py-8">
+        <div ref={vhWrapRef} className="py-24 xl:py-32" style={{ height: '260vh' }}>
+          <div className="sticky top-[20vh] w-full">
+            <div className="w-[82%] max-w-[1260px] mx-auto">
               {/* Header */}
               <div className="flex flex-row justify-between items-end gap-8 mb-12">
                 <div className="flex flex-col gap-6 items-start">

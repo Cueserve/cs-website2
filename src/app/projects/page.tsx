@@ -1,9 +1,10 @@
 'use client';
 
-import React from 'react';
+import React, { useRef } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
+import gsap from 'gsap';
 import FaqSection from '@/components/FaqSection';
 import { FadeInUp } from '@/components/FadeInUp';
 import { HeadingPill } from '@/components/ui/HeadingPill';
@@ -44,6 +45,41 @@ const projects = [
 ];
 
 export default function ProjectsPage() {
+  const arrowRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLElement>, idx: number) => {
+    const arrow = arrowRefs.current[idx];
+    if (!arrow) return;
+
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const dx = x - rect.width / 2;
+    const dy = y - rect.height / 2;
+
+    gsap.to(arrow, {
+      x: dx * 0.45,
+      y: dy * 0.45,
+      duration: 0.5,
+      ease: "power2.out",
+      overwrite: "auto",
+    });
+  };
+
+  const handleMouseLeave = (idx: number) => {
+    const arrow = arrowRefs.current[idx];
+    if (!arrow) return;
+
+    gsap.to(arrow, {
+      x: 0,
+      y: 0,
+      duration: 0.5,
+      ease: "power2.out",
+      overwrite: "auto",
+    });
+  };
+
   return (
     <>
       <div className="inner-page-top-bg">
@@ -97,17 +133,23 @@ export default function ProjectsPage() {
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.6, ease: "easeOut", delay: (index % 2) * 0.1 }}
                 >
-                  <Link href={`/projects/${project.id}`} className={`relative overflow-hidden rounded-[32px] block bg-[#f4f8ff] ${project.isLarge ? 'aspect-[4/3] md:aspect-[21/9]' : 'aspect-[4/3] md:aspect-[3/2]'}`}>
+                  <Link 
+                    href={`/projects/${project.id}`} 
+                    onMouseMove={(e) => handleMouseMove(e, index)}
+                    onMouseLeave={() => handleMouseLeave(index)}
+                    className={`relative overflow-hidden rounded-[32px] block bg-[#f4f8ff] ${project.isLarge ? 'aspect-[4/3] md:aspect-[21/9]' : 'aspect-[4/3] md:aspect-[3/2]'}`}
+                  >
                     <img 
                       src={project.image} 
                       alt={project.title} 
-                      className="w-full h-full object-cover" 
+                      className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105 group-hover:blur-[3px]" 
                     />
-                    {/* Hover Overlay with Button */}
-                    <div className="absolute inset-0 bg-[#0042c5]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center pointer-events-none">
-                      <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out pointer-events-auto">
-                        <ArrowUpRight className="w-7 h-7 text-brand-default" />
-                      </div>
+                    {/* Hover Floating Arrow Overlay */}
+                    <div
+                      ref={(el) => { arrowRefs.current[index] = el; }}
+                      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 pointer-events-none opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white shadow-xl text-brand-default"
+                    >
+                      <ArrowUpRight className="w-7 h-7 text-brand-default" />
                     </div>
                   </Link>
                   <Link href={`/projects/${project.id}`} className="relative overflow-hidden rounded-[32px] px-8 py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-[#f4f8ff]">
