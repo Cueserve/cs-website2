@@ -53,8 +53,8 @@ export function HomeServicesGrid() {
             { title: "Mobile App", subtitle: "DEVELOPMENT", image: "/assets/images/services/service-icon-2.svg" },
             { title: "Software", subtitle: "DEVELOPMENT", image: "/assets/images/services/service-icon-3.svg" },
             { title: "UI/UX", subtitle: "DESIGN", image: "/assets/images/services/service-icon-4.svg" },
-            { title: "Kiosk", subtitle: "DEVELOPMENT", image: "/tech_logo.png" },
-            { title: "Graphics", subtitle: "DESIGN", image: "/service-icon-pen.png" },
+            { title: "Kiosk", subtitle: "DEVELOPMENT", image: "/assets/images/brand/tech-logo.png" },
+            { title: "Graphics", subtitle: "DESIGN", image: "/assets/images/services/service-icon-pen.png" },
           ].map((service, index) => (
             <div key={index} className="service-card-wrapper">
               <div

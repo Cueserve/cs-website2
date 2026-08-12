@@ -27,7 +27,7 @@ export function AIDashboardVisual() {
         style={{ transform: "translate(-50%, -52%)" }}
       >
         <Image
-          src="/hero-illustration.svg"
+          src="/assets/images/home/hero-illustration.svg"
           alt="AI-powered solutions illustration"
           width={398}
           height={397}

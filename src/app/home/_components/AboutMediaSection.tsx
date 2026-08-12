@@ -102,7 +102,7 @@ export function AboutMediaSection() {
               {/* Background Video */}
               <video
                 ref={videoRef}
-                src="/video1.mp4"
+                src="/assets/videos/video1.mp4"
                 autoPlay
                 loop
                 muted
@@ -146,7 +146,7 @@ export function AboutMediaSection() {
               >
                 {/* Timer / Clock Icon from public folder */}
                 <img
-                  src="/timer.png"
+                  src="/assets/images/icons/timer.png"
                   alt="Alarm Timer Icon"
                   className="w-[65%] h-[65%] sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain"
                 />

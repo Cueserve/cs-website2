@@ -476,7 +476,7 @@ export const VisionHeroWrapper: React.FC<VisionHeroWrapperProps> = ({
         <div
           className="absolute inset-0 pointer-events-none z-0 bg-cover bg-no-repeat bg-[position:65%_center] md:hidden"
           style={{
-            backgroundImage: `url('/hero_bg2.jpg')`,
+            backgroundImage: `url('/assets/images/home/hero-bg2.jpg')`,
           }}
         />
         <div className="absolute inset-0 pointer-events-none z-[1] bg-gradient-to-r from-white/95 via-white/88 to-white/40 md:hidden" />
@@ -486,14 +486,14 @@ export const VisionHeroWrapper: React.FC<VisionHeroWrapperProps> = ({
         <div
           className="hidden md:block absolute inset-0 pointer-events-none z-0 bg-cover bg-no-repeat bg-center"
           style={{
-            backgroundImage: `url('/hero_bg3.png')`,
+            backgroundImage: `url('/assets/images/home/hero-bg3.png')`,
           }}
         />
 
         {/* Tablet Image on the Left (shifted left and up) */}
         <div className="hidden md:flex absolute bottom-4 lg:bottom-8 left-[-260px] lg:left-[-320px] xl:left-[-380px] h-[65vh] lg:h-[70vh] max-h-[650px] pointer-events-none z-10 items-end">
           <img
-            src="/hero_men.png"
+            src="/assets/images/home/hero-men.png"
             alt="Vision Hero Character"
             className="w-auto h-full object-contain object-left-bottom select-none"
           />
@@ -523,7 +523,7 @@ export const VisionHeroWrapper: React.FC<VisionHeroWrapperProps> = ({
         <div
           className="absolute top-0 left-0 right-0 h-[115vh] pointer-events-none z-0 bg-cover bg-no-repeat"
           style={{
-            backgroundImage: `url('/hero.jpg')`,
+            backgroundImage: `url('/assets/images/home/hero.jpg')`,
             backgroundPosition: "center -10vh",
           }}
         />
@@ -565,14 +565,14 @@ export const VisionHeroWrapper: React.FC<VisionHeroWrapperProps> = ({
               <div
                 className="absolute inset-0 pointer-events-none z-0 bg-cover bg-no-repeat bg-center"
                 style={{
-                  backgroundImage: `url('/hero_bg3.png')`,
+                  backgroundImage: `url('/assets/images/home/hero-bg3.png')`,
                 }}
               />
 
               {/* Layer 2: Independent Foreground Man Cutout (`hero_men.png`) with strict fixed pixel isolation (`-136px` on large, `-153px` on mid, and `-20px` on extra large) so breakpoints never interrupt each other */}
               <div className="absolute bottom-0 left-[-11vw] sm:left-[-136px] xl:left-[-136px] 2xl:left-[-153px] min-[1800px]:!left-[-20px] h-[68vh] sm:h-[75vh] xl:h-[85vh] 2xl:h-[86vh] max-h-[860px]  pointer-events-none z-10 flex items-end">
                 <img
-                  src="/hero_men.png"
+                  src="/assets/images/home/hero-men.png"
                   alt="Vision Hero Character"
                   className="w-auto h-full object-contain object-left-bottom select-none"
                 />

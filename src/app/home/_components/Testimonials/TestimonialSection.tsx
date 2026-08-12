@@ -8,21 +8,21 @@ const testimonials = [
   {
     name: "Lindel Wabhembe",
     company: "New Chapter Books",
-    logo: "/testimonial/testimonial_logo.png",
-    image: "/testimonial/client.jpg",
+    logo: "/assets/images/testimonials/testimonial-logo.png",
+    image: "/assets/images/testimonials/client.jpg",
     quote: "If you want your job to be done professionally and on time, I highly recommend Team Cueserve. Very professional and will hire again in my future projects. Job well done. Thank you."
   },
   {
     name: "Emma Johnson",
     company: "Vario",
-    logo: "/testimonial/testimonial_logo.png",
+    logo: "/assets/images/testimonials/testimonial-logo.png",
     image: "https://cdn.prod.website-files.com/6916390ccd119327e597f20f/69163cb028f55e0b0169b82a_Project-Gallery-Image-1.jpg",
     quote: "The team at Cueserve transformed our ideas into a polished and professional digital experience. Communication was smooth, timelines were met, and the final outcome was exceptional."
   },
   {
     name: "David Smith",
     company: "PixelForge",
-    logo: "/testimonial/testimonial_logo.png",
+    logo: "/assets/images/testimonials/testimonial-logo.png",
     image: "https://cdn.prod.website-files.com/6916390ccd119327e597f20f/69163cb3fdf07c4ef098e9a0_Project-Gallery-Image-2.jpg",
     quote: "From concept to execution, Cueserve handled everything with precision and creativity. The final design perfectly reflects our brand and received great feedback from our clients."
   }
@@ -160,7 +160,7 @@ export function TestimonialSection() {
                       </div>
                       {/* Quote Icon */}
                       <div className="shrink-0 ml-4">
-                        <img src="/testimonial/quote-icon.png" alt="Quote" className="w-8 md:w-8 lg:w-12 h-auto object-contain opacity-50 md:opacity-100" />
+                        <img src="/assets/images/testimonials/quote-icon.png" alt="Quote" className="w-8 md:w-8 lg:w-12 h-auto object-contain opacity-50 md:opacity-100" />
                       </div>
                     </div>
 
