@@ -69,7 +69,7 @@ export default function NotFound() {
 
             {/* Error Message */}
             <p className="text-base md:text-lg lg:text-xl font-paragraph text-cs-ink-muted mb-8 leading-relaxed">
-              Oops! Something is not right. Let's get back on track.
+              Oops! Something is not right. Let&apos;s get back on track.
             </p>
 
             {/* Back Button */}

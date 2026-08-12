@@ -127,7 +127,7 @@ ${message}
     await transporter.sendMail(mailOptions);
 
     return NextResponse.json({ success: true, message: "Email sent successfully!" });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("Error in contact API route:", error);
     return NextResponse.json(
       { error: "Failed to send message. Please try again later." },
