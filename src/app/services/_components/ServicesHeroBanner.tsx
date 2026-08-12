@@ -1,0 +1,81 @@
+'use client';
+
+import React from 'react';
+import { motion } from 'framer-motion';
+import { HeadingPill } from '@/components/ui/HeadingPill';
+
+export default function ServicesHeroBanner() {
+  // Empty images for the marquee as requested
+  const tickerItems = [
+    { type: 'shape', src: '/assets/images/services/service-banner-shape-1.png' },
+    { type: 'image', src: '/assets/images/services/service-banner-image-1.jpg' },
+    { type: 'shape', src: '/assets/images/services/service-banner-shape-2.png' },
+    { type: 'image', src: '/assets/images/services/service-banner-image-2.jpg' },
+    { type: 'shape', src: '/assets/images/services/service-banner-shape-3.png' },
+    { type: 'image', src: '/assets/images/services/service-banner-image-3.jpg' },
+    { type: 'shape', src: '/assets/images/services/service-banner-shape-4.png' },
+  ];
+
+  return (
+    <section className="relative pt-[180px] pb-10 md:pb-[80px] overflow-hidden bg-gradient-to-b from-[#e3f0ff] to-white text-[var(--color-text-primary)] w-full flex flex-col items-center">
+      <div className="w-[90%] xl:w-[82%] max-w-[1260px] mx-auto">
+        <div className="flex flex-col items-center justify-center mb-24 text-center">
+          <motion.div 
+            className="flex flex-col items-center w-full"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
+            <HeadingPill text="Our Services" />
+            <h1 className="text-h2 font-normal max-w-2xl mb-4">
+              Our Creative{' '}
+              <span className="text-[var(--color-brand-default)]">Solutions.</span>
+            </h1>
+          </motion.div>
+          <motion.div 
+            className="flex flex-col items-center w-full max-w-2xl"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+          >
+            <p className="text-body-base text-[var(--color-text-secondary)]">
+              At Cueserve, we offer a full range of creative and digital services designed to help brands stand out and succeed in a fast-evolving digital world.
+            </p>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Infinite Marquee */}
+      <div className="relative w-full flex overflow-hidden py-8">
+        <motion.div
+          className="flex flex-nowrap whitespace-nowrap items-center gap-0 w-max"
+          animate={{ x: [0, "-50%"] }}
+          transition={{ repeat: Infinity, ease: 'linear', duration: 25 }}
+        >
+          {/* We repeat the array twice for seamless loop */}
+          {[...tickerItems, ...tickerItems].map((item, index) => {
+            const isImage = item.type === 'image';
+
+            return (
+              <div
+                key={index}
+                className="flex-shrink-0 flex items-center justify-center"
+              >
+                {/* Image or Shape */}
+                {item.src ? (
+                   <img
+                     src={item.src}
+                     alt={isImage ? "Work" : "Shape"}
+                     className={`${isImage ? 'w-[220px] h-[220px] md:w-[350px] md:h-[350px] rounded-[60px] md:rounded-[100px] object-cover' : 'h-[220px] md:h-[350px] w-auto object-contain'}`}
+                   />
+                 ) : (
+                   <div className="w-[220px] h-[220px] md:w-[350px] md:h-[350px] bg-gray-200 rounded-[60px] md:rounded-[100px]" />
+                 )}
+              </div>
+            );
+          })}
+        </motion.div>
+      </div>
+    </section>
+  );
+}
