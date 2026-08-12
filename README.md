@@ -1,16 +1,16 @@
 # Cueserve Website
 
-[![Next.js](https://img.shields.io/badge/Next.js-v16+-black.svg)](https://nextjs.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-v15+-black.svg)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5+-blue.svg)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4+-38B2AC.svg)](https://tailwindcss.com/)
 
-> Rebuilding the Cueserve web experience with a fresh/new UI with AI‑Native positioning that reflects our evolution into an innovation-driven technology partner for next era of Digital Engineering.
+> The official corporate web experience for Cueserve, showcasing our AI‑Native positioning, capabilities in Digital Engineering, and real-world solutions.
 
 ---
 
 ## Table of Contents
 
 - [Objective](#objective)
-- [Documentation](#documentation)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Development](#development)
@@ -21,35 +21,26 @@
 
 ## Objective
 
-Cueserve is undertaking a full redesign and rebuild of its corporate website from the ground up to reposition itself as an AI-native technology company and customer‑focused IT services agency. It reflects Cueserve’s evolution into an AI-first, innovation-driven technology partner.
+Cueserve's corporate website is built to reposition the company as an AI-native technology partner and customer‑focused IT services agency. 
 
-The [current site](https://www.cueserve.com) provides a foundational overview, but it no longer represents Cueserve’s growing capabilities in AI-powered solutions, intelligent automation, and next-generation digital engineering. The new website delivers a fresh visual identity, clearer messaging, and an improved structure that highlights Cueserve as a trusted partner, who help build, automate, and scale using AI. With AI‑centric storytelling, outcome‑driven narratives, high‑performance architecture, and credibility through real‑world case studies, the new website will serve as a powerful digital expression of Cueserve’s expertise and value.
+The platform delivers a fresh visual identity, clear messaging, and a component-driven structure that highlights Cueserve as a trusted partner to build, automate, and scale using AI. Built with performance in mind using **Next.js**, **Tailwind CSS**, and **GSAP** for animations, it serves as a powerful digital expression of Cueserve’s expertise and value.
 
-This transformation will go beyond visual refresh—it will redefine how Cueserve communicates value:
-
-- **AI-Centric Positioning** — Showcase expertise in **_GenAI, Agentic AI, AI‑driven automation, and data‑driven systems_** as core service pillars, not as add‑ons.
-- **Outcome-Oriented Storytelling** — Shift from generic service descriptions to business‑impact narratives that highlight measurable outcomes such as **_efficiency gains, cost reduction, scalability, and accelerated innovation_**, helping prospects instantly see ROI.
-- **Conversion-focused User Journey** — Design **_a modern, optimized user‑journey and conversion‑focused_** website that guides visitors from problem → solution → measurable impact, ultimately increasing lead quality and accelerating growth.
-- **SEO‑Optimized** — Build **_a fast, responsive, and scalable_** website optimized for performance, SEO, and lead generation, ensuring higher visibility, stronger engagement, and a frictionless user experience.
-- **Credibility & Trust Signals** — Highlight real-world AI use-cases, case studies, and testimonials to build trust, reduce buyer hesitation, and demonstrate proven expertise that converts interest into conversions.
-- **Lead Capture Strategy** — Implement **_strategic CTAs, high‑intent landing pages, gated assets, and streamlined lead‑capture flows_** to convert visitors into qualified opportunities and improve funnel performance.
-- **Buyer‑Persona** — Craft tailored messaging for decision‑makers and technical evaluators, ensuring **_relevance, clarity, and resonance_** across all audience segments to increase engagement and conversion.
+Key technical and business highlights:
+- **AI-Centric Positioning:** Showcases expertise in GenAI, Agentic AI, AI‑driven automation, and data‑driven systems.
+- **High-Performance Architecture:** Fast, responsive, and scalable website optimized for SEO and modern web vitals.
+- **Conversion-focused User Journey:** Optimized landing pages, strategic CTAs, and streamlined lead‑capture flows.
+- **Modern Animations:** Fluid, engaging scroll animations and transitions powered by GSAP.
 
 ---
 
-## Documentation
-
-- [TECH-STACK.md](TECH-STACK.md) — Technology choices, tools, and strategic decisions
-- [ARCHITECTURE.md](ARCHITECTURE.md) — Project structure, page routes, data flow, and design system
-
----
- 
 ## Prerequisites
 
-- Node.js 18+
+- Node.js 18+ (20+ recommended)
 - npm (package manager)
 
 ## Installation
+
+Clone the repository and install dependencies:
 
 ```bash
 npm install
@@ -57,24 +48,32 @@ npm install
 
 ## Development
 
+Start the Next.js development server:
+
 ```bash
 npm run dev
 ```
 
-Starts the Next.js development server on `http://localhost:3000`.
+The application will be available at `http://localhost:3000`.
 
 ## Build
+
+To build the production-optimized bundle:
 
 ```bash
 npm run build
 ```
 
-Builds the production-optimized bundle.
+And to start the production server:
+
+```bash
+npm start
+```
 
 ## Testing
 
-```bash
-npm test
-```
+Run the linter to ensure code quality:
 
-Runs the test suite (configure as needed based on testing framework).
+```bash
+npm run lint
+```
