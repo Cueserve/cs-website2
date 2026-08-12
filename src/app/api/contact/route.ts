@@ -22,13 +22,12 @@ export async function POST(request: Request) {
 
     // If SMTP details are not configured, log it and return a placeholder success or error
     if (!host || !user || !pass) {
-      console.warn("SMTP configuration is missing. Printing submission to console:");
-      console.log({ name, email, phone, message, services });
+      console.warn("SMTP configuration is missing. Submission was bypassed.");
       
-      // We return success to the client for preview/dev mode, but notify that it was logged to console
+      // We return success to the client for preview/dev mode
       return NextResponse.json({
         success: true,
-        message: "Message received! (Dev mode: logged to server console as SMTP is not configured).",
+        message: "Message received! (Dev mode: SMTP is not configured).",
       });
     }
 
