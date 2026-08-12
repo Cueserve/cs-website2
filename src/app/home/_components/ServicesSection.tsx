@@ -27,9 +27,9 @@ const services: Service[] = [
       "ART DIRECTION",
       "PACKAGING",
     ],
-    activeImage: "/assets/images/home/Service-Image-1.jpg",
-    inactiveImage: "/assets/images/home/Service-Image-1.jpg",
-    leftIcon: "/assets/images/home/Service-Icon-1.svg", // icon 1
+    activeImage: "/assets/images/services/service-image-1.jpg",
+    inactiveImage: "/assets/images/services/service-image-1.jpg",
+    leftIcon: "/assets/images/services/service-icon-1.svg", // icon 1
   },
   {
     id: "02",
@@ -41,27 +41,27 @@ const services: Service[] = [
       "PROTOTYPING",
       "USABILITY TESTING",
     ],
-    activeImage: "/assets/images/home/Service-Image-2.jpg",
-    inactiveImage: "/assets/images/home/Service-Image-2.jpg",
-    leftIcon: "/assets/images/home/Service-Icon-2.svg", // icon 2
+    activeImage: "/assets/images/services/service-image-2.jpg",
+    inactiveImage: "/assets/images/services/service-image-2.jpg",
+    leftIcon: "/assets/images/services/service-icon-2.svg", // icon 2
   },
   {
     id: "03",
     slug: "digital-marketing",
     title: "Digital Marketing",
     pills: ["SEO", "CONTENT STRATEGY", "SOCIAL MEDIA", "PPC CAMPAIGNS"],
-    activeImage: "/assets/images/home/Service-Image-3.jpg",
-    inactiveImage: "/assets/images/home/Service-Image-3.jpg",
-    leftIcon: "/assets/images/home/Service-Icon-3.svg", // icon 3
+    activeImage: "/assets/images/services/service-image-3.jpg",
+    inactiveImage: "/assets/images/services/service-image-3.jpg",
+    leftIcon: "/assets/images/services/service-icon-3.svg", // icon 3
   },
   {
     id: "04",
     slug: "product-design",
     title: "Product Design",
     pills: ["3D MODELING", "INDUSTRIAL DESIGN", "CONCEPTING"],
-    activeImage: "/assets/images/home/Service-Image-4.jpg",
-    inactiveImage: "/assets/images/home/Service-Image-4.jpg",
-    leftIcon: "/assets/images/home/Service-Icon-4.svg", // icon 4
+    activeImage: "/assets/images/services/service-image-4.jpg",
+    inactiveImage: "/assets/images/services/service-image-4.jpg",
+    leftIcon: "/assets/images/services/service-icon-4.svg", // icon 4
   },
 ];
 

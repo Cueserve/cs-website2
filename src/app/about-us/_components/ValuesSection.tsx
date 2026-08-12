@@ -49,7 +49,7 @@ export default function ValuesSection() {
           <rect x="7" y="7" width="14" height="14" rx="2" />
         </svg>
       ),
-      image: '/assets/images/about-us/Mission-Image-1.jpg',
+      image: '/assets/images/about/mission-image-1.jpg',
     },
     {
       id: '02',
@@ -63,7 +63,7 @@ export default function ValuesSection() {
           <circle cx="12" cy="12" r="9" strokeDasharray="4 4" />
         </svg>
       ),
-      image: '/assets/images/about-us/Graph-Image.jpg',
+      image: '/assets/images/icons/graph-image.jpg',
     },
     {
       id: '03',
@@ -76,7 +76,7 @@ export default function ValuesSection() {
           <circle cx="12" cy="12" r="3" />
         </svg>
       ),
-      image: '/assets/images/about-us/About-Us-Image.jpg',
+      image: '/assets/images/about/about-us-image.jpg',
     },
   ];
 

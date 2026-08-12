@@ -7,13 +7,13 @@ import { HeadingPill } from '@/components/ui/HeadingPill';
 export default function ServicesHeroBanner() {
   // Empty images for the marquee as requested
   const tickerItems = [
-    { type: 'shape', src: '/assets/images/services/Service-Banner-Shape-1.png' },
-    { type: 'image', src: '/assets/images/services/Service-Banner-Image-1.jpg' },
-    { type: 'shape', src: '/assets/images/services/Service-Banner-Shape-2.png' },
-    { type: 'image', src: '/assets/images/services/Service-Banner-Image-2.jpg' },
-    { type: 'shape', src: '/assets/images/services/Service-Banner-Shape-3.png' },
-    { type: 'image', src: '/assets/images/services/Service-Banner-Image-3.jpg' },
-    { type: 'shape', src: '/assets/images/services/Service-Banner-Shape-4.png' },
+    { type: 'shape', src: '/assets/images/services/service-banner-shape-1.png' },
+    { type: 'image', src: '/assets/images/services/service-banner-image-1.jpg' },
+    { type: 'shape', src: '/assets/images/services/service-banner-shape-2.png' },
+    { type: 'image', src: '/assets/images/services/service-banner-image-2.jpg' },
+    { type: 'shape', src: '/assets/images/services/service-banner-shape-3.png' },
+    { type: 'image', src: '/assets/images/services/service-banner-image-3.jpg' },
+    { type: 'shape', src: '/assets/images/services/service-banner-shape-4.png' },
   ];
 
   return (

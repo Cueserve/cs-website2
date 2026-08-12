@@ -12,25 +12,25 @@ export default function AboutTestimonialsSection() {
     {
       id: 1,
       name: 'Emma Johnson',
-      avatar: '/assets/images/about-us/Testimonial-Image-1.jpg',
+      avatar: '/assets/images/testimonials/testimonial-image-1.jpg',
       quote: '“Working with Cueserve was a seamless experience from start to finish. Their team truly understood our vision and brought it to life through a stunning digital identity. The results exceeded our expectations.”',
     },
     {
       id: 2,
       name: 'Emma Johnson',
-      avatar: '/assets/images/about-us/Testimonial-Image-2.jpg',
+      avatar: '/assets/images/testimonials/testimonial-image-2.jpg',
       quote: '“Cueserve delivered exactly what we were looking for—clean design, clear structure, and a strong brand presence. Their attention to detail and creative approach made the entire process effortless.”',
     },
     {
       id: 3,
       name: 'Emma Johnson',
-      avatar: '/assets/images/about-us/Testimonial-Image-3.jpg',
+      avatar: '/assets/images/testimonials/testimonial-image-3.jpg',
       quote: '“The team at Cueserve transformed our innovative ideas into a polished and professional digital experience. Communication was smooth, timelines were consistently met, and the final outcome was exceptionally impressive.”',
     },
     {
       id: 4,
       name: 'Emma Johnson',
-      avatar: '/assets/images/about-us/Testimonial-Image-4.jpg',
+      avatar: '/assets/images/testimonials/testimonial-image-4.jpg',
       quote: '“From concept to execution, Cueserve handled everything with precision and creativity. The final design perfectly reflects our brand and has received overwhelmingly positive feedback from our clients.”',
     },
   ];

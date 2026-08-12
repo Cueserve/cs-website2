@@ -14,11 +14,11 @@ if (typeof window !== "undefined") {
 }
 
 const projects = [
-  { id: "pixel-forge", num: "01", name: "Pixel Forge", category: "UI/UX DESIGN", image: "/assets/images/home/Project-Image-1.jpg", isLarge: false },
-  { id: "studio-nova", num: "02", name: "Studio Nova", category: "UI/UX DESIGN", image: "/assets/images/home/Project-Image-2.jpg", isLarge: false },
-  { id: "brand-orbit", num: "03", name: "Brand Orbit", category: "UI/UX DESIGN", image: "/assets/images/home/Project-Image-3.jpg", isLarge: true },
-  { id: "vision-core", num: "04", name: "Vision Core", category: "UI/UX DESIGN", image: "/assets/images/home/Project-Image-4.jpg", isLarge: false },
-  { id: "design-flow", num: "05", name: "Design Flow", category: "UI/UX DESIGN", image: "/assets/images/home/Project-Image-5.jpg", isLarge: false },
+  { id: "pixel-forge", num: "01", name: "Pixel Forge", category: "UI/UX DESIGN", image: "/assets/images/projects/project-image-1.jpg", isLarge: false },
+  { id: "studio-nova", num: "02", name: "Studio Nova", category: "UI/UX DESIGN", image: "/assets/images/projects/project-image-2.jpg", isLarge: false },
+  { id: "brand-orbit", num: "03", name: "Brand Orbit", category: "UI/UX DESIGN", image: "/assets/images/projects/project-image-3.jpg", isLarge: true },
+  { id: "vision-core", num: "04", name: "Vision Core", category: "UI/UX DESIGN", image: "/assets/images/projects/project-image-4.jpg", isLarge: false },
+  { id: "design-flow", num: "05", name: "Design Flow", category: "UI/UX DESIGN", image: "/assets/images/projects/project-image-5.jpg", isLarge: false },
 ];
 
 export function ProjectsSection() {

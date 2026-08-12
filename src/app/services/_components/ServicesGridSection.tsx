@@ -10,7 +10,7 @@ export default function ServicesGridSection() {
       title: 'Brand Identity',
       description: 'We create consistent brand systems that define your voice, visuals, and positioning across all touchpoints.',
       icon: (
-        <img src="/assets/images/services/Service-Icon-1.svg" alt="Brand Identity" className="w-28 h-28 object-contain" />
+        <img src="/assets/images/services/service-icon-1.svg" alt="Brand Identity" className="w-28 h-28 object-contain" />
       )
     },
     {
@@ -18,7 +18,7 @@ export default function ServicesGridSection() {
       title: 'UI/UX Strategy',
       description: 'We design intuitive user experiences that improve usability, engagement, and conversion across digital products.',
       icon: (
-        <img src="/assets/images/services/Service-Icon-2.svg" alt="UI/UX Strategy" className="w-28 h-28 object-contain" />
+        <img src="/assets/images/services/service-icon-2.svg" alt="UI/UX Strategy" className="w-28 h-28 object-contain" />
       )
     },
     {
@@ -26,7 +26,7 @@ export default function ServicesGridSection() {
       title: 'Digital Marketing',
       description: 'We grow brands through data-driven digital strategies focused on visibility, engagement, and measurable results.',
       icon: (
-        <img src="/assets/images/services/Service-Icon-3.svg" alt="Digital Marketing" className="w-28 h-28 object-contain" />
+        <img src="/assets/images/services/service-icon-3.svg" alt="Digital Marketing" className="w-28 h-28 object-contain" />
       )
     },
     {
@@ -34,7 +34,7 @@ export default function ServicesGridSection() {
       title: 'Product Design',
       description: 'We design scalable digital products that balance usability, aesthetics, and business goals.',
       icon: (
-        <img src="/assets/images/services/Service-Icon-4.svg" alt="Product Design" className="w-28 h-28 object-contain" />
+        <img src="/assets/images/services/service-icon-4.svg" alt="Product Design" className="w-28 h-28 object-contain" />
       )
     }
   ];

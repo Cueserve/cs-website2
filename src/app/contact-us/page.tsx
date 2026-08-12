@@ -103,7 +103,7 @@ export default function ContactPage() {
               
               <div className="rounded-[24px] md:rounded-[32px] overflow-hidden w-full aspect-[4/3] md:aspect-[16/10] lg:aspect-auto lg:h-[400px] relative mt-auto">
                 <img 
-                   src="/assets/images/contact/Contact-Team.jpg" 
+                   src="/assets/images/team/contact-team.jpg" 
                   alt="Our Team" 
                   className="w-full h-full object-cover"
                 />

@@ -144,7 +144,7 @@ export default function AboutMainSection() {
             {/* Image Placeholder under text */}
             <div className="w-full h-48 sm:h-56 md:h-64 lg:h-72 rounded-3xl overflow-hidden mt-auto bg-gray-100">
               <img 
-                src="/assets/images/about-us/About-Us-Image.jpg" 
+                src="/assets/images/about/about-us-image.jpg" 
                 alt="Our Team" 
                 className="w-full h-full object-cover"
               />

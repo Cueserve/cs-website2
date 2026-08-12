@@ -15,32 +15,32 @@ const projects = [
     id: 'pixel-forge', 
     title: 'Pixel Forge', 
     category: 'UI/UX Design', 
-    image: '/assets/images/projects/Project-Image-1.jpg' 
+    image: '/assets/images/projects/project-image-1.jpg' 
   },
   { 
     id: 'studio-nova', 
     title: 'Studio Nova', 
     category: 'UI/UX Design', 
-    image: '/assets/images/projects/Project-Image-2.jpg' 
+    image: '/assets/images/projects/project-image-2.jpg' 
   },
   { 
     id: 'brand-orbit', 
     title: 'Brand Orbit', 
     category: 'UI/UX Design', 
-    image: '/assets/images/projects/Project-Image-3.jpg', 
+    image: '/assets/images/projects/project-image-3.jpg', 
     isLarge: true 
   },
   { 
     id: 'vision-core', 
     title: 'Vision Core', 
     category: 'UI/UX Design', 
-    image: '/assets/images/projects/Project-Image-4.jpg' 
+    image: '/assets/images/projects/project-image-4.jpg' 
   },
   { 
     id: 'design-flow', 
     title: 'Design Flow', 
     category: 'UI/UX Design', 
-    image: '/assets/images/projects/Project-Image-5.jpg' 
+    image: '/assets/images/projects/project-image-5.jpg' 
   },
 ];
 
