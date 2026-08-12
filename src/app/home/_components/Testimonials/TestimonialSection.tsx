@@ -55,7 +55,7 @@ export function TestimonialSection() {
 
   // Card animation variants
   const cardVariants = {
-    enter: (dir: number) => ({
+    enter: () => ({
       x: 0,
       y: 0,
       rotate: 0,

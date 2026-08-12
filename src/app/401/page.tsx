@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import { RollingButton } from '@/components/ui/RollingButton';
 import { FadeInUp } from '@/components/FadeInUp';
 

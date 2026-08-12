@@ -1,9 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
-import Image from "next/image";
 import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
 import { CircleArrow } from "@/components/ui/CircleArrow";
 import { HeadingPill } from "@/components/ui/HeadingPill";
 
@@ -133,7 +131,7 @@ export function ServicesSection() {
 
         <div className="flex flex-col md:flex-row gap-6 w-full">
           {/* Left Side: Static Card */}
-          <div className="w-full md:w-[35%] lg:w-[24%] bg-cs-surface-tint rounded-[32px] sm:rounded-[38px] px-6 sm:px-8 md:px-5 lg:px-8 pt-6 sm:pt-8 md:pt-6 lg:pt-8 pb-4 sm:pb-5 flex flex-col justify-between h-[360px] md:h-[280px] lg:h-[380px] self-start relative border border-cs-border overflow-hidden">
+          <div className="w-full md:w-[40%] lg:w-[35%] bg-cs-surface-tint rounded-[32px] sm:rounded-[38px] px-6 sm:px-8 md:px-5 lg:px-8 pt-6 sm:pt-8 md:pt-6 lg:pt-8 pb-4 sm:pb-5 flex flex-col justify-between h-[360px] md:h-[280px] lg:h-[380px] self-start relative border border-cs-border overflow-hidden">
             <div ref={numberRef} className="text-cs-dark-blue font-display text-2xl font-medium italic z-10">
               {services[displayIndex].id}
             </div>

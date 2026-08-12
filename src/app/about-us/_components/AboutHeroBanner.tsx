@@ -53,7 +53,6 @@ export default function AboutHeroBanner() {
           {/* We repeat the array twice for seamless loop */}
           {[...tickerItems, ...tickerItems].map((item, index) => {
             const isImage = item.type === 'image';
-            const isBlueShape = item.type === 'shape' && index % 2 === 0;
 
             return (
               <div
